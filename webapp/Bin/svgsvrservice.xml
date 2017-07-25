@@ -1,0 +1,1846 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>svgsvrservice</name>
+    </assembly>
+    <members>
+        <member name="T:svgsvr.AppConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppConfig.selfdllname">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.AppConfig.GetServiceUrl(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="serviceflag"></param>
+            <returns></returns>
+        </member>
+        <member name="T:svgsvr.AppData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppData.refreshtime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppData.listdata">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:svgsvr.AppURDefalutSVGThreadData">
+            <summary>
+            用户默认打开接线图线程数据类
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURDefalutSVGThreadData.appname">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURDefalutSVGThreadData.businessname">
+            <summary>
+            业务代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURDefalutSVGThreadData.userrighthost">
+            <summary>
+            用户权限地址
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURDefalutSVGThreadData.Config">
+            <summary>
+            配置数据
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURDefalutSVGThreadData.lstUserData">
+            <summary>
+            string:webuser
+            </summary>
+        </member>
+        <member name="T:svgsvr.DBAppSvgID">
+            <summary>
+            数据库中svg表中的数据
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBAppSvgID.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBAppSvgID.dtsvgid">
+            <summary>
+            项目字典,string:svgid
+            string:appname;
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBAppSvgID.dtData">
+            <summary>
+            string:appname;
+            string:图形编号
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBAppSvgID.dtSvg">
+            <summary>
+            string:appname;
+            string:图形编号
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBAppSvgID.uploadFolder">
+            <summary>
+            上传图形文件保存路径
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBAppSvgID.sivFolder">
+            <summary>
+            原始图形保存路径
+            </summary>
+        </member>
+        <member name="M:svgsvr.DBAppSvgID.AddSvgID(System.String,System.String)">
+            <summary>
+            增加某个图形文件
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="svgid">图形编号</param>
+        </member>
+        <member name="M:svgsvr.DBAppSvgID.DelSvgID(System.String,System.String)">
+            <summary>
+            删除某个图形文件，更新内存数据
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="svgid">图形编号</param>
+        </member>
+        <member name="M:svgsvr.DBAppSvgID.CheckSvgFile(svgsvr.DataSvg)">
+            <summary>
+            检查图形文件是否存在
+            </summary>
+            <param name="dt">需要检测的图形数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.DBAppSvgID.CheckJpgFile(svgsvr.DataSvg)">
+            <summary>
+            检查图形文件是否存在
+            </summary>
+            <param name="dt">需要检测的图形数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.DBAppSvgID.CheckSivFile(svgsvr.DataSvg)">
+            <summary>
+            检查图形文件是否存在
+            </summary>
+            <param name="dt">需要检测的图形数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.DBAppSvgID.SetSvgNode(System.Data.DataRowView,svgsvr.SVGNode)">
+            <summary>
+            根据图形编号获取对应的SVGNode信息
+            </summary>
+            <param name="drvNode"></param>
+            <param name="sn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.DBAppSvgID.SetDataSvg(System.Data.DataRowView,svgsvr.DataSvg)">
+            <summary>
+            
+            </summary>
+            <param name="drvNode"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.DBAppSvgID.GetSvgFromDB(System.String)">
+            <summary>
+            获取所有的项目信息，放入项目字典中
+            </summary>
+        </member>
+        <member name="M:svgsvr.DBAppSvgID.GetDatas">
+            <summary>
+            从数据库中更新所有项目的数据
+            </summary>
+        </member>
+        <member name="T:svgsvr.DBBusinessCryptinfo">
+            <summary>
+            数据库中BusinessCryptinfo表中的数据
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBBusinessCryptinfo.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBBusinessCryptinfo.dtData">
+            <summary>
+            项目字典,string:appname
+            string:businessname
+            </summary>
+        </member>
+        <member name="M:svgsvr.DBBusinessCryptinfo.GetAppInfoFromDB">
+            <summary>
+            获取所有的项目信息，放入项目字典中
+            </summary>
+        </member>
+        <member name="M:svgsvr.DBBusinessCryptinfo.GetDatas">
+            <summary>
+            从数据库中更新所有项目的数据
+            </summary>
+        </member>
+        <member name="T:svgsvr.BusinessUserParam">
+            <summary>
+            业务用户扩展参数
+            </summary>
+        </member>
+        <member name="F:svgsvr.BusinessUserParam.appname">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.BusinessUserParam.businessname">
+            <summary>
+            业务代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.BusinessUserParam.webuser">
+            <summary>
+            web用户名
+            </summary>
+        </member>
+        <member name="F:svgsvr.BusinessUserParam.webuserpwd">
+            <summary>
+            web用户密码
+            </summary>
+        </member>
+        <member name="F:svgsvr.BusinessUserParam.userparamlist">
+             <summary>
+            string:paramjson 用户扩展参数列表
+             </summary>
+        </member>
+        <member name="T:svgsvr.DataAppname">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataAppname.lockdel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataAppname.Name">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataAppname._dtDataSvgBySvgName">
+            <summary>
+            SVG文件数组,关键字是SVG文件名称
+            </summary>
+        </member>
+        <member name="P:svgsvr.DataAppname.dtDataSvgBySvgName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataAppname._dtDataSvgByID">
+            <summary>
+            SVG文件数组,关键字是SVG文件编号
+            </summary>
+        </member>
+        <member name="P:svgsvr.DataAppname.dtDataSvgBySvgID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.DataAppname.AdddictIDDataSvg(svgsvr.DataSvg)">
+            <summary>
+            增加图形文件
+            </summary>
+            <param name="ds"></param>
+        </member>
+        <member name="M:svgsvr.DataAppname.DeleteDataSvg(svgsvr.DataSvg)">
+            <summary>
+            删除图形文件
+            </summary>
+            <param name="ds"></param>
+        </member>
+        <member name="F:svgsvr.DataAppname.dictStationAppData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataAppname._dictStationListSvgID">
+            <summary>
+             项目所有厂站与svg_id列表的对应关系
+            </summary>
+        </member>
+        <member name="P:svgsvr.DataAppname.dictStationListSvgID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.DataAppname.GetStationByDB">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:svgsvr.DataAppname.appconfig">
+            <summary>
+            应用程序对应的配置数据
+            </summary>
+        </member>
+        <member name="M:svgsvr.DataAppname.GetDataSvg(System.String,System.String,System.String)">
+            <summary>
+            获取满足条件的图形数据
+            </summary>
+            <param name="fname"></param>
+            <param name="appname"></param>
+            <param name="fid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:svgsvr.DataSvg">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataSvg.Data">
+            <summary>
+            数据契约
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataSvg.Sivfilesize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataSvg.Lastrefreshtime">
+            <summary>
+            上次数据刷新时间
+            </summary>        
+        </member>
+        <member name="F:svgsvr.DataSvg.Svgfilename">
+            <summary>
+            SVG文件名称
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataSvg.Sivfilename">
+            <summary>
+            SIV文件名称
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataSvg.Jpgfilename">
+            <summary>
+            Jpg文件名称
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataSvg.fileext">
+            <summary>
+            原始图元扩展名
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataSvg.Appname">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="F:svgsvr.DataSvg.Backcolor">
+            <summary>
+            背景色
+            </summary>
+        </member>
+        <member name="T:svgsvr.DBSvgMainInfoValue">
+            <summary>
+            数据库中的svgmaininfo中的value数据，不包含值和刷新时间，只是作为基础数据
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBSvgMainInfoValue.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBSvgMainInfoValue.LockDBSvgMainInfoValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBSvgMainInfoValue.dtSvginfoByStationIDAndPointName">
+            <summary>
+            string:appname
+            string:厂站编号与点名构成的关键字(StationID+"-UT_"+pointName)
+            svginfo:厂站与点名对应的svginfo数据列表，厂站和点有可能存在多个图中
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBSvgMainInfoValue.dtSvginfoBySvgID">
+            <summary>
+            项目中图形编号对应的内存值数据列表字典
+            string:appname
+            string:svgid
+            </summary>
+        </member>
+        <member name="F:svgsvr.DBSvgMainInfoValue.dtSvginfoBySvgIDAndGUID">
+            <summary>
+            项目中图形编号对应的内存值数据列表字典
+            string:appname
+            string:svgid+"-UT_"+svgshapeguid
+            </summary>
+        </member>
+        <member name="M:svgsvr.DBSvgMainInfoValue.CloneData(System.Collections.Concurrent.ConcurrentDictionary{System.String,System.Collections.Concurrent.ConcurrentDictionary{System.String,System.Collections.Generic.List{svgsvr.svginfo}}}@,System.Collections.Concurrent.ConcurrentDictionary{System.String,System.Collections.Concurrent.ConcurrentDictionary{System.String,System.Collections.Generic.List{svgsvr.svginfo}}}@)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.DBSvgMainInfoValue.CloneAData(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.DBSvgMainInfoValue.RefreshGlossary(System.String)">
+            <summary>
+            从数据库更新术语表述
+            </summary>
+            <param name="appname"></param>
+        </member>
+        <member name="M:svgsvr.DBSvgMainInfoValue.GetDataFromDB(System.String,System.Int32,System.String,SVGMdl.Appconfiginfo)">
+            <summary>
+            从数据库重新获取某个项目的所有可以编辑数据
+            </summary>
+            <param name="appname"></param>
+            <param name="appid"></param>
+            <param name="svgid"></param>
+        </member>
+        <member name="M:svgsvr.DBSvgMainInfoValue.GetAllDataFromDB">
+            <summary>
+            从数据库中更新所有项目的数据
+            </summary>
+        </member>
+        <member name="T:svgsvr.MemSvgMainInfos">
+             <summary>
+            图元的内存数据
+             </summary>
+        </member>
+        <member name="F:svgsvr.MemSvgMainInfos.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemSvgMainInfos.MemDataLock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemSvgMainInfos.dtMemdtSvginfoByStationIDAndPointName">
+            <summary>
+            string:appname
+            string:厂站编号+"-UT_"+点号,svginfo:数据列表
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemSvgMainInfos.dtMemSvginfoBySvgID">
+            <summary>
+            项目中图形编号对应的内存值数据列表字典
+            string:appname
+            string:svgid
+            </summary>
+        </member>
+        <member name="M:svgsvr.MemSvgMainInfos.GetSvgInfoBySvgID(System.String,System.String,System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="appname"></param>
+            <param name="svgid"></param>
+            <param name="ltime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemSvgMainInfos.InitialSvginfo">
+            <summary>
+            初始化SvgInfo数据
+            </summary>
+        </member>
+        <member name="M:svgsvr.MemSvgMainInfos.RefreshSvginfo(System.String,System.String,System.Int32)">
+            <summary>
+            图形文件发生变化，重新获取数据库中内容
+            </summary>
+            <param name="appname"></param>
+            <param name="svgid"></param>
+            /// <param name="operationtype">1：增加SVG文件节点；2：删除SVG文件节点；3：只修改SVG属性，不修改图元信息；4:修改SVG图元信息;5:增加虚拟SVG文件节点(无图形文件)</param>        
+        </member>
+        <member name="M:svgsvr.MemSvgMainInfos.ChangeSvgInfoValue(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            外部应用系统更新某一个数据时间以及数据值
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="stationname">厂站名</param>
+            <param name="pointname">点名</param>
+            <param name="svalue">值</param>
+            <returns>1:成功更新，0:不存在图形点,2:异常失败</returns>
+        </member>
+        <member name="M:svgsvr.MemSvgMainInfos.ChangeSvgInfoValues(System.Collections.Generic.List{svgsvr.UpdateDataSvgInfo})">
+            <summary>
+            根据应用系统推送过来的数据，更改内存中的数据值
+            </summary>
+            <param name="ltdata">应用系统推送过来的数据</param>
+        </member>
+        <member name="M:svgsvr.MemSvgMainInfos.ChangeSvgInfoValues(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="appname"></param>
+            <param name="ltdata">object:SvgData</param>
+        </member>
+        <member name="T:svgsvr.MySort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.MySort.QuickSort(System.Collections.Generic.List{svgsvr.svginfo},System.Int32,System.Int32)">
+            <summary>
+            快速排序
+            </summary>
+            <param name="si">svginfo数组</param>
+            <param name="l">起始位</param>
+            <param name="r">结束位</param>
+        </member>
+        <member name="M:svgsvr.MySort.Partition(System.Collections.Generic.List{svgsvr.svginfo},System.Int32,System.Int32)">
+            <summary>
+            插座标记位
+            </summary>
+            <param name="si">svginfo数组</param>
+            <param name="l">起始位</param>
+            <param name="r">结束位</param>
+            <returns></returns>
+        </member>
+        <member name="T:svgsvr.UpdateDataSvgInfo">
+            <summary>
+            用于实时推送的post中的stream的结构
+            </summary>
+        </member>
+        <member name="F:svgsvr.UpdateDataSvgInfo.pn">
+            <summary>
+            第一个数据作为特殊数据，pn指明数据类型
+            datatype=1
+            </summary>
+        </member>
+        <member name="F:svgsvr.UpdateDataSvgInfo.sn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.UpdateDataSvgInfo.sv">
+            <summary>
+            第一个数据作为特殊数据，项目代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.UpdateDataSvgInfo.ep">
+            <summary>
+            扩展信息,rf=0(rf:刷新标识),statusvalue=(状态值),twinkle=1(闪烁标识)
+            </summary>
+        </member>
+        <member name="T:svgsvr.appinfodata">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.appinfodata.id">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.appinfodata.name">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="F:svgsvr.appinfodata.parent_id">
+            <summary>
+            父亲项目代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.appinfodata.haschild">
+            <summary>
+            是否有孩子
+            </summary>
+        </member>
+        <member name="F:svgsvr.appinfodata.classname">
+            <summary>
+            类名：名字空间.类名
+            </summary>
+        </member>
+        <member name="F:svgsvr.appinfodata.canquerycontent">
+            <summary>
+            是否允许工作区的内容查询
+            </summary>
+        </member>
+        <member name="M:svgsvr.appinfodata.SetDataTableInfo">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:svgsvr.SvgData">
+            <summary>
+            数据外部来源定义,例如E钥通服务提供的数据源，请勿更改此定义
+            </summary>
+        </member>
+        <member name="F:svgsvr.SvgData.StationName">
+            <summary>
+            设备厂站
+            </summary>
+        </member>
+        <member name="F:svgsvr.SvgData.PointName">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="F:svgsvr.SvgData.Value">
+            <summary>
+            设备状态值
+            </summary>
+        </member>
+        <member name="F:svgsvr.SvgData.LastreFreshTime">
+            <summary>
+            最后一次更新时间
+            </summary>
+        </member>
+        <member name="M:svgsvr.SvgData.SetDataTableInfo">
+            <summary>
+            按照其他类增加此函数，但没有内容，设备状态值不显示，只用来更新接线图中设备状态
+            </summary>
+        </member>
+        <member name="T:svgsvr.svginfo">
+            <summary>
+            图元信息数据接口定义
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo.type">
+            <summary>
+            图形文件类型:mappingtable_id
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo.shape_guid">
+            <summary>
+            图形编号ID
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo.value">
+            <summary>
+            图形编号值
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo.stationname">
+            <summary>
+            厂站名称
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo.pointname">
+            <summary>
+            点名
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo.lastrefreshtime">
+            <summary>
+            上次数据刷新时间
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo.extendparams">
+            <summary>
+            扩展参数
+            </summary>
+        </member>
+        <member name="F:svgsvr.svginfo.svg_id">
+            <summary>
+            图形编号
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo.ullastrefreshtime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.svginfo.svg_stationname_id">
+            <summary>
+            厂站编号
+            </summary>
+        </member>
+        <member name="F:svgsvr.svginfo.glossary">
+            <summary>
+            图元控制对应的术语
+            </summary>
+        </member>
+        <member name="F:svgsvr.svginfo.datatype">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="M:svgsvr.svginfo.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.svginfo.CompareTo(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns>小于0，此实例排序顺序在obj之前，大于0此实例排序顺序在obj后面，=0，相同位置</returns>
+        </member>
+        <member name="T:svgsvr.svginfo_action">
+            <summary>
+            svginfo_action数据接口定义
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo_action.id">
+            <summary>
+            图形文件编号
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo_action.type">
+            <summary>
+            图元类型
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo_action.shape_guid">
+            <summary>
+            图元svg文件对应的编号
+            </summary>
+        </member>
+        <member name="P:svgsvr.svginfo_action.svalue">
+            <summary>
+            图元对应的脚本
+            </summary>
+        </member>
+        <member name="M:svgsvr.svginfo_action.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:svgsvr.SVGNode">
+            <summary>
+            svg图形节点信息
+            </summary>
+        </member>
+        <member name="P:svgsvr.SVGNode.id">
+            <summary>
+            图形文件ID
+            </summary>
+        </member>
+        <member name="P:svgsvr.SVGNode.name">
+            <summary>
+            图形文件名称
+            </summary>
+        </member>
+        <member name="P:svgsvr.SVGNode.desc">
+            <summary>
+            图形文件描述
+            </summary>
+        </member>
+        <member name="P:svgsvr.SVGNode.width">
+            <summary>
+            图形文件宽度
+            </summary>
+        </member>
+        <member name="P:svgsvr.SVGNode.height">
+            <summary>
+            图形文件高度
+            </summary>
+        </member>
+        <member name="P:svgsvr.SVGNode.parent_id">
+            <summary>
+            图形文件父节点编号
+            </summary>
+        </member>
+        <member name="P:svgsvr.SVGNode.parent_fullpath">
+            <summary>
+            父节点路径
+            </summary>
+        </member>
+        <member name="P:svgsvr.SVGNode.filesize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:svgsvr.SVGNode.modifydate">
+            <summary>
+            修改时间,17位格式：yyyymmddhhmmssfff
+            </summary>
+        </member>
+        <member name="F:svgsvr.SVGNode.extendparam">
+            <summary>
+            扩展参数，key=value;key1=value;
+            showorder=1;
+            </summary>
+        </member>
+        <member name="M:svgsvr.SVGNode.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.SVGNode.SetDataTableInfo">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:svgsvr.SVGNodeColor">
+             <summary>
+            svg图形文件背景数据定义
+             </summary>
+        </member>
+        <member name="F:svgsvr.SVGNodeColor.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.SVGNodeColor.color">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:svgsvr.ISVGService">
+            <summary>
+            图形数据服务接口类定义
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:svgsvr.ISVGService.GetSVGNodes(System.String,System.String,System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:svgsvr.ISVGService.GetSVGNodesJson(System.String,System.String,System.String,System.String)" -->
+        <member name="M:svgsvr.ISVGService.GetDatas(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            根据SVG图形文件ID获取SVG文件所有的图形编号信息
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="nodeid">SVG图形文件编号(通过GetSVGNodes或者GetSVGNodesJson服务接口获取SVGNode对象中的id)</param>
+            <param name="lasttime">取大于lasttime时间的刷新数据，如果此值为""，则获取全部数据,格式为yyyyMMddhhmmssffff</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回svginfo对象列表</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.GetDatasJson(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            根据SVG图形文件ID获取SVG文件所有的图形编号信息
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="nodeid">SVG图形文件编号(通过GetSVGNodes或者GetSVGNodesJson服务接口获取SVGNode对象中的id)</param>
+            <param name="lasttime">取大于lasttime时间的刷新数据，如果此值为""，则获取全部数据,格式为yyyyMMddhhmmssffff</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回svginfo对象列表</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.GetDataActions(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据SVG图形文件ID获取SVG文件所有具有操作属性的图形信息
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="nodeid">SVG图形文件编号(通过GetSVGNodes或者GetSVGNodesJson服务接口获取SVGNode对象中的id)</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回svginfo_action对象列表</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.GetDataActionsJson(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据SVG图形文件ID获取SVG文件所有具有操作属性的图形信息
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="nodeid">SVG图形文件编号(通过GetSVGNodes或者GetSVGNodesJson服务接口获取SVGNode对象中的id)</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回svginfo_action对象列表</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.RefreshFile(System.String,System.String,System.Int32)">
+            <summary>
+            更新某个图形文件所有数据
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="fid">图形文件编号</param>
+            <param name="operationtype">操作符号： 1：增加SVG文件节点；2：删除SVG文件节点；3：只修改SVG属性，不修改图元信息；4:修改SVG图元信息;5:增加虚拟SVG文件节点(无图形文件)</param>
+            <returns>1:更新成功，0：更新失败，2：参数错误</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.UpdateData(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新SVG图形文件中指定图形编号的数据
+            </summary>
+            <param name="id">数据编号(在指定的appname中fid与sn、pn可以确定SVG文件中唯一的图形编号;\r\n
+            fname与sn、pn可以确定SVG文件中唯一的图形编号;\r\n
+            fid与id可以确定SVG文件中唯一的图形编号；fname与id可以确定SVG文件中唯一的图形编号。)</param>
+            <param name="sn">厂站名称</param>
+            <param name="pn">编号名称</param>
+            <param name="fid">图形文件编号(fid和fname必须传入其中一个参数，否则无法确定唯一的SVG文件)</param>
+            <param name="fname">图形文件名称</param>
+            <param name="appname">项目名称(应用于单项目系统中该参数可以为空)</param>
+            <param name="svalue">数据值(不允许为空)</param>
+            <returns>int 1：更新成功；0：appname错误；2：SVG文件不存在该ID图形编号；3：SVG文件不存在与sn、pn匹配的图形编号。</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.SetRDDataJson(System.IO.Stream)">
+            <summary>
+            全部数据推送接口
+            </summary>
+            <param name="datas"></param>
+        </member>
+        <member name="M:svgsvr.ISVGService.RefreshData(System.String,System.String,System.String)">
+            <summary>
+            更新SVG图形文件中所有图形编号的数据
+            </summary>
+            <param name="fid">SVG图形文件编号(fid和fname必须传入其中一个参数，在指定的appname中fid或者fname可以确定唯一的SVG文件)</param>
+            <param name="fname">SVG图形文件名称</param>
+            <param name="appname">项目名称(不允许为空)</param>
+            <returns>1:更新成功，0：更新失败</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.DeleteFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            删除某个图形文件
+            </summary>
+            <param name="fname">图形文件名称，与fid参数2者必须设置其一</param>
+            <param name="fid">图形文件名称对应编号，与fname参数2者必须设置其一，如果设置了fid，则忽略fname</param>
+            <param name="appname">图形文件对应的项目名称，如果为空，则将图形服务器中所有的对应图形文件删除</param>
+            <param name="username">删除图形认证的用户名，如果没有启动权限认证则可以为空</param>
+            <param name="pwd">删除图形认证的用户密码</param>
+            <returns>返回结构体ResultData</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.GetSvg(System.String,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            获取svg图形文件数据流
+            </summary>
+            <param name="fname">图形文件名称，与fid参数,2者必须设置其一</param>
+            <param name="fid">图形文件名称对应编号，与fname参数,2者必须设置其一</param>
+            <param name="appname">图形文件对应的项目名称</param>
+            <param name="contenttype">返回的数据流的数据类型，定义：非1：application/octet-stream ； 1：image/svg+xml</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回SVG文件流</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.GetSiv(System.String,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+             获取siv原始图形文件数据流
+            </summary>
+            <param name="fname">图形文件名称，与fid参数,2者必须设置其一</param>
+            <param name="fid">图形文件名称对应编号，与fname参数,2者必须设置其一</param>
+            <param name="appname">图形文件对应的项目名称</param>
+            <param name="contenttype">返回的数据流的数据类型，定义：非1：application/octet-stream ； 1：image/svg+xml</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回siv文件流</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.GetJPG(System.String,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+             获取jpg原始图形文件数据流
+            </summary>
+            <param name="fname">图形文件名称，与fid参数,2者必须设置其一</param>
+            <param name="fid">图形文件名称对应编号，与fname参数,2者必须设置其一</param>
+            <param name="appname">图形文件对应的项目名称</param>
+            <param name="contenttype">返回的数据流的数据类型，定义：非1：application/octet-stream ； 1：image/svg+xml</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回jpg文件流</returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.HeartBeat">
+            <summary>
+            服务运行状态检查接口，在调用方检查访问的值为200，则表示服务在运行
+            </summary>
+        </member>
+        <member name="M:svgsvr.ISVGService.GetRData(System.String,System.String,System.String,System.String)">
+             <summary>
+             通用服务接口，用于获取方法数据,返回xml数据格式
+             </summary>
+             <param name="a">用户名</param>
+             <param name="b">密码</param>
+             <param name="c">方法名（数据来源者自定义的字符串）\r\n
+            1: 获取图形文件背景颜色，返回的对象为svgsvr.SVGNodeColor \r\n
+            　　其定义：方法名：backcolor  参数：d=appname=项目名称;fid=图形文件编号;
+             </param>
+             <param name="d">调用此方法需要的参数。\r\n
+             其定义：key=value[,];key1=value;如果key的取值为多个，则以"，"作为分隔符。参数之间以";"作为分隔符。\r\n
+             项目使用中请避免使用key的关键字（ibegin(数据开始记录号),iend(数据结束记录号),method(方法名),appname(项目代码)),\r\n
+             其中日期格式统一为yyyyMMddhhmmssffff, 目的是统一不同数据库和本地日期描述之间的差异\r\n
+             例子：startdate=201306080821550000;endate=201306090821550000;FactoryName=test;id=1,2,3;ibegin=1;iend=31</param>
+             <returns>传输格式为xml,返回数据对象为MRDDataAll的列表，请使用UTDtCnvrt.dll中的GetContractData方法调用生成,请参考UTDtCnvrt使用说明书
+             </returns>
+        </member>
+        <member name="M:svgsvr.ISVGService.GetRDDataJson(System.String,System.String,System.String,System.String)">
+            <summary>
+            同GetRData接口，只是返回的数据为json数据格式
+            </summary>
+        </member>
+        <member name="M:svgsvr.ISVGService.UpdateDatas(System.IO.Stream)">
+            <summary>
+            全部数据推送接口
+            </summary>
+            <param name="datas"></param>
+        </member>
+        <member name="T:svgsvr.WriteLogType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.WriteLogType.ERROR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.WriteLogType.WARNING">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.WriteLogType.DEBUG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:svgsvr.MemoryData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.MemoryFlagAssembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.MemoryFlagAppname">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.MemoryFlagConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.MemoryFlagLog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.SPERATOR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.lockInitial">
+            <summary>
+            初始化的锁对象
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.Dtf">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.MemoryFlagSivPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.MemoryFlagSvgPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.log">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.lockUpdateData">
+            <summary>
+            更新图元数据锁对象
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.lockFromAppGetData">
+            <summary>
+            从应用系统获取图元值进行更新的锁对象
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.amb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.lockdcAppURData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.lockUpdateGlossyData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.SELFFLAG">
+            <summary>
+            服务代码标识
+            </summary>
+        </member>
+        <member name="F:svgsvr.MemoryData.MemoryFlagMemoryDataType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.MemoryData.CommunicateParam">
+            <summary>
+            将本服务的信息放入内存中，给其他服务使用
+            </summary>
+        </member>
+        <member name="M:svgsvr.MemoryData.InitialLog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.MemoryData.IntialParam">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.RefreshURDataFromService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetSVGNodes(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="appname"></param>
+            <param name="lasttime"></param>
+            <param name="username"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetRData(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            提供给同一进程中的其他服务调用的接口
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.RefreshFile(System.String,System.String,System.Int32)">
+            <summary>
+            由图形上传服务发来的刷新命令
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="fid">图形文件编号</param>
+            <param name="operationtype">1：增加SVG文件节点；2：删除SVG文件节点；3：只修改SVG属性，不修改图元信息；4:修改SVG图元信息;5:增加虚拟SVG文件节点(无图形文件)</param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.CreateAssemblyMem">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:svgsvr.MemoryData.errorcount">
+            <summary>
+            错误个数
+            </summary>
+        </member>
+        <member name="M:svgsvr.MemoryData.ChangeInfoDataFromDataSourceService_All(SVGMdl.Appconfiginfo)">
+            <summary>
+            
+            </summary>
+            <param name="cfg"></param>
+            <returns>0:失败,1:成功,2:部分成功</returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.SaveMainInfoValueToDB(System.Int32,System.Collections.Generic.List{System.Object},System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="appid"></param>
+            <param name="ltData"></param>
+            <param name="ltime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.ChangeInfoDataFromDataSourceService(SVGMdl.Appconfiginfo,System.Collections.Generic.List{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="cfg">配置信息</param>
+            <param name="listName">厂站名或者图形文件名列表</param>
+            <returns>0:失败,1:成功,2:部分成功</returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetParaInfoFromDB(System.String,SVGMdl.Appconfiginfo)">
+            <summary>
+            从数据库中获取框架中所有的项目信息
+            </summary>
+            <param name="appname"></param>
+            <param name="appconfig"></param>
+        </member>
+        <member name="M:svgsvr.MemoryData.OutPutDatabaseinfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:svgsvr.MemoryData.RefreshAppConfig">
+            <summary>
+            通知刷新项目对应的数据源
+            </summary>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetAppDataFromDataSourceService(System.String)">
+            <summary>
+            从应用系统获取所有图形的图元数据值，保持一致性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.DeleteSvgNode(svgsvr.DataSvg)">
+            <summary>
+            从内存中删除图元数据
+            </summary>
+            <param name="sn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetSvgNodeFromMem(System.String)">
+            <summary>
+            从内存中根据svgid获取对应的svgnode数据
+            </summary>
+            <param name="svgid">svg编号</param>
+            <returns>返回编号为svgid的svgnode数据,如果没有找到，则返回空</returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.SetNavigateData(SVGMdl.UtdrawModel,System.Data.DataView,UTDtCnvrt.NavigateData)">
+            <summary>
+            根据图形编号获取对应的NavigateData信息
+            </summary>
+            <param name="um"></param>
+            <param name="dv"></param>
+            <param name="sn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.SetContractSvgNode(System.Data.DataRowView,svgsvr.SVGNode)">
+            <summary>
+            根据图形编号获取对应的SVGNode信息
+            </summary>
+            <param name="drvNode"></param>
+            <param name="sn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetContractSvgNodeFromDB(SVGMdl.UtdrawModel,svgsvr.SVGNode)">
+            <summary>
+            根据图形编号获取对应的SVGNode信息
+            </summary>
+            <param name="um"></param>
+            <param name="sn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.SetSvginfo_Action(System.Data.DataRowView,svgsvr.svginfo_action)">
+            <summary>
+            
+            </summary>
+            <param name="drvInfo"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetSvgInfoActionMenuDataFromDB(System.String,System.String,System.String,System.String)">
+            <summary>
+            从数据库中获取菜单图元数据
+            </summary>
+            <param name="svg_id"></param>
+            <param name="appname"></param>
+            <param name="username"></param>
+            <param name="businessname">业务代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetSvgInfoActionMenuDataFromDB_AppGlossary(System.String,System.String,System.String,System.String)">
+            <summary>
+            从数据库中获取菜单图元数据
+            </summary>
+            <param name="svg_id"></param>
+            <param name="appname"></param>
+            <param name="username"></param>
+            <param name="businessname">业务代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetSvgInfoActionLinkDataFromDB(System.String)">
+            <summary>
+            从数据库中获取可以操作的图元数据
+            </summary>
+            <param name="svg_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetSvgInfoDataFromDB(System.String,System.UInt64)">
+            <summary>
+            从数据库中获取初始的SvgInfo数据,其值并不是最新数据
+            </summary>
+            <param name="svg_id">图形编号</param>
+            <param name="lasttime">获取时间</param>
+            <returns>返回修改后的SVGNode数据</returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetDatas(System.String,System.String,System.String)">
+            <summary>
+            获取图元数据
+            </summary>
+            <param name="appname"></param>
+            <param name="svgid"></param>
+            <param name="lasttime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.ChangeInfoData(System.Collections.Generic.List{System.Object},System.String)">
+            <summary>
+            根据sd更新内存中的emp数据
+            </summary>
+            <param name="sd">从网络服务获取到的图元数据</param>
+            <param name="appname">项目代码</param>
+            <returns>返回重新设置时间和当前值的图形节点</returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetDataFromAppWebService(System.String,System.String,System.String@)">
+            <summary>
+            从网络服务获取数据
+            </summary>
+            <param name="filename">图形文件名或者是厂站名称，根据配置而定</param>
+            <param name="host">网络服务地址</param>
+            <param name="errormessage">异常信息</param>
+            <returns>返回获取到的数据当前值</returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetDataFromUserRightWebService(System.String,System.String,System.String,System.String,System.Type,System.String@)">
+            <summary>
+            从网络服务获取数据
+            </summary>
+            <param name="appnamename">项目代码</param>
+            <param name="businessname">业务代码</param>
+            <param name="host">网络服务地址</param>
+            <param name="errormessage">错误信息</param>
+            <returns>返回获取到的数据当前值</returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.ThreadFunc_GetDataFromUserRightCrptyWebService(System.Object)">
+            <summary>
+            从用户权限服务获取加密信息
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:svgsvr.MemoryData.ThreadFunc_GetDataFromUserRightWebService(System.Object)">
+            <summary>
+            从用户权限服务获取接线图权限控制数据
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:svgsvr.MemoryData.ThreadFunc_GetDefaultDataFromUserRightWebService(System.Object)">
+            <summary>
+            从用户权限服务获取接线图权限控制数据
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:svgsvr.MemoryData.CheckValidRefreshTime(System.String)">
+            <summary>
+            检查刷新时间格式是否正确
+            </summary>
+            <param name="lasttime">yyyyMMddHHmmssffff</param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.DeleteSvgFile(System.String,System.String,System.String)">
+            <summary>
+            删除图形文件
+            </summary>
+            <param name="fname"></param>
+            <param name="fid"></param>
+            <param name="appname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.Backcolor(System.String,System.String)">
+            <summary>
+            获取图形背景图颜色
+            </summary>
+            <param name="appname"></param>
+            <param name="svgid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetChildNodes(System.String,System.String,System.String)">
+            <summary>
+            获取图形孩子节点
+            </summary>
+            <param name="paramdata"></param>
+            <param name="username"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.QueryData(System.String,System.String,System.String)">
+            <summary>
+            图形导航树中的搜索功能
+            </summary>
+            <param name="paramdata">d参数</param>
+            <param name="username"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetParentID(System.String)">
+            <summary>
+            获取父亲图形数据
+            </summary>
+            <param name="paramdata">d参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetDataFromBaseService">
+            <summary>
+            获取基础服务项目数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.SaveConfigToAppDataSource">
+            <summary>
+            将config.ini的配置保存到图形数据库中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.SaveAppParamToParamInfo">
+            <summary>
+            将config.ini的配置保存到图形数据库中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.MemoryData.ThreadFun_UserRight(svgsvr.AppURCntrlThreadData)">
+            <summary>
+            用户权限数据线程处理过程
+            </summary>
+            <param name="obj">用户权限数据</param>
+        </member>
+        <member name="M:svgsvr.MemoryData.ThreadFun_UserRightCrpt(svgsvr.AppCryptThreadData)">
+            <summary>
+            用户权限数据线程处理过程
+            </summary>
+            <param name="obj">用户权限数据</param>
+        </member>
+        <member name="M:svgsvr.MemoryData.ThreadFun_UserRightDefaultSVG(svgsvr.AppURDefalutSVGThreadData)">
+            <summary>
+            用户权限数据线程处理过程
+            </summary>
+            <param name="obj">用户权限数据</param>
+        </member>
+        <member name="M:svgsvr.MemoryData.SetRData(System.IO.Stream)">
+            <summary>
+            大数量的更新实时图元数据
+            </summary>
+            <param name="sourceStream">数据流</param>
+        </member>
+        <member name="M:svgsvr.MemoryData.UpdateDatas(System.IO.Stream)">
+            <summary>
+            大数量的更新实时图元数据
+            </summary>
+            <param name="sourceStream">数据流</param>
+        </member>
+        <member name="M:svgsvr.MemoryData.GetDataControlInfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            获得控制命令 
+            </summary>
+            <param name="appname"></param>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_updatedata">
+            <summary>
+            是否显示更新数据状态的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_getdatas">
+            <summary>
+            是否显示获取数据的调试信息
+            </summary>        
+        </member>
+        <member name="F:svgsvr.MyLog.debug_getdataactions">
+            <summary>
+            是否显示获取操作数据的调试信息
+            </summary>        
+        </member>
+        <member name="F:svgsvr.MyLog.debug_getsvgnodes">
+            <summary>
+            是否显示获取图形数据的调试信息
+            </summary>        
+        </member>
+        <member name="F:svgsvr.MyLog.debug_refreshfile">
+            <summary>
+            是否显示刷新文件的调试信息
+            </summary>        
+        </member>
+        <member name="F:svgsvr.MyLog.debug_setdata">
+            <summary>
+            是否显示更新大数据状态的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_refreshdata">
+            <summary>
+            是否显示应用系统通知刷新数据值的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_refreshdatapost">
+            <summary>
+            是否显示图形文件结束本批次图形上传，图形数据服务从应用系统获取多个图形数据值的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_deletefile">
+            <summary>
+            是否显示删除图形文件的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_getsvg">
+            <summary>
+            是否显示获取svg图形文件的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_getsiv">
+            <summary>
+            是否显示获取siv图形文件的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_getjpg">
+            <summary>
+            是否显示获取jpg图形文件的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_heartbeat">
+            <summary>
+            是否显示获取心态检测的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_getrdata">
+            <summary>
+            是否显示获取通用接口的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.debug_getdatacontrolinfo">
+            <summary>
+            是否显示获取图元控制数据的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_setdata">
+            <summary>
+            是否记录更新数据状态的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_getdatas">
+            <summary>
+            是否记录获取数据的调试信息
+            </summary>        
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_getdataactions">
+            <summary>
+            是否记录获取操作数据的调试信息
+            </summary>        
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_getsvgnodes">
+            <summary>
+            是否记录获取图形数据的调试信息
+            </summary>        
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_refreshfile">
+            <summary>
+            是否记录刷新文件的调试信息
+            </summary>        
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_updatedatas">
+            <summary>
+            是否记录更新大数据状态的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_refreshdata">
+            <summary>
+            是否记录应用系统通知刷新数据值的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_refreshdatapost">
+            <summary>
+            是否显示图形文件结束本批次图形上传，图形数据服务从应用系统获取多个图形数据值的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_deletefile">
+            <summary>
+            是否显示删除图形文件的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_getsvg">
+            <summary>
+            是否显示获取svg图形文件的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_getsiv">
+            <summary>
+            是否显示获取siv图形文件的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_getjpg">
+            <summary>
+            是否显示获取jpg图形文件的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_heartbeat">
+            <summary>
+            是否显示获取心态检测的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_getrdata">
+            <summary>
+            是否显示获取通用接口的调试信息
+            </summary>
+        </member>
+        <member name="F:svgsvr.MyLog.writelog_getdatacontrolinfo">
+            <summary>
+            是否保存获取图元控制数据的调试信息
+            </summary>
+        </member>
+        <member name="T:svgsvr.SVGService">
+            <summary>
+            图形数据服务实现类
+            </summary>
+        </member>
+        <member name="F:svgsvr.SVGService.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:svgsvr.SVGService.GetSVGNodes(System.String,System.String,System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:svgsvr.SVGService.GetSVGNodesJson(System.String,System.String,System.String,System.String)" -->
+        <member name="M:svgsvr.SVGService.GetDatas(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            根据SVG图形文件ID获取SVG文件所有的图形编号信息
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="nodeid">SVG图形文件编号(通过GetSVGNodes或者GetSVGNodesJson服务接口获取SVGNode对象中的id)</param>
+            <param name="lasttime">取大于lasttime时间的刷新数据，如果此值为""，则获取全部数据,格式为yyyyMMddhhmmssffff</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回svginfo对象列表</returns>
+        </member>
+        <member name="M:svgsvr.SVGService.GetDatasJson(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            根据SVG图形文件ID获取SVG文件所有的图形编号信息
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="nodeid">SVG图形文件编号(通过GetSVGNodes或者GetSVGNodesJson服务接口获取SVGNode对象中的id)</param>
+            <param name="lasttime">取大于lasttime时间的刷新数据，如果此值为""，则获取全部数据,格式为yyyyMMddhhmmssffff</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回svginfo对象列表</returns>
+        </member>
+        <member name="M:svgsvr.SVGService.GetDataActions(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据SVG图形文件ID获取SVG文件所有具有操作属性的图形信息
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="nodeid">SVG图形文件编号(通过GetSVGNodes或者GetSVGNodesJson服务接口获取SVGNode对象中的id)</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回svginfo_action对象列表</returns>
+        </member>
+        <member name="M:svgsvr.SVGService.GetDataActionsJson(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据SVG图形文件ID获取SVG文件所有具有操作属性的图形信息
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="nodeid">SVG图形文件编号(通过GetSVGNodes或者GetSVGNodesJson服务接口获取SVGNode对象中的id)</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回svginfo_action对象列表</returns>
+        </member>
+        <member name="M:svgsvr.SVGService.RefreshFile(System.String,System.String,System.Int32)">
+            <summary>
+            由图形文件服务给来的通知，图形文件发生了变化，需要更新内存中的缓存数据
+            </summary>
+            <param name="appname">项目代码</param>
+            <param name="fid"></param>
+            <param name="operationtype">1：增加SVG文件节点；2：删除SVG文件节点；3：只修改SVG属性，不修改图元信息；4:修改SVG图元信息;5:增加虚拟SVG文件节点(无图形文件)</param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.SVGService.UpdateData(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            根据配置从内存或数据库更新某个厂站的图元数据值
+            </summary>
+            <param name="id"></param>
+            <param name="sn"></param>
+            <param name="pn"></param>
+            <param name="fid"></param>
+            <param name="fname"></param>
+            <param name="appname"></param>
+            <param name="svalue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:svgsvr.SVGService.SetRDDataJson(System.IO.Stream)">
+            <summary>
+            应用系统大数据量更新图元信息
+            </summary>
+            <param name="datas">实时图元信息</param>
+        </member>
+        <member name="M:svgsvr.SVGService.UpdateDatas(System.IO.Stream)">
+            <summary>
+            全部数据推送接口
+            </summary>
+            <param name="datas"></param>
+        </member>
+        <member name="M:svgsvr.SVGService.RefreshData(System.String,System.String,System.String)">
+            <summary>
+            由应用系统发来通知，从应用系统重新获取图形或者某个厂站的图元数据,根据配置更新内存或者数据库
+            </summary>
+            <param name="fname"></param>
+            <param name="appname"></param>
+            <param name="fid"></param>
+        </member>
+        <member name="M:svgsvr.SVGService.DeleteFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            删除某个图形文件
+            </summary>
+            <param name="fname">图形文件名称，与fid参数2者必须设置其一</param>
+            <param name="fid">图形文件名称对应编号，与fname参数2者必须设置其一，如果设置了fid，则忽略fname</param>
+            <param name="appname">图形文件对应的项目名称，如果为空，则将图形服务器中所有的对应图形文件删除</param>
+            <param name="username">删除图形认证的用户名，如果没有启动权限认证则可以为空</param>
+            <param name="pwd">删除图形认证的用户密码</param>
+            <returns>返回结构体ResultData</returns>
+        </member>
+        <member name="M:svgsvr.SVGService.GetSvg(System.String,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            获取svg图形文件数据流
+            </summary>
+            <param name="fname">图形文件名称，与fid参数,2者必须设置其一</param>
+            <param name="fid">图形文件名称对应编号，与fname参数,2者必须设置其一</param>
+            <param name="appname">图形文件对应的项目名称</param>
+            <param name="contenttype">返回的数据流的数据类型，定义：非1：application/octet-stream ； 1：image/svg+xml</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回SVG文件流</returns>
+        </member>
+        <member name="M:svgsvr.SVGService.GetSiv(System.String,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+             获取siv原始图形文件数据流
+            </summary>
+            <param name="fname">图形文件名称，与fid参数,2者必须设置其一</param>
+            <param name="fid">图形文件名称对应编号，与fname参数,2者必须设置其一</param>
+            <param name="appname">图形文件对应的项目名称</param>
+            <param name="contenttype">返回的数据流的数据类型，定义：非1：application/octet-stream ； 1：image/svg+xml</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回siv文件流</returns>
+        </member>
+        <member name="M:svgsvr.SVGService.GetJPG(System.String,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+             获取jpg原始图形文件数据流
+            </summary>
+            <param name="fname">图形文件名称，与fid参数,2者必须设置其一</param>
+            <param name="fid">图形文件名称对应编号，与fname参数,2者必须设置其一</param>
+            <param name="appname">图形文件对应的项目名称</param>
+            <param name="contenttype">返回的数据流的数据类型，定义：非1：application/octet-stream ； 1：image/svg+xml</param>
+            <param name="username">用户名</param>
+            <param name="pwd">密码</param>
+            <returns>返回jpg文件流</returns>
+        </member>
+        <member name="M:svgsvr.SVGService.HeartBeat">
+            <summary>
+            心跳检测
+            </summary>
+        </member>
+        <member name="M:svgsvr.SVGService.GetRData(System.String,System.String,System.String,System.String)">
+             <summary>
+             通用服务接口，用于获取方法数据,返回xml数据格式
+             </summary>
+             <param name="a">用户名</param>
+             <param name="b">密码</param>
+             <param name="c">方法名（数据来源者自定义的字符串）\r\n
+            1: 获取图形文件背景颜色，返回的对象为svgsvr.SVGNodeColor \r\n
+            　　其定义：方法名：backcolor  参数：d=appname=项目名称;fid=图形文件编号;
+             </param>
+             <param name="d">调用此方法需要的参数。\r\n
+             其定义：key=value[,];key1=value;如果key的取值为多个，则以"，"作为分隔符。参数之间以";"作为分隔符。\r\n
+             项目使用中请避免使用key的关键字（ibegin(数据开始记录号),iend(数据结束记录号),method(方法名),appname(项目代码)),\r\n
+             其中日期格式统一为yyyyMMddhhmmssffff, 目的是统一不同数据库和本地日期描述之间的差异\r\n
+             例子：startdate=201306080821550000;endate=201306090821550000;FactoryName=test;id=1,2,3;ibegin=1;iend=31</param>
+             <returns>传输格式为xml,返回数据对象为MRDDataAll的列表，请使用UTDtCnvrt.dll中的GetContractData方法调用生成,请参考UTDtCnvrt使用说明书
+             </returns>
+        </member>
+        <member name="M:svgsvr.SVGService.GetRDDataJson(System.String,System.String,System.String,System.String)">
+            <summary>
+            同GetRData接口，只是返回的数据为json数据格式
+            </summary>
+        </member>
+        <member name="T:svgsvr.ThreadData">
+            <summary>
+            线程数据类
+            </summary>
+        </member>
+        <member name="F:svgsvr.ThreadData.filename">
+            <summary>
+            图形文件名称
+            </summary>
+        </member>
+        <member name="F:svgsvr.ThreadData.host">
+            <summary>
+            网络服务地址
+            </summary>
+        </member>
+        <member name="F:svgsvr.ThreadData.Config">
+            <summary>
+            项目配置数据
+            </summary>
+        </member>
+        <member name="F:svgsvr.ThreadData.da">
+            <summary>
+            项目数据
+            </summary>
+        </member>
+        <member name="T:svgsvr.AppURCntrlThreadData">
+            <summary>
+            用户权限线程数据类
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURCntrlThreadData.appname">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURCntrlThreadData.businessname">
+            <summary>
+            业务代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURCntrlThreadData.userrighthost">
+            <summary>
+            用户权限地址
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURCntrlThreadData.Config">
+            <summary>
+            配置数据
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppURCntrlThreadData.dcSvgURData">
+            <summary>
+            string:webuser
+            </summary>
+        </member>
+        <member name="T:svgsvr.AppCryptThreadData">
+            <summary>
+            用户权限加密数据类
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppCryptThreadData.appname">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppCryptThreadData.businessname">
+            <summary>
+            业务代码
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppCryptThreadData.userrighthost">
+            <summary>
+            用户权限地址
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppCryptThreadData.Config">
+            <summary>
+            配置数据
+            </summary>
+        </member>
+        <member name="F:svgsvr.AppCryptThreadData.dcData">
+            <summary>
+            string:webuser
+            </summary>
+        </member>
+    </members>
+</doc>

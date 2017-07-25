@@ -1,0 +1,1309 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Web;
+using System.Text;
+using System.Reflection;
+using System.ComponentModel;
+using System.Linq;
+using Aspose.Cells;
+using System.IO;
+using System.Web.Security;
+
+/// <summary>
+///TableView 的摘要说明
+/// </summary>
+namespace AppCode
+{
+    public class UTUI
+    {
+        protected static string sGroupSperator = "_UT_";
+        static Workbook wb = new Workbook();
+
+        static Worksheet worksheet = null;
+        public UTUI()
+        {
+            //
+            //TODO: 在此处添加构造函数逻辑
+            //
+        }
+        
+        /// <summary>
+        /// 多个用户登录，判断角色是否一致，不一致退出
+        /// </summary>
+        public static void RoleChanged()
+        {
+           // HttpContext currenthttp = HttpContext.Current;
+            if (string.IsNullOrEmpty(LoginUserModel.UserName))
+            {
+                ///currenthttp.Response.Write("请重新登录");
+                //currenthttp.Response.End();
+            }
+            else
+            {
+                /*
+                if (!string.IsNullOrEmpty(currenthttp.Request["RoleName"]))
+                {
+                    string Role = GetRoles().ToLower();
+
+                    if (!Roles.IsUserInRole(currenthttp.Request["RoleName"], Role))
+                    {
+                        currenthttp.Response.Write(string.Format("请重新登录,{0}用户已经登录", currenthttp.User.Identity.Name));
+                        currenthttp.Response.End();
+                    }
+                }
+                */
+            }
+        }
+        /// <summary>
+        /// 通用多个文件上传函数
+        /// </summary>
+        /// <param name="MyFileCollection">要上传的文件群(MyFileCollection=Request.Files)</param>
+        /// <param name="sPath">保存上传文件的路径</param>
+        /// <returns>返回文件是否上传成功</returns>	
+        public static string Upload(HttpFileCollection MyFileCollection, string sPath)
+        {
+            string NewFile = "";
+            string filename = "";
+            HttpContext context = HttpContext.Current;
+            string sNewPath = context.Server.MapPath(sPath);
+            try
+            {
+
+                for (int iFile = 0; iFile < MyFileCollection.Count; iFile++)
+                {
+                    filename = MyFileCollection[iFile].FileName;
+                    if ((MyFileCollection[iFile].ContentLength / 1024) > 15000)
+                    {
+
+                    }
+                    if (MyFileCollection[iFile].ContentLength > 0)
+                    {
+                        int i = filename.LastIndexOf("\\");
+                        NewFile = filename.Substring(i).ToLower();
+                        if (NewFile.IndexOf(".jpg") < 0 && NewFile.IndexOf(".gif") < 0 && NewFile.IndexOf(".png") < 0 && NewFile.IndexOf(".bmp") < 0)
+                        {
+                            return "上传失败，只能上传图片文件";
+                        }
+                        MyFileCollection[iFile].SaveAs(sNewPath + NewFile);
+                    }
+                }
+            }
+            catch (Exception Err)
+            {
+                return "上传失败," + Err.Message.ToString() + sNewPath;
+
+            }
+            return "上传成功";
+        }
+       
+        public static string GetRoles()
+        {
+            //string roles = System.Web.Security.Roles.GetRolesForUser()[0].Replace("u", "U").Replace("j", "J").Replace("g", "G");
+            //LoginUserModel lum = new LoginUserModel();
+            //return lum.GetRoles();
+            if (HttpContext.Current.Session == null) return "user";
+            Object roles = HttpContext.Current.Session["RoleType"];
+            if (roles == null) return "user";
+            return roles.ToString();
+        }
+
+        /// <summary>
+        /// 通过描述，获取一个枚举
+        /// </summary>
+        /// <param name="enumType">枚举类型</param>
+        /// <param name="strDesc">枚举描述</param>
+        /// <returns></returns>
+        public static object GetEnumValueByDescription(Type enumType, string type)
+        {
+            string strDesc = type;
+            if (enumType == null || string.IsNullOrEmpty(strDesc))
+            {
+                return null;
+            }
+            FieldInfo[] fis = enumType.GetFields();
+            foreach (FieldInfo fi in fis)
+            {
+                DescriptionAttribute[] atts = (DescriptionAttribute[])fi.GetCustomAttributes(typeof(DescriptionAttribute), false);
+                if (atts != null && atts.Length > 0)
+                {
+                    string curDesc = atts[0].Description;
+                    if (string.Compare(TrimString(curDesc), TrimString(strDesc), true) == 0)
+                    {
+                        return fi.GetValue(null);
+                    }
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 去掉字符串前面或末尾的空格, 如果字符串为null，则返回""
+        /// </summary>
+        /// <param name="strText">字符串</param>
+        /// <returns>处理后的字符串</returns>
+        public static string TrimString(string strText)
+        {
+            if (string.IsNullOrEmpty(strText))
+            {
+                return "";
+            }
+            else
+            {
+                return strText.Trim();
+            }
+        }
+
+        private static List<string> GetColumnName(DataTable dtbody, int iBegin)
+        {
+            List<string> list = new List<string>();
+            for (int iHead = iBegin; iHead < dtbody.Columns.Count; iHead++)
+            {
+                string columnName = dtbody.Columns[iHead].ColumnName.Trim();
+                if (columnName.EndsWith("$"))
+                {
+                    columnName = columnName.Substring(0, columnName.Length - 1);
+                }
+                list.Add(columnName);
+            }
+            return list;
+        }
+        /// <summary>
+        /// 返回表格数据
+        /// </summary>
+        /// <param name="dtbody">DataTable</param>
+        /// <param name="sColWidth">每个字段的宽度</param>
+        /// <param name="bHeader">是否要表头</param>
+        /// <param name="bAdd">是否增加界面</param>
+        /// <returns></returns>
+        public static string TableBody(DataTable dtbody, string[] sColWidth, bool bAdd, int ibegin, int iMergeCell,string[] aImageColumn,string[] aMergeInfo)
+        {
+            HttpContext context = HttpContext.Current;
+            StringBuilder sb = new StringBuilder();
+            string sHeaderName = "";
+            string sdisplay = "";
+            bool bGroup = false;            
+            int iBegin = 0;
+            int iBegRow = 2;
+            if (bAdd)//有增加界面
+            {
+                iBegin = 1;//前面有序号
+                iBegRow = 1;
+            }
+            
+            int[] aImageIndex = null;
+            if (aImageColumn != null)
+            {
+                aImageIndex = new int[aImageColumn.Length];
+            }
+
+            bool bExcel = false;
+            if (context.Request["ToExcel"] == "1")
+            {
+                bExcel = true;
+            }
+
+            List<string> list = GetColumnName(dtbody, iBegin);
+
+            #region 表头
+            Dictionary<string, List<string>> dic = GetHeadStructList(list);
+            foreach (KeyValuePair<string, List<string>> kvp in dic)
+            {
+                if (kvp.Value.Count > 1)
+                {
+                    bGroup = true;
+                    break;
+                }
+            }
+            // HttpContext.Current.Response.Write(bGroup.ToString() + "<br>");
+            sb.Append(@" <table  style='width:100%'  border='0' cellpadding='0' cellspacing='0'  >");
+            sb.Append("<tbody id='spanrightmenu' >");
+            #region 合并表头
+            if (bGroup)
+            {
+                int icell = 0;
+                int icell2 = 0;
+                int ipa = 0;
+                sb.Append("<tr height='20'  >");
+                if (bExcel)
+                {
+                    worksheet = wb.Worksheets[0];
+                    //  wb.Worksheets.Add("ut");                   
+                }
+                Cell cell = null;
+                //   HttpContext.Current.Response.Write(icell2.ToString() + "<br>");
+                foreach (KeyValuePair<string, List<string>> kvp in dic)
+                {
+                    if (bExcel)
+                    {
+                        cell = worksheet.Cells[0, icell];
+                        cell.Style.HorizontalAlignment = TextAlignmentType.Center;
+                        cell.PutValue(kvp.Key);
+                    }
+                    if (ipa == 0)
+                        sb.Append(string.Format(@"<td  style='width:60px' nowrap  rowspan='2'  id='td{0}'  onmousedown=""f_getName('{0}')""  class='t2' >
+                     &nbsp;&nbsp;{0}&nbsp;&nbsp;</td>", "序号"));
+                    if (kvp.Value.Count == 1)
+                    {
+                        if (bExcel)
+                        {
+                            Cells cells = worksheet.Cells;//单元格                            
+                            cells.Merge(0, icell, 2, 1);
+                        }
+                        // 修正Bug, 处理单个带 '-' 的字段 @ 2012-01-18                        
+                        sb.Append(string.Format(@"<td rowspan='2' nowrap id='td{0}'  onmousedown=""f_getName('{0}')""  class='t2'>&nbsp;&nbsp;{0}&nbsp;&nbsp;</td>", kvp.Key));
+                        icell++;
+                        icell2++;
+                        // HttpContext.Current.Response.Write(icell2.ToString() + "|" + kvp.Key + "<br>");
+                    }
+                    else
+                    {
+                        if (bExcel)
+                        {
+                            for (int iList = 0; iList < kvp.Value.Count; iList++)
+                            {
+                                sHeaderName = kvp.Value[iList].Replace(sGroupSperator, "");
+
+                                cell = worksheet.Cells[1, icell2];
+                                //   HttpContext.Current.Response.Write("|" + icell2 +"|"+ sHeaderName + "<br>");
+                                cell.Style.HorizontalAlignment = TextAlignmentType.Center;
+                                cell.PutValue(sHeaderName);
+                                icell2++;
+                            }
+                            Cells cells = worksheet.Cells;//单元格 
+                            cells.Merge(0, icell, 1, kvp.Value.Count);
+                            icell += kvp.Value.Count;
+
+                        }
+                        sb.Append(string.Format(@"<td colspan='{0}' nowrap  id='td{1}'  onmousedown=""f_getName('{1}')""  align='center'  class='t2' >&nbsp;&nbsp;{1}&nbsp;&nbsp;</td>", kvp.Value.Count, kvp.Key.Trim()));
+                    }
+                    ipa++;
+                }
+                sb.Append("</tr>");
+                sb.Append("<tr  height='20' >");
+                foreach (KeyValuePair<string, List<string>> kvp in dic)
+                {
+                    if (kvp.Value.Count >= 2)
+                    {
+                        for (int iList = 0; iList < kvp.Value.Count; iList++)
+                        {
+                            sHeaderName = kvp.Value[iList].Replace(sGroupSperator, "");
+                            sb.Append(string.Format(@"<td  nowrap   class='t2'  id='td{1}' title='{1}' onmousedown=""f_getName('{1}')""  >&nbsp;&nbsp;{0}&nbsp;&nbsp;</td>", sHeaderName, kvp.Key.Trim()));
+                        }
+                    }
+                }
+                sb.Append("</tr>");
+
+
+            }
+            #endregion
+
+            #region 无表头合并
+            else
+            {
+                
+                int iColWIdth = 0;
+
+                sb.Append("<tr  height='20' class='tableHead'  >");
+                sb.Append(string.Format(@"<td  nowrap style='width:60px'   id='td{0}'  onmousedown=""f_getName('{0}')""  class='t2' >&nbsp;&nbsp;{0}&nbsp;&nbsp;</td>", "序号"));
+                for (int iHead = iBegin; iHead < dtbody.Columns.Count; iHead++)
+                {                  
+                    sHeaderName = dtbody.Columns[iHead].ToString().Trim();
+                    if (aImageColumn != null)
+                    {
+                        for (int i = 0; i < aImageColumn.Length; i++)
+                        {
+                            string s = aImageColumn[i];
+                            if (s == sHeaderName)
+                            {
+                                aImageIndex[i] = iHead;
+                                break;
+                            }
+                        }
+                    }
+                    // 修正Bug, 处理单个带 '-' 的字段 @ 2012-01-17
+                    int iIndexPos = sHeaderName.IndexOf(sGroupSperator);
+                    if (iIndexPos > 0)
+                    {
+                        sHeaderName = sHeaderName.Remove(iIndexPos);
+                    }
+                    sdisplay = "";
+                    if (Convert.ToInt16(sColWidth[iHead]) == 0)
+                    {
+                        sdisplay = ";display:none";
+                    }
+                    iColWIdth = Convert.ToInt32(sColWidth[iHead]);
+                    iColWIdth = 18 * sHeaderName.Length;
+                    if (iColWIdth < 100)
+                    {
+                        iColWIdth = 100;
+                    }
+                    sb.Append(string.Format(@"<td nowrap  style='width:{0}{2}' id='td{1}' onmousedown=""f_getName('{1}')"" class='t2'>&nbsp;&nbsp;{1}&nbsp;&nbsp;</td>", iColWIdth, sHeaderName, sdisplay));
+                }
+                sb.Append("</tr>");
+                if (bExcel)
+                {
+                    AddHeader(dtbody, bAdd);
+                }
+            }
+            #endregion
+
+            sb.Append("</tbody>");
+            #endregion
+
+            #region 表体
+            int iRow = 0;
+            string bgColor = "";
+            string sClick = "";
+            string std = "";
+            if (bAdd)
+            {
+                sClick = " onclick='f_choose(this)'";
+            }
+            string scolname = "";
+            string scolnametd = "";
+            string[,] sCol = new string[dtbody.Rows.Count, dtbody.Columns.Count];
+            int iMergeNum = 0;
+            string PresColumnName = "";//前一个字段名称
+            string sCompateData = "";//临时比较字段的值   
+            // HttpContext.Current.Response.Write(iMergeCell.ToString() + ">" + iBegin + "<br>");
+            for (int m = 0; m < dtbody.Rows.Count; m++)
+            //foreach (DataRow dr in dtbody.Rows)
+            {
+                DataRow dr = dtbody.Rows[m];
+                if (iRow % 2 == 0)
+                {
+                    bgColor = "class='t0'";
+                    std = "class='td0'";
+                }
+                else
+                {
+                    bgColor = "class='t1'";
+                    std = "class='td1'";
+                }
+                sdisplay = "";
+                if (m == 0 || m == 1)
+                {
+                    sdisplay = ";display:none";
+                }
+                sb.Append(string.Format("<tr {0} id='jerker' {1} style='cursor:hand{4}' rowid='{2}' KeyFieldName='{3}'>", bgColor, sClick, dr[dtbody.Columns[0]].ToString(), dtbody.Columns[0].ColumnName.ToString(), sdisplay));
+                sb.Append(string.Format("<td {0} title='td序号' id='td序号'>&nbsp;&nbsp;{1}</td>", std, (ibegin++)-2));
+                for (int iHead = iBegin; iHead < dtbody.Columns.Count; iHead++)
+                {
+                    sdisplay = "";
+                    if (Convert.ToInt16(dtbody.Rows[1][iHead])==0)
+                    {
+                        sdisplay = "display:none";
+                    }
+
+                    scolname = dtbody.Columns[iHead].ToString();//当前字段名称               
+                    if (scolname.IndexOf(sGroupSperator) > 0)
+                    {
+                        scolnametd = scolname.Substring(0, scolname.IndexOf(sGroupSperator));
+                    }
+                    else
+                    {
+                        scolnametd = scolname;
+                    }
+                    // Mod @ 2012-05-17
+                    string sColData = dr[scolname].ToString()/*.Replace(" 0:00:00", "").Trim()*/;//显示字段数据
+                    iMergeNum = 0;
+                    if (sColData.Contains("合 计"))
+                    {
+                        iMergeCellOfSameRow(dtbody, iRow, iHead, ref iMergeNum);
+                        if (iMergeNum > 1)//合并列
+                        {
+                            if (iHead == iBegin)
+                            {
+                                sb.Append(string.Format("<td align='center' {0} id='td{2}' colspan='{3}'>&nbsp;&nbsp;{1}&nbsp;&nbsp;</td>", std, sColData, scolnametd.Trim(), iMergeNum));
+                                if (bExcel)
+                                {
+                                    Cells cells = worksheet.Cells;//单元格 
+                                    cells[iRow + iBegRow, iHead - iBegin].Style.HorizontalAlignment = TextAlignmentType.Center;
+                                    cells.Merge(iRow + iBegRow, iHead - iBegin, 1, iMergeNum);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            sb.Append(string.Format("<td {0} id='td{2}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd.Trim()));
+                        }
+                    }
+                    else
+                        if (iMergeCell == 0 || iHead > iMergeCell + (iBegin - 1))//正常
+                        {
+                            bool isImage = false;
+                            if (aImageIndex != null)
+                            {
+                                foreach (int idex in aImageIndex)
+                                {
+                                    if (iHead == idex)
+                                    {
+                                        isImage = true;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (!isImage)
+                            {
+                                sb.Append(string.Format("<td {0} id='td{2}' style='{3}' >&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd.Trim(),sdisplay));
+                            }
+                            else
+                            {
+                                string s = "./photo.aspx/?imgsrc=" + HttpUtility.UrlEncode(sColData);
+                                sb.Append(string.Format("<td {0} id='td{2}' style='{3}' ><img  src='{1}'/> </td>", std, s, scolnametd.Trim(), sdisplay));
+                            }                            
+                        }
+                        else
+                        {
+                            if (aMergeInfo == null)
+                            {
+                                #region 数据行合并处理问题
+                                if (iHead != iBegin)
+                                    PresColumnName = dtbody.Columns[iHead - 1].ToString();
+                                else
+                                    PresColumnName = "";
+                                // Mod @ 2012-05-17
+                                sCompateData = dr[scolname].ToString()/*.Replace(" 0:00:00", "").Trim()*/;
+                                if (iHead > 1)//如果不是第一个字段，前一个字段和当前字段
+                                    sCompateData = dtbody.Rows[iRow][iHead - 1].ToString() + dr[scolname].ToString()/*.Replace(" 0:00:00", "").Trim()*/;
+                                iMergeNum = 0;
+                                // Mod End
+                                if (iRow == 0)//第一行特殊处理
+                                {
+                                    iMergeCellNum(dtbody, iRow, iHead, ref iMergeNum, PresColumnName);
+                                    if (iMergeNum == 0) iMergeNum = 1;
+                                    //    HttpContext.Current.Response.Write((iRow).ToString() + "|" + iHead.ToString() + "|" + "|" + iMergeNum.ToString() + "|" + sColData + "|<br>");                      
+                                    if (iMergeNum > 1 && bExcel)
+                                    {
+                                        Cells cells = worksheet.Cells;//单元格   
+                                        //   HttpContext.Current.Response.Write((iRow + iBegRow).ToString() + "|" + iMergeNum.ToString()+"<br>");
+                                        cells.Merge(iRow + iBegRow, iHead - iBegin, iMergeNum, 1);
+                                    }
+                                    sb.Append(string.Format("<td {0} id='td{2}' title='{3}' rowspan='{3}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd, iMergeNum));
+                                }
+                                else
+                                {
+
+                                    if (sCol[iRow - 1, iHead] != sCompateData)
+                                    {
+                                        iMergeCellNum(dtbody, iRow, iHead, ref iMergeNum, PresColumnName);
+                                        if (iMergeNum == 0) iMergeNum = 1;
+                                        //  HttpContext.Current.Response.Write((iRow ).ToString() + "|" + iHead.ToString() + "|"   + "|" + iMergeNum.ToString() + "|" + sColData + "|<br>");                                                  
+                                        if (iMergeNum > 1 && bExcel)
+                                        {
+                                            Cells cells = worksheet.Cells;//单元格   
+                                            //    HttpContext.Current.Response.Write((iRow + iBegRow).ToString() + "|" + iMergeNum.ToString() + "<br>");
+                                            cells.Merge(iRow + iBegRow, iHead - iBegin, iMergeNum, 1);
+                                        }
+                                        sb.Append(string.Format("<td {0} id='td{2}' title='{3}' rowspan='{3}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd, iMergeNum));
+                                    }
+                                }
+                                sCol[iRow, iHead] = sCompateData;
+                                #endregion
+                            }
+                            else
+                            {
+                                #region 数据行合并处理问题
+
+                                bool flag = false;
+                                for (int i = 0; i < aMergeInfo.Length; i++)
+                                {
+                                    if (aMergeInfo[i].Trim().Equals("")) continue;
+                                    String[] split = aMergeInfo[i].Split(',');
+                                    String[] row = split[0].Split('-');
+                                    String[] col = split[1].Split('-');
+                                    if (row.Length == 2 && Convert.ToInt32(split[1]) == iHead + 1)
+                                    {
+
+                                        iMergeNum = Convert.ToInt32(row[1]) - Convert.ToInt32(row[0]) + 1;
+                                        if (iMergeNum == 0) iMergeNum = 1;
+
+                                        if (ibegin - 1 <= Convert.ToInt32(row[1]))
+                                            flag = true;
+
+                                        if (Convert.ToInt32(row[0]) == ibegin - 1)
+                                        {
+
+                                            sb.Append(string.Format("<td {0} id='td{2}' title='{3}' rowspan='{3}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd, iMergeNum));
+                                            break;
+                                        }
+                                    }
+                                    else if (col.Length == 2 && Convert.ToInt32(col[0]) == iHead + 1)
+                                    {
+
+                                        iMergeNum = Convert.ToInt32(col[1]) - Convert.ToInt32(col[0]) + 1;
+                                        if (iMergeNum == 0) iMergeNum = 1;
+
+                                      //  if (ibegin - 1 <= Convert.ToInt32(col[1]))
+                                            flag = true;
+
+                                        if (Convert.ToInt32(split[0]) == ibegin - 1)
+                                        {
+                                            sb.Append(string.Format("<td {0} id='td{2}' title='{3}' colspan='{3}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd, iMergeNum));
+
+                                            iHead = Convert.ToInt32(col[1]) - 1;
+                                            //        return sb.ToString();
+                                            break;
+                                        }
+
+                                    }
+                                   
+
+                                }
+
+                               if(!flag) //只有一列
+                                    {
+                                        sb.Append(string.Format("<td {0} id='td{2}' style='{3}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd.Trim(),sdisplay));
+                              
+                                    }
+
+                                #endregion
+                            }
+                        }
+                }
+                sb.Append("</tr>");
+                iRow++;
+            }
+            #endregion
+            sb.Append("</table>");
+            if (bExcel)
+            {
+                AddBody(dtbody, bAdd);
+            }
+            return sb.ToString(); ;
+        }
+        public static string TableBodyUserRunPlan(DataTable dtbody, string[] sColWidth, bool bAdd, int iUserRunPlanBegin, int iMergeCell, string[] aImageColumn, string strType)
+        {
+            HttpContext context = HttpContext.Current;
+            StringBuilder sb = new StringBuilder();
+            string sHeaderName = "";
+            bool bGroup = false;
+            List<string> list = new List<string>();
+            int iBegin = 0;
+            int iBegRow = 2;
+            if (bAdd)//有增加界面
+            {
+                iBegin = 1;//前面有序号
+                iBegRow = 1;
+            }
+            int[] aImageIndex = null;
+            if (aImageColumn != null)
+                aImageIndex = new int[aImageColumn.Length];
+            bool bExcel = false;
+            if (context.Request["ToExcel"] == "1")
+                bExcel = true;
+            for (int iHead = iBegin; iHead < dtbody.Columns.Count; iHead++)
+            {
+                string columnName = dtbody.Columns[iHead].ColumnName.Trim();
+                if (columnName.EndsWith("$"))
+                {
+                    columnName = columnName.Substring(0, columnName.Length - 1);
+                }
+
+                list.Add(columnName);
+                //     HttpContext.Current.Response.Write(dtbody.Columns[iHead].ToString()+"<br>");
+            }
+
+
+            #region 表头
+            Dictionary<string, List<string>> dic = GetHeadStructList(list);
+            foreach (KeyValuePair<string, List<string>> kvp in dic)
+            {
+                if (kvp.Value.Count > 1)
+                {
+                    bGroup = true;
+                    break;
+                }
+            }
+            // HttpContext.Current.Response.Write(bGroup.ToString() + "<br>");
+            sb.Append(@" <table  style='width:100%'  border='0' cellpadding='0' cellspacing='0'  >");
+            sb.Append("<tbody id='spanrightmenu' >");
+
+
+            #region 无表头合并
+            {
+
+                int iColWIdth = 0;
+                sb.Append("<tr  height='20' class='tableHead'  >");
+                sb.Append(string.Format(@"<td  nowrap style='width:60px'   id='td{0}'  onmousedown=""f_getName('{0}')""  class='t2' >&nbsp;&nbsp;{0}&nbsp;&nbsp;</td>", "序号"));
+                for (int iHead = iBegin; iHead < dtbody.Columns.Count; iHead++)
+                {
+                    sHeaderName = dtbody.Columns[iHead].ToString().Trim();
+                    if (aImageColumn != null)
+                    {
+                        for (int i = 0; i < aImageColumn.Length; i++)
+                        {
+                            string s = aImageColumn[i];
+                            if (s == sHeaderName)
+                            {
+                                aImageIndex[i] = iHead;
+                                break;
+                            }
+                        }
+                    }
+                    // 修正Bug, 处理单个带 '-' 的字段 @ 2012-01-17
+                    int iIndexPos = sHeaderName.IndexOf(sGroupSperator);
+                    if (iIndexPos > 0)
+                        sHeaderName = sHeaderName.Remove(iIndexPos);
+                    iColWIdth = Convert.ToInt32(sColWidth[iHead]);
+                    iColWIdth = 18 * sHeaderName.Length;
+                    if (iColWIdth < 100) iColWIdth = 100;
+                    sb.Append(string.Format(@"<td nowrap  style='width:{0}' id='td{1}'   onmousedown=""f_getName('{1}')"" class='t2'>&nbsp;&nbsp;{1}&nbsp;&nbsp;</td>", iColWIdth, sHeaderName));
+
+                }
+                sb.Append("</tr>");
+                if (bExcel)
+                {
+                    AddHeader(dtbody, bAdd);
+                }
+            }
+            #endregion
+
+            sb.Append("</tbody>");
+            #endregion
+
+            #region 表体
+            int iRow = 0;
+            string bgColor = "";
+            string sClick = "";
+            string std = "";
+            if (bAdd)
+            {
+                sClick = " onclick='f_chooseUserRunPlan(this,{1},&quot;" + strType + "&quot;)' ";
+            }
+            string scolname = "";
+            string scolnametd = "";
+            string[,] sCol = new string[dtbody.Rows.Count, dtbody.Columns.Count];
+            int iMergeNum = 0;
+            string PresColumnName = "";//前一个字段名称
+            string sCompateData = "";//临时比较字段的值   
+            // HttpContext.Current.Response.Write(iMergeCell.ToString() + ">" + iBegin + "<br>");
+            int iNo = 1;
+            for (int i = iBegRow; i < dtbody.Rows.Count;i++ )
+            //foreach (DataRow dr in dtbody.Rows)
+            {
+                DataRow dr = dtbody.Rows[i];
+                if (iRow % 2 == 0)
+                {
+                    bgColor = "class='t0'";
+                    std = "class='td0'";
+                }
+                else
+                {
+                    bgColor = "class='t1'";
+                    std = "class='td1'";
+                }
+
+                sb.Append(string.Format("<tr {0} id='jerker' " + sClick + "  style='cursor:hand' rowid='{2}' KeyFieldName='{3}'>", bgColor, iUserRunPlanBegin++, dr[dtbody.Columns[0]].ToString(), dtbody.Columns[0].ColumnName.ToString()));
+
+                sb.Append(string.Format("<td {0} title='td序号' id='td序号'>&nbsp;&nbsp;{1}</td>", std, iNo++));
+                for (int iHead = iBegin; iHead < dtbody.Columns.Count; iHead++)
+                {
+                    scolname = dtbody.Columns[iHead].ToString();//当前字段名称               
+                    if (scolname.IndexOf(sGroupSperator) > 0)
+                    {
+                        scolnametd = scolname.Substring(0, scolname.IndexOf(sGroupSperator));
+                    }
+                    else
+                    {
+                        scolnametd = scolname;
+                    }
+                    // Mod @ 2012-05-17
+                    string sColData = dr[scolname].ToString()/*.Replace(" 0:00:00", "").Trim()*/;//显示字段数据
+                    iMergeNum = 0;
+                    if (sColData.Contains("合计"))
+                    {
+                        iMergeCellOfSameRow(dtbody, iRow, iHead, ref iMergeNum);
+                        if (iMergeNum > 1)//合并列
+                        {
+                            if (iHead == iBegin)
+                            {
+                                sb.Append(string.Format("<td align='center' {0} id='td{2}' colspan='{3}'>&nbsp;&nbsp;{1}&nbsp;&nbsp;</td>", std, sColData, scolnametd.Trim(), iMergeNum));
+                                if (bExcel)
+                                {
+                                    Cells cells = worksheet.Cells;//单元格 
+                                    cells[iRow + iBegRow, iHead - iBegin].Style.HorizontalAlignment = TextAlignmentType.Center;
+                                    cells.Merge(iRow + iBegRow, iHead - iBegin, 1, iMergeNum);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            sb.Append(string.Format("<td {0} id='td{2}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd.Trim()));
+                        }
+                    }
+                    else
+                        if (iMergeCell == 0 || iHead > iMergeCell + (iBegin - 1))//正常
+                        {
+                            bool isImage = false;
+                            if (aImageIndex != null)
+                            {
+                                foreach (int idex in aImageIndex)
+                                {
+                                    if (iHead == idex)
+                                    {
+                                        isImage = true;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (!isImage)
+                            {
+                                sb.Append(string.Format("<td {0} id='td{2}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd.Trim()));
+                            }
+                            else
+                            {
+                                string s = "./photo.aspx/?imgsrc=" + HttpUtility.UrlEncode(sColData);
+                                sb.Append(string.Format("<td {0} id='td{2}'><img  src='{1}'/> </td>", std, s, scolnametd.Trim()));
+                            }
+                        }
+                        else
+                        {
+                            #region 数据行合并处理问题
+                            if (iHead != iBegin)
+                                PresColumnName = dtbody.Columns[iHead - 1].ToString();
+                            else
+                                PresColumnName = "";
+                            // Mod @ 2012-05-17
+                            sCompateData = dr[scolname].ToString()/*.Replace(" 0:00:00", "").Trim()*/;
+                            if (iHead > 1)//如果不是第一个字段，前一个字段和当前字段
+                                sCompateData = dtbody.Rows[iRow][iHead - 1].ToString() + dr[scolname].ToString()/*.Replace(" 0:00:00", "").Trim()*/;
+                            iMergeNum = 0;
+                            // Mod End
+                            if (iRow == 0)//第一行特殊处理
+                            {
+                                iMergeCellNum(dtbody, iRow, iHead, ref iMergeNum, PresColumnName);
+                                if (iMergeNum == 0) iMergeNum = 1;
+                                //    HttpContext.Current.Response.Write((iRow).ToString() + "|" + iHead.ToString() + "|" + "|" + iMergeNum.ToString() + "|" + sColData + "|<br>");                      
+                                if (iMergeNum > 1 && bExcel)
+                                {
+                                    Cells cells = worksheet.Cells;//单元格   
+                                    //   HttpContext.Current.Response.Write((iRow + iBegRow).ToString() + "|" + iMergeNum.ToString()+"<br>");
+                                    cells.Merge(iRow + iBegRow, iHead - iBegin, iMergeNum, 1);
+                                }
+                                sb.Append(string.Format("<td {0} id='td{2}' title='{3}' rowspan='{3}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd, iMergeNum));
+                            }
+                            else
+                            {
+
+                                if (sCol[iRow - 1, iHead] != sCompateData)
+                                {
+                                    iMergeCellNum(dtbody, iRow, iHead, ref iMergeNum, PresColumnName);
+                                    if (iMergeNum == 0) iMergeNum = 1;
+                                    //  HttpContext.Current.Response.Write((iRow ).ToString() + "|" + iHead.ToString() + "|"   + "|" + iMergeNum.ToString() + "|" + sColData + "|<br>");                                                  
+                                    if (iMergeNum > 1 && bExcel)
+                                    {
+                                        Cells cells = worksheet.Cells;//单元格   
+                                        //    HttpContext.Current.Response.Write((iRow + iBegRow).ToString() + "|" + iMergeNum.ToString() + "<br>");
+                                        cells.Merge(iRow + iBegRow, iHead - iBegin, iMergeNum, 1);
+                                    }
+                                    sb.Append(string.Format("<td {0} id='td{2}' title='{3}' rowspan='{3}'>&nbsp;&nbsp;{1}</td>", std, sColData, scolnametd, iMergeNum));
+                                }
+                            }
+                            sCol[iRow, iHead] = sCompateData;
+                            #endregion
+                        }
+                }
+                sb.Append("</tr>");
+                iRow++;
+            }
+            #endregion
+            sb.Append("</table>");
+            if (bExcel)
+            {
+                AddBody(dtbody, bAdd);
+            }
+            return sb.ToString(); ;
+        }
+        /// <summary>
+        /// 返回该字段重复的个数(相同的列不同行)
+        /// </summary>
+        /// <param name="dtbody">DataTable数据</param>
+        /// <param name="iCell">要合并的列</param>
+        /// <param name="iMergeNum">返回该字段重复的个数</param>
+        /// <param name="sColumnname">上一个字段名称</param>
+        /// <param name="irowNum">第几行</param>
+        private static void iMergeCellNum(DataTable dtbody, int irowNum, int iCell, ref int iMergeNum, string PresColumnName)
+        {
+            string sw = "";
+            string sColData = dtbody.Rows[irowNum][iCell].ToString();
+            if (PresColumnName != "") sw = string.Format(" {0}='{1}'", PresColumnName, dtbody.Rows[irowNum][PresColumnName].ToString());
+            // HttpContext.Current.Response.Write(PresColumnName + "|sw=" + sw + "|" + dtbody.Select(sw).Length + "|" + sColData + "<br>");
+
+            foreach (DataRow dr in dtbody.Select(sw))
+            {
+                //if (dr[iCell].ToString().Trim() == sColData) iMergeNum++;
+                if (dr[iCell].ToString() == sColData) iMergeNum++;
+
+            }
+
+        }
+
+        /// <summary>
+        ///  返回该字段重复的个数(相同的行不同列)
+        /// </summary>
+        /// <param name="dtbody"></param>
+        /// <param name="irowNum"></param>
+        /// <param name="iCell"></param>
+        /// <param name="iMergeNum"></param>
+        private static void iMergeCellOfSameRow(DataTable dtbody, int irowNum, int iCell, ref int iMergeNum)
+        {
+            string sColData = dtbody.Rows[irowNum][iCell].ToString();
+            for (int iLoopCell = 0; iLoopCell < dtbody.Columns.Count; iLoopCell++)
+            {
+                if (dtbody.Rows[irowNum][iLoopCell].ToString().Trim() == sColData) iMergeNum++;
+
+            }
+        }
+        /// <summary>
+        /// 导出Excel表头(没有合并的)
+        /// </summary>
+        /// <param name="dtExcel"></param>
+        /// <param name="bAdd"></param>
+        public static void AddHeader(DataTable dtExcel, bool bAdd)
+        {
+            int iBeginCell = 0;
+            if (bAdd) iBeginCell = 1;
+            worksheet = wb.Worksheets[0];
+            Cell cell = null;
+            int icell = 0;
+            for (int iCol = iBeginCell; iCol < dtExcel.Columns.Count; iCol++)
+            {
+                cell = worksheet.Cells[0, icell];
+                cell.Style.HorizontalAlignment = TextAlignmentType.Center;
+                cell.PutValue(dtExcel.Columns[iCol].ToString());
+                cell.Style.Font.IsBold = true;
+                icell++;
+            }
+        }
+
+        /// <summary>
+        /// 导出Excel内容
+        /// </summary>
+        /// <param name="dtExcel"></param>
+        /// <param name="iBegRow"></param>
+        /// <param name="bAdd"></param>
+        public static void AddBody(DataTable dtExcel, bool bAdd)
+        {
+            int iBeginRow = 2;
+            int iBeginCell = 0;
+            if (bAdd)
+            {
+                iBeginRow = 1;
+                iBeginCell = 1;
+            }
+            HttpContext context = HttpContext.Current;
+            string sPath = context.Server.MapPath("../temp/");
+            string ok = FileReadOnly(sPath);
+
+            for (int iRow = 0; iRow < dtExcel.Rows.Count; iRow++)
+            {
+                int icell = 0;
+                for (int iCol = iBeginCell; iCol < dtExcel.Columns.Count; iCol++)
+                {
+                    worksheet.Cells[iRow + iBeginRow, icell].PutValue(dtExcel.Rows[iRow][iCol].ToString());
+                    icell++;
+                }
+            }
+            Random rdm = new Random();
+         //   WebDatabase db = new WebDatabase(enumDatabaseBussiness.PRODUCT);
+            DataTable dttemp = new DataTable();
+         //   db.ExecSqlQuery("select newid()", out dttemp);
+              try
+            {
+                string sFilename = "Excel" + dttemp.Rows[0][0].ToString() + ".xls";
+         
+                wb.Save(sPath + sFilename);
+                context.Response.Write("<script type='text/javascript'>  window.open('../temp/" + sFilename + "')</script>");
+            }
+            catch (Exception see)
+            {
+
+            }
+        }
+
+        /// <summary>
+        /// 去掉文件的属性,并删除
+        /// </summary>
+        /// <param name="DirName"></param>
+        /// <returns></returns>
+        public static string FileReadOnly(string DirName)
+        {
+            HttpContext context = HttpContext.Current;
+            string DeleteFlag = "true";
+            if (Directory.Exists(DirName))
+            {
+
+                try
+                {
+                    DirectoryInfo di = new DirectoryInfo(DirName);
+                    string[] fileEntries = Directory.GetFiles(DirName);
+                    foreach (string fileName in fileEntries)
+                    {
+                        //  context.Response.Write(File.GetLastWriteTime(fileName).ToString()+"|"+DateTime.Today.ToString());
+                        if (File.GetLastWriteTime(fileName) <= DateTime.Today && fileName.IndexOf("Web.config")<0)
+                        {
+                            //  context.Response.Write("<br>ok");
+
+                            File.SetAttributes(fileName.ToString(), FileAttributes.Normal);
+                            File.Delete(fileName.ToString());
+                        }
+
+                    }
+
+
+                }
+                catch (Exception serr)
+                {
+                    // context.Response.Write("<br>" + serr);
+                    DeleteFlag = "false";
+                    //UTFun.alert("出错:"+serr.ToString());
+                }
+            }
+            return DeleteFlag;
+        }
+
+        /// <summary>
+        /// 表头合并，返回("A相",3)
+        /// </summary>
+        /// <param name="HeadStrValueList"></param>
+        /// <returns></returns>
+        public static Dictionary<string, List<string>> GetHeadStructList(List<string> HeadStrValueList)
+        {
+            Dictionary<string, List<string>> headStrDict = new Dictionary<string, List<string>>();
+            foreach (string str in HeadStrValueList)
+            {
+                int no = str.IndexOf(sGroupSperator);
+                if (no < 0)
+                {
+                    List<string> list = new List<string>();
+                    list.Add(" ");
+                    headStrDict.Add(str, list);
+                }
+                else
+                {
+                    string headStr = str.Substring(0, no);
+                    //  HttpContext.Current.Response.Write(headStrDict.Keys+"|"+ headStr+ "<br>");
+                    if (headStrDict.Keys.Contains(headStr))
+                    {
+                        List<string> value = null;
+                        string sValue = str.Replace(headStr, "");
+                        headStrDict.TryGetValue(headStr, out value);
+                        value.Add(sValue);
+                        //   HttpContext.Current.Response.Write(sValue + "|" + headStr + "<br>");
+                    }
+                    else
+                    {
+                        List<string> list = new List<string>();
+                        string sValue = str.Replace(headStr, "");
+                        list.Add(sValue);
+                        headStrDict.Add(headStr, list);
+                        //  HttpContext.Current.Response.Write(sValue + "|" + headStr + "<br>");
+                    }
+                }
+            }
+            return headStrDict;
+        }
+
+        /// <summary>
+        /// 导出到Excel
+        /// </summary>
+        /// <param name="dt">DataTable</param>
+        /// <param name="ReportTitle">标题</param>
+        /// <param name="fileName">文件名称</param>
+        /// <returns>文件名称</returns>
+        public static string TableToExcel(System.Data.DataTable dt, string ReportTitle, string fileName)
+        {
+            if (ReportTitle == "") ReportTitle = "Sheet1";
+            Aspose.Cells.Workbook workbook = new Aspose.Cells.Workbook();
+            workbook.Worksheets.Clear();
+            workbook.Worksheets.Add(ReportTitle);
+            Aspose.Cells.Worksheet wst = workbook.Worksheets[0];
+            wst.Cells.ImportDataTable(dt, true, 0, 0);
+            workbook.Save(fileName);
+            return fileName;
+        }
+
+        /// <summary>
+        /// 获取表数据，同时根据TableInfoModel对表的字段和描述的记录，在数据表中返回表字段的描述信息
+        /// </summary>
+        /// <param name="tablename">表名称</param>
+        /// <returns></returns>
+        public static DataTable dtdata(string tablename, int iBeging, int iEnd, string powerid, string cmpid, string sWhere)
+        {
+            string sqlQuery = "";
+            string mysqlQuery = "";
+            DataTable desTable = new DataTable();            
+         /*   TableInfoModel dbTM = new TableInfoModel();
+            desTable = dbTM.GetQueryFiled(tablename);            
+
+            string sFiedKey = dbTM.GetColumnName(tablename, "primary");
+            string sOrderBy = dbTM.GetOrderByFiled(tablename);
+
+            string strColumnName = "";
+            string swhereother = SqlFilter(powerid, cmpid, tablename, sWhere);
+
+            //配网运方
+            if (tablename.ToLower() == "v_t_userrunplanrelpowersupply")
+            {
+                //swhereother = string.Format(" where C_USER_RUNPLAN_ID='{0}' and c_type=2 ", cmpid);
+                tablename = " (select * from  v_t_userrunplanrelpowersupply  where C_USER_RUNPLAN_ID='" + cmpid + "')";
+            }
+            else if (tablename.ToLower() == "v_t_userrunplanrelbreakstatus")
+            {
+                //swhereother = string.Format(" where C_USER_RUNPLAN_ID='{0}' and c_type=1 ", cmpid);
+                tablename = "(select * from  v_t_userrunplanrelbreakstatus where  C_USER_RUNPLAN_ID='" + cmpid + "')";
+                for (int i = 0; i < desTable.Rows.Count; i++)
+                {
+                    if (desTable.Rows[i]["ColumnName"].ToString().ToUpper() == "C_USER_RUNPLAN_ID")
+                    {
+                        desTable.Rows.RemoveAt(i); break;
+                    }
+                }
+            }
+            else if (tablename.ToLower() == "v_t_userrunplanrelsupplyarea")
+            {
+                //swhereother = string.Format(" where C_USER_RUNPLAN_ID='{0}' and c_type=3 ", cmpid);
+                tablename = "(select * from  v_t_userrunplanrelsupplyarea where  C_USER_RUNPLAN_ID='" + cmpid + "')";
+                for (int i = 0; i < desTable.Rows.Count; i++)
+                {
+                    if (desTable.Rows[i]["ColumnName"].ToString().ToUpper() == "C_USER_RUNPLAN_ID")
+                    {
+                        desTable.Rows.RemoveAt(i); break;
+                    }
+                }
+            }
+
+            if (desTable != null && desTable.Rows.Count > 0)
+            {
+                string tempStr = string.Empty;
+                if (tablename.ToLower() == "T_ShirtPeak_Target".ToLower())
+                {
+                    tablename = " ( (  SELECT a11.C_ID,b11.NAME as 'C_OBJID',a11.C_TYPE,a11.C_END_DATE,a11.C_START_DATE,a11.C_WARNING_TYPE,a11.C_POWER_VALUE,a11.C_SHIFTPEAK_VALUE FROM T_ShirtPeak_Target a11,T_PowerCity b11 WHERE a11.C_OBJID=b11.ID AND a11.C_TYPE='1' ) UNION (  SELECT a11.C_ID,b11.NAME as 'C_OBJID',a11.C_TYPE,a11.C_END_DATE,a11.C_START_DATE,a11.C_WARNING_TYPE,a11.C_POWER_VALUE,a11.C_SHIFTPEAK_VALUE FROM T_ShirtPeak_Target a11,T_Area b11 WHERE a11.C_OBJID=b11.ID AND a11.C_TYPE='2' ) UNION (  SELECT a11.C_ID,b11.NAME as 'C_OBJID',a11.C_TYPE,a11.C_END_DATE,a11.C_START_DATE,a11.C_WARNING_TYPE,a11.C_POWER_VALUE,a11.C_SHIFTPEAK_VALUE FROM T_ShirtPeak_Target a11,T_Group b11 WHERE a11.C_OBJID=b11.ID AND a11.C_TYPE='3' ) UNION (  SELECT a11.C_ID,b11.NAME as 'C_OBJID',a11.C_TYPE,a11.C_END_DATE,a11.C_START_DATE,a11.C_WARNING_TYPE,a11.C_POWER_VALUE,a11.C_SHIFTPEAK_VALUE FROM T_ShirtPeak_Target a11,T_PowerUser b11 WHERE a11.C_OBJID=b11.ID AND a11.C_TYPE='4' )) ggg";
+                }
+                else
+                    if (tablename.ToLower() == "T_ShirtPeak_Warning".ToLower())
+                    {
+                        tablename = " ( (  SELECT a11.C_ID,b11.NAME as 'C_OBJID',a11.C_TYPE,a11.C_END_DATE,a11.C_START_DATE,a11.C_WARNINGTYPE_ID FROM T_ShirtPeak_Warning a11,T_PowerCity b11 WHERE a11.C_OBJID=b11.ID AND a11.C_TYPE='1' ) UNION (  SELECT a11.C_ID,b11.NAME as 'C_OBJID',a11.C_TYPE,a11.C_END_DATE,a11.C_START_DATE,a11.C_WARNINGTYPE_ID FROM T_ShirtPeak_Warning a11,T_Area b11 WHERE a11.C_OBJID=b11.ID AND a11.C_TYPE='2' ) UNION (  SELECT a11.C_ID,b11.NAME as 'C_OBJID',a11.C_TYPE,a11.C_END_DATE,a11.C_START_DATE,a11.C_WARNINGTYPE_ID FROM T_ShirtPeak_Warning a11,T_Group b11 WHERE a11.C_OBJID=b11.ID AND a11.C_TYPE='3' ) UNION (  SELECT a11.C_ID,b11.NAME as 'C_OBJID',a11.C_TYPE,a11.C_END_DATE,a11.C_START_DATE,a11.C_WARNINGTYPE_ID FROM T_ShirtPeak_Warning a11,T_PowerUser b11 WHERE a11.C_OBJID=b11.ID AND a11.C_TYPE='4' )) ggg";
+                    }
+                for (int i = 0; i < desTable.Rows.Count; i++)
+                {
+
+                    if (desTable.Rows[i]["isForeign"].ToString() == "1")
+                    {
+                        if (tablename.IndexOf("SELECT") > 0)
+                        {
+                            strColumnName = "(SELECT a{2}.name name{2},b{2}.* from ({0}) b{2} LEFT JOIN ({1}) a{2} on a{2}.id=b{2}.{2} ) h{2}";
+                            tablename = String.Format(strColumnName, tablename.Substring(tablename.IndexOf('(') + 1, tablename.LastIndexOf(")") - tablename.IndexOf('(') - 1), desTable.Rows[i]["ColumnSql"].ToString(), desTable.Rows[i]["ColumnName"].ToString());
+                        }
+                        else
+                        {
+                            strColumnName = "(SELECT a{2}.name name{2},b{2}.* from {0} b{2} LEFT JOIN ({1}) a{2} on a{2}.id=b{2}.{2} ) h{2}";
+                            tablename = String.Format(strColumnName, tablename, desTable.Rows[i]["ColumnSql"].ToString(), desTable.Rows[i]["ColumnName"].ToString());
+                        }
+                        strColumnName = "name" + desTable.Rows[i]["ColumnName"].ToString();
+                    }
+                    else
+                        strColumnName = desTable.Rows[i]["ColumnName"].ToString().Trim();
+
+                    if (tempStr == string.Empty)
+                        tempStr = string.Format("{0} {1} ", strColumnName,
+                            desTable.Rows[i]["ColumnDes"] == DBNull.Value ? "" : desTable.Rows[i]["ColumnDes"].ToString().Trim());
+                    else
+                        tempStr += string.Format(",{0} {1} ", strColumnName,
+                            desTable.Rows[i]["ColumnDes"] == DBNull.Value ? "" : desTable.Rows[i]["ColumnDes"].ToString().Trim());
+                }
+                if (sFiedKey == "")
+                {
+                    HttpContext.Current.Response.Write("该表应该设置一个唯一的值字段");
+                    HttpContext.Current.Response.End();
+                }
+                else
+                {
+                    string sordername = sFiedKey;
+                    if (sOrderBy.Length > 0)
+                    {
+                        sordername = sOrderBy;
+                    }
+                    sqlQuery = string.Format("select  {4}, {0}  from (select ROW_NUMBER() Over( order by {6} ) as rowNum,* from {1} {5}  ) t where rowNum>={2} and rowNum<{3} order by {6} ",
+                        tempStr, tablename, iBeging, iEnd, sFiedKey, swhereother, sordername);
+                    mysqlQuery = string.Format("select {4}, {0}  from (select * from {1} {5} order by {6} limit {2},{3} ) t",
+                        tempStr, tablename, iBeging - 1, iEnd - iBeging + 1, sFiedKey, swhereother,sordername);
+                }
+            }
+            else
+            {
+                HttpContext.Current.Response.Write("没有配置基本表");
+                HttpContext.Current.Response.End();
+            };
+
+            // HttpContext.Current.Response.Write(sqlQuery);
+            // HttpContext.Current.Response.End();
+            DataTable dtQuery = new DataTable();
+            if (tablename.ToUpper() == "USERMENU")
+            {
+                UserMenuModel dbUM = new UserMenuModel();
+                dtQuery = dbUM.GetAllData();
+            }
+            else if (tablename.ToLower() == "v_user")
+            {
+                WebDatabase db1 = new WebDatabase(enumDatabaseBussiness.MEMBERSHIP);
+                db1.ExecSqlQuery(sqlQuery, out dtQuery);
+            }
+            else
+            {
+                WebDatabase db1 = new WebDatabase(enumDatabaseBussiness.PRODUCT);
+                if (db1.getDatabaseType() == enumDatabaseType.SQLSERVER)
+                {
+                    db1.ExecSqlQuery(sqlQuery, out dtQuery);
+                }
+                else if (db1.getDatabaseType() == enumDatabaseType.MYSQL)
+                {
+                    db1.ExecSqlQuery(mysqlQuery, out dtQuery);
+                }
+            }
+            */
+
+            DataTable dtQuery = new DataTable();
+            return dtQuery;
+        }
+
+        /// <summary>
+        /// 返回过滤条件
+        /// </summary>
+        /// <param name="powerid">电力用户id</param>
+        /// <param name="cmpid">其他id</param>
+        /// <param name="tablename">表名称</param>
+        /// <param name="sWhere">条件</param>
+        /// <returns></returns>
+        public static string SqlFilter(string powerid, string cmpid, string tablename, string sWhere)
+        {
+            string roles = UTUI.GetRoles();
+            DataTable desTable = new DataTable();
+            string sql = "";
+            string swhereother = " where 1=1 ";
+        /*    TableInfoModel dbTM = new TableInfoModel();
+            DataView dv = dbTM.GetHiddenFieldInfo(tablename);
+            if (dv != null && dv.Table != null)
+            {
+                desTable = dbTM.GetHiddenFieldInfo(tablename).Table;
+            }            
+            string swhereother = " where 1=1 ";
+
+            
+
+            if (desTable != null && desTable.Rows.Count > 0)
+            {
+                string tempStr = string.Empty;
+                for (int i = 0; i < desTable.Rows.Count; i++)
+                {
+                    //  HttpContext.Current.Response.Write(desTable.Rows[i]["ColumnName"].ToString().ToUpper()+"<br>");
+                    if (desTable.Rows[i]["ColumnName"].ToString().ToUpper() == "C_POWERUSER_ID")//电力用户Id不显示
+                    {
+                        swhereother += string.Format(" and C_POWERUSER_ID='{0}'", powerid);
+                        continue;
+                    }
+                    if (desTable.Rows[i]["ColumnName"].ToString().ToUpper() == "C_ITEM_ID")//节能减排:指标类型
+                    {
+                        // HttpContext.C0urrent.Response.Write("<br>|" + cmpid + "|<br>");
+                        if (!string.IsNullOrEmpty(cmpid))
+                        {
+                            if (cmpid != "0")
+                                swhereother += string.Format(" and C_ITEM_ID='{0}'", cmpid);
+                        }
+                        continue;
+                    }
+                    if (desTable.Rows[i]["ColumnName"].ToString().ToUpper() == "C_MP_ID")//计量点
+                    {
+
+                        swhereother += string.Format(" and C_MP_ID='{0}'", cmpid);
+                        continue;
+                    }
+                    //  HttpContext.Current.Response.Write(desTable.Rows[i]["ColumnName"].ToString().ToUpper()+"<br>");
+                    if (desTable.Rows[i]["ColumnName"].ToString().ToUpper() == "C_ROLE")//角色
+                    {
+                        swhereother += string.Format(" and C_ROLE='{0}'", roles);
+                        continue;
+                    }
+
+                }
+                swhereother += sWhere;
+
+
+                if (tablename.ToUpper() == "USERMENU")
+                {
+
+                }
+                //左边部门
+                if (tablename.ToLower() == "t_userdepartment")
+                {
+                    swhereother += string.Format(" and C_PARENT_ID='{0}'", cmpid);
+                }
+                swhereother += sWhere;
+            }
+         * */
+            //   HttpContext.Current.Response.Write(swhereother + "<br>");
+            return swhereother;
+        }
+
+        /// <summary>
+        /// 返回数据的条数
+        /// </summary>
+        /// <param name="powerid">电力用户</param>
+        /// <param name="cmpid">其他id</param>
+        /// <param name="tablename">表名称</param>
+        /// <param name="swhere">条件</param>
+        /// <returns></returns>
+    /*    public static int dtdataiCount(string powerid, string cmpid, string tablename, string swhere)
+        {
+            DataTable dtQuery = new DataTable();
+            int icount = 0;
+            try
+            {
+                //HttpContext.Current.Response.Write("ok" + "<br>");
+                string sqlQuery = "";
+                string sWhereQuery = SqlFilter(powerid, cmpid, tablename, swhere);
+                //运行配方加载方案
+                if (tablename.ToLower() == "t_userrunplanrelpowersupply")
+                {
+                    sWhereQuery = string.Format(" where C_USER_RUNPLAN_ID='{0}'  ", cmpid);
+                    //tablename = "t_userrunplanrel";
+                }
+                else if (tablename.ToLower() == "t_userrunplanrelbreakstatus" )
+                {
+                    sWhereQuery = string.Format(" where C_USER_RUNPLAN_ID='{0}'  ", cmpid);
+                    //tablename = "t_userrunplanrel";
+                }
+                else if (tablename.ToLower() == "t_userrunplanrelsupplyarea")
+                {
+                    sWhereQuery = string.Format(" where C_USER_RUNPLAN_ID='{0}'  ", cmpid);
+                    //tablename = "t_userrunplanrel";
+                }
+
+                sqlQuery = string.Format("select * from {0}  {1}", tablename, sWhereQuery);
+                //   HttpContext.Current.Response.Write(sqlQuery + "<br>");
+                //  HttpContext.Current.Response.End();
+                WebDatabase db = null;
+                if (tablename != "v_user")
+                {
+                    db = new WebDatabase(enumDatabaseBussiness.PRODUCT);
+                    db.ExecSqlQuery(sqlQuery, out dtQuery);
+                }
+                else
+                {
+                    db = new WebDatabase(enumDatabaseBussiness.MEMBERSHIP);
+                    db.ExecSqlQuery(sqlQuery, out dtQuery);
+                }
+                icount = dtQuery.Rows.Count;
+            }
+            catch (Exception sErr)
+            {
+
+            }
+
+            return icount;
+        }
+     * */
+    }
+}

@@ -1,0 +1,2180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg width="1185.28" xmlns="http://www.w3.org/2000/svg" height="949.78" viewBox="0 0 1185.28 949.78" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cge="http://iec.ch/TC57/2005/SVG-schema#">
+ <defs>
+  <symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@0">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@111">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@1">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@112">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@113">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@79">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@80">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@45">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@9">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@46">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@10">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@89">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@90">
+    <rect width="100" x="0" y="0" fill="#936200" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@17">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@91">
+    <rect width="100" x="0" y="0" fill="#0000ff" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@21">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@95">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@22">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@96">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@97">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@98">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@62">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@99">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@63">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@100">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@108">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@109">
+    <rect width="100" x="0" y="0" fill="#ff0000" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 100 30" id="光字牌:lightplate@110">
+    <rect width="100" x="0" y="0" fill="#9d9d9d" height="30"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:开关@1">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb2)" cap_style="16" height="24" line_style="1" stroke="#ff0000" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:开关@0">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb1)" cap_style="16" height="24" line_style="1" stroke="#00c600" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:开关@115">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb2)" cap_style="16" height="24" line_style="1" stroke="#ff0000" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:开关@116">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb1)" cap_style="16" height="24" line_style="1" stroke="#00c600" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:开关@1000">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb3)" cap_style="16" height="24" line_style="1" stroke="#969600" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#00ff00" y1="16" x1="3.16667" y2="16" stroke-width="2" x2="11.1667"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:开关@1001">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb4)" cap_style="16" height="24" line_style="1" stroke="#c8c800" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:开关@2001">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb5)" cap_style="16" height="24" line_style="1" stroke="#696969" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:开关@3000">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb5)" cap_style="16" height="24" line_style="1" stroke="#696969" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#00ff00" y1="16" x1="2.5" y2="16" stroke-width="2" x2="12.5"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:开关@3001">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb5)" cap_style="16" height="24" line_style="1" stroke="#696969" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 18 38" id="刀闸:刀闸@0">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#00ee00" y1="4" x1="7" y2="6" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#00ee00" y1="6" x1="2" y2="6" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#00ee00" y1="27" x1="7" y2="30" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#00ee00" y1="10" x1="0" y2="19" stroke-width="2" x2="6"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="7" cy="23" cap_style="16" rx="3" ry="3" line_style="1" stroke="#00ee00" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="30" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 38" id="刀闸:刀闸@1">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ff0000" y1="4" x1="7" y2="6" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ff0000" y1="6" x1="2" y2="6" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ff0000" y1="27" x1="7" y2="30" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ff0000" y1="6" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="7" cy="23" cap_style="16" rx="3" ry="3" line_style="1" stroke="#ff0000" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="30" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 38" id="刀闸:刀闸@117">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c8c800" y1="4" x1="7" y2="6" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c8c800" y1="6" x1="2" y2="6" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c8c800" y1="27" x1="7" y2="30" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c8c800" y1="6" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="7" cy="23" cap_style="16" rx="3" ry="3" line_style="1" stroke="#c8c800" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="30" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 38" id="刀闸:刀闸@105">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="4" x1="7" y2="6" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="6" x1="2" y2="6" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="27" x1="7" y2="30" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="6" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="7" cy="23" cap_style="16" rx="3" ry="3" line_style="1" stroke="#696969" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="30" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 18 38" id="刀闸:刀闸@1000">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#969600" y1="4" x1="7" y2="6" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#969600" y1="6" x1="2" y2="6" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#969600" y1="27" x1="7" y2="30" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#969600" y1="10" x1="0" y2="19" stroke-width="2" x2="6"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="7" cy="23" cap_style="16" rx="3" ry="3" line_style="1" stroke="#969600" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="30" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 38" id="刀闸:刀闸@1001">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c8c800" y1="4" x1="7" y2="6" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c8c800" y1="6" x1="2" y2="6" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c8c800" y1="27" x1="7" y2="30" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c8c800" y1="6" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="7" cy="23" cap_style="16" rx="3" ry="3" line_style="1" stroke="#c8c800" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="30" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 18 38" id="刀闸:刀闸@2001">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="4" x1="7" y2="6" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="6" x1="2" y2="6" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="27" x1="7" y2="30" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="10" x1="0" y2="19" stroke-width="2" x2="6"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="7" cy="23" cap_style="16" rx="3" ry="3" line_style="1" stroke="#696969" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="30" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 18 38" id="刀闸:刀闸@3000">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="4" x1="7" y2="6" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="6" x1="2" y2="6" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="27" x1="7" y2="30" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="10" x1="0" y2="19" stroke-width="2" x2="6"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="7" cy="23" cap_style="16" rx="3" ry="3" line_style="1" stroke="#696969" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="30" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 38" id="刀闸:刀闸@3001">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="4" x1="7" y2="6" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="6" x1="2" y2="6" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="27" x1="7" y2="30" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#696969" y1="6" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="7" cy="23" cap_style="16" rx="3" ry="3" line_style="1" stroke="#696969" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="30" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 40.869 52" id="电压互感器5:PT-15">
+    <ellipse join_style="64" fill_style="0" fill="none" cx="12.65476" cy="24.6071" cap_style="16" rx="8" ry="8.000000000000002" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <use x="4.559523809525672" y="24.70238095237801" xlink:href="#terminal"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="19.4286" cy="12.57143" cap_style="16" rx="8" ry="8" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="19.4286" cy="36.5714" cap_style="16" rx="8" ry="7.999999999999998" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="25.4286" cy="24.5714" cap_style="16" rx="8.000000000000002" ry="7.999999999999998" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <use x="19.42857142857065" y="4.571428571428442" xlink:href="#terminal"/>
+    <use x="19.42857142857065" y="44.57142857142844" xlink:href="#terminal"/>
+    <use x="33.42857142857156" y="24.57142857142662" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 34.5 40" id="电压互感器17:PT-12">
+    <ellipse join_style="64" fill_style="0" fill="none" cx="8" cy="12" cap_style="16" rx="8" ry="8" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="8" cy="24" cap_style="16" rx="8" ry="8" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="20" cy="18" cap_style="16" rx="8" ry="8" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <use x="8" y="4" xlink:href="#terminal"/>
+    <use x="8" y="32" xlink:href="#terminal"/>
+    <use x="28" y="18" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 40.869 52" id="电压互感器24:PT-15">
+    <ellipse join_style="64" fill_style="0" fill="none" cx="12.65476" cy="24.6071" cap_style="16" rx="8" ry="8.000000000000002" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <use x="4.559523809525672" y="24.70238095237801" xlink:href="#terminal"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="19.4286" cy="12.57143" cap_style="16" rx="8" ry="8" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="19.4286" cy="36.5714" cap_style="16" rx="8" ry="7.999999999999998" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="25.4286" cy="24.5714" cap_style="16" rx="8.000000000000002" ry="7.999999999999998" line_style="1" stroke="#ffff0d" line_width="1"/>
+    <use x="19.42857142857065" y="4.571428571428442" xlink:href="#terminal"/>
+    <use x="19.42857142857065" y="44.57142857142844" xlink:href="#terminal"/>
+    <use x="33.42857142857156" y="24.57142857142662" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 34.5 40" id="电压互感器32:PT-12">
+    <ellipse join_style="64" fill_style="0" fill="none" cx="8" cy="12" cap_style="16" rx="8" ry="8" line_style="1" stroke="#a00000" line_width="1"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="8" cy="24" cap_style="16" rx="8" ry="8" line_style="1" stroke="#a00000" line_width="1"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="20" cy="18" cap_style="16" rx="8" ry="8" line_style="1" stroke="#a00000" line_width="1"/>
+    <use x="8" y="4" xlink:href="#terminal"/>
+    <use x="8" y="32" xlink:href="#terminal"/>
+    <use x="28" y="18" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 15 48" id="避雷器50:BLQ-3">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="13" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <rect width="10" join_style="64" x="2" y="6" fill_style="0" fill="none" cap_style="16" height="14" line_style="1" stroke="#a00000" line_width="1"/>
+    <polygon join_style="64" fill_style="1" points="7 9,9 13,5 13" fill="#a00000" cap_style="16" line_style="1" stroke="#a00000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="21" x1="7" y2="29" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="30" x1="0" y2="30" stroke-width="1" x2="14"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="33" x1="3" y2="33" stroke-width="1" x2="11"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="36" x1="5" y2="36" stroke-width="1" x2="9"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 15 48" id="避雷器52:BLQ-3">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="13" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <rect width="10" join_style="64" x="2" y="6" fill_style="0" fill="none" cap_style="16" height="14" line_style="1" stroke="#a00000" line_width="1"/>
+    <polygon join_style="64" fill_style="1" points="7 9,9 13,5 13" fill="#a00000" cap_style="16" line_style="1" stroke="#a00000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="21" x1="7" y2="29" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="30" x1="0" y2="30" stroke-width="1" x2="14"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="33" x1="3" y2="33" stroke-width="1" x2="11"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="36" x1="5" y2="36" stroke-width="1" x2="9"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 15 48" id="避雷器54:BLQ-3">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="13" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <rect width="10" join_style="64" x="2" y="6" fill_style="0" fill="none" cap_style="16" height="14" line_style="1" stroke="#a00000" line_width="1"/>
+    <polygon join_style="64" fill_style="1" points="7 9,9 13,5 13" fill="#a00000" cap_style="16" line_style="1" stroke="#a00000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="21" x1="7" y2="29" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="30" x1="0" y2="30" stroke-width="1" x2="14"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="33" x1="3" y2="33" stroke-width="1" x2="11"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="36" x1="5" y2="36" stroke-width="1" x2="9"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 15 48" id="避雷器56:BLQ-3">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="13" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <rect width="10" join_style="64" x="2" y="6" fill_style="0" fill="none" cap_style="16" height="14" line_style="1" stroke="#a00000" line_width="1"/>
+    <polygon join_style="64" fill_style="1" points="7 9,9 13,5 13" fill="#a00000" cap_style="16" line_style="1" stroke="#a00000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="21" x1="7" y2="29" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="30" x1="0" y2="30" stroke-width="1" x2="14"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="33" x1="3" y2="33" stroke-width="1" x2="11"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="36" x1="5" y2="36" stroke-width="1" x2="9"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 15 48" id="避雷器58:BLQ-3">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="13" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <rect width="10" join_style="64" x="2" y="6" fill_style="0" fill="none" cap_style="16" height="14" line_style="1" stroke="#a00000" line_width="1"/>
+    <polygon join_style="64" fill_style="1" points="7 9,9 13,5 13" fill="#a00000" cap_style="16" line_style="1" stroke="#a00000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="21" x1="7" y2="29" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="30" x1="0" y2="30" stroke-width="1" x2="14"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="33" x1="3" y2="33" stroke-width="1" x2="11"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="36" x1="5" y2="36" stroke-width="1" x2="9"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 15 48" id="避雷器60:BLQ-3">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="13" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <rect width="10" join_style="64" x="2" y="6" fill_style="0" fill="none" cap_style="16" height="14" line_style="1" stroke="#a00000" line_width="1"/>
+    <polygon join_style="64" fill_style="1" points="7 9,9 13,5 13" fill="#a00000" cap_style="16" line_style="1" stroke="#a00000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="21" x1="7" y2="29" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="30" x1="0" y2="30" stroke-width="1" x2="14"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="33" x1="3" y2="33" stroke-width="1" x2="11"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="36" x1="5" y2="36" stroke-width="1" x2="9"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 15 48" id="避雷器62:BLQ-3">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="13" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <rect width="10" join_style="64" x="2" y="6" fill_style="0" fill="none" cap_style="16" height="14" line_style="1" stroke="#a00000" line_width="1"/>
+    <polygon join_style="64" fill_style="1" points="7 9,9 13,5 13" fill="#a00000" cap_style="16" line_style="1" stroke="#a00000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="21" x1="7" y2="29" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="30" x1="0" y2="30" stroke-width="1" x2="14"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="33" x1="3" y2="33" stroke-width="1" x2="11"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="36" x1="5" y2="36" stroke-width="1" x2="9"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 13 22.5" id="网门:网门@0">
+    <rect width="12" join_style="64" x="0" y="0" fill_style="1" fill="#ffffff" cap_style="16" height="12" line_style="1" stroke="#ff0000" line_width="1"/>
+    <polygon join_style="64" fill_style="1" points="0 6,6 0,12 6,6 12" fill="#d2d2d2" cap_style="16" line_style="1" stroke="#5a5a5a" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#8a8a8a" y1="0" x1="0" y2="12" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#8a8a8a" y1="12" x1="0" y2="0" stroke-width="1" x2="12"/>
+    <polygon join_style="64" fill_style="1" points="0 0,2 3,2 16,0 12" fill="#ff0000" cap_style="16" line_style="1" stroke="#ff0000" stroke-width="1"/>
+    <polygon join_style="64" fill_style="1" points="10 3,12 0,12 12,10 16" fill="#ff0000" cap_style="16" line_style="1" stroke="#ff0000" stroke-width="1"/>
+    <use x="6" y="0" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 13 22.5" id="网门:网门@1">
+    <rect width="12" join_style="64" x="0" y="0" fill_style="1" fill="#90dce0" cap_style="16" height="12" line_style="1" stroke="#008080" line_width="1"/>
+    <polygon join_style="64" fill_style="0" points="0 6,6 0,12 6,6 12" fill="none" cap_style="16" line_style="1" stroke="#002626" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#008080" y1="0" x1="0" y2="12" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#008080" y1="12" x1="0" y2="0" stroke-width="1" x2="12"/>
+    <polygon join_style="64" fill_style="0" points="0 0,0 0,0 12,0 12" fill="none" cap_style="16" line_style="1" stroke="#008080" stroke-width="1"/>
+    <polygon join_style="64" fill_style="0" points="12 0,12 0,12 12,12 12" fill="none" cap_style="16" line_style="1" stroke="#008080" stroke-width="1"/>
+    <use x="6" y="0" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 13 22.5" id="网门:网门@1000">
+    <rect width="12" join_style="64" x="0" y="0" fill_style="1" fill="#ffffff" cap_style="16" height="12" line_style="1" stroke="#c8c800" line_width="1"/>
+    <polygon join_style="64" fill_style="0" points="0 6,6 0,12 6,6 12" fill="none" cap_style="16" line_style="1" stroke="#808000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a0a000" y1="0" x1="0" y2="12" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a0a000" y1="12" x1="0" y2="0" stroke-width="1" x2="12"/>
+    <polygon join_style="64" fill_style="1" points="0 0,2 3,2 16,0 12" fill="#b4b400" cap_style="16" line_style="1" stroke="#828200" stroke-width="1"/>
+    <polygon join_style="64" fill_style="1" points="10 3,12 0,12 12,10 16" fill="#b4b400" cap_style="16" line_style="1" stroke="#828200" stroke-width="1"/>
+    <use x="6" y="0" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 13 22.5" id="网门:网门@1001">
+    <rect width="12" join_style="64" x="0" y="0" fill_style="1" fill="#797900" cap_style="16" height="12" line_style="1" stroke="#969600" line_width="1"/>
+    <polygon join_style="64" fill_style="0" points="0 6,6 0,12 6,6 12" fill="none" cap_style="16" line_style="1" stroke="#002626" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#585800" y1="0" x1="0" y2="12" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#585800" y1="12" x1="0" y2="0" stroke-width="1" x2="12"/>
+    <polygon join_style="64" fill_style="0" points="0 0,0 0,0 12,0 12" fill="none" cap_style="16" line_style="1" stroke="#969600" stroke-width="1"/>
+    <polygon join_style="64" fill_style="0" points="12 0,12 0,12 12,12 12" fill="none" cap_style="16" line_style="1" stroke="#969600" stroke-width="1"/>
+    <use x="6" y="0" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 13 22.5" id="网门:网门@2001">
+    <rect width="12" join_style="64" x="0" y="0" fill_style="1" fill="#929292" cap_style="16" height="12" line_style="1" stroke="#696969" line_width="1"/>
+    <polygon join_style="64" fill_style="0" points="0 6,6 0,12 6,6 12" fill="none" cap_style="16" line_style="1" stroke="#000000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#404040" y1="0" x1="0" y2="12" stroke-width="1" x2="12"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#404040" y1="12" x1="0" y2="0" stroke-width="1" x2="12"/>
+    <polygon join_style="64" fill_style="0" points="0 0,0 0,0 12,0 12" fill="none" cap_style="16" line_style="1" stroke="#696969" stroke-width="1"/>
+    <polygon join_style="64" fill_style="0" points="12 0,12 0,12 12,12 12" fill="none" cap_style="16" line_style="1" stroke="#696969" stroke-width="1"/>
+    <use x="6" y="0" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 23" id="接地线:接地线@0">
+    <ellipse join_style="64" fill_style="1" fill="#cfcfcf" cx="6" cy="10" cap_style="16" rx="6" ry="6" line_style="1" stroke="#9e9e9e" line_width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="4" x1="6" y2="8" stroke-width="2" x2="6"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="9" x1="2" y2="9" stroke-width="1" x2="10"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="11" x1="4" y2="11" stroke-width="1" x2="8"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="13" x1="5" y2="13" stroke-width="1" x2="7"/>
+    <use x="6" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 23" id="接地线:接地线@1">
+    <ellipse join_style="64" fill_style="1" fill="#ff9999" cx="6" cy="10" cap_style="16" rx="6" ry="6" line_style="1" stroke="#ff0000" line_width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="4" x1="6" y2="8" stroke-width="2" x2="6"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="9" x1="2" y2="9" stroke-width="1" x2="10"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="11" x1="4" y2="11" stroke-width="1" x2="8"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="13" x1="5" y2="13" stroke-width="1" x2="7"/>
+    <use x="6" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 23" id="接地线:接地线@1000">
+    <ellipse join_style="64" fill_style="1" fill="#a0a000" cx="6" cy="10" cap_style="16" rx="6" ry="6" line_style="1" stroke="#969600" line_width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="4" x1="6" y2="8" stroke-width="2" x2="6"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="9" x1="2" y2="9" stroke-width="1" x2="10"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="11" x1="4" y2="11" stroke-width="1" x2="8"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="13" x1="5" y2="13" stroke-width="1" x2="7"/>
+    <use x="6" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 23" id="接地线:接地线@1001">
+    <ellipse join_style="64" fill_style="1" fill="#d2d27e" cx="6" cy="10" cap_style="16" rx="6" ry="6" line_style="1" stroke="#dcdc00" line_width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c00000" y1="4" x1="6" y2="8" stroke-width="2" x2="6"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c00000" y1="9" x1="2" y2="9" stroke-width="1" x2="10"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c00000" y1="11" x1="4" y2="11" stroke-width="1" x2="8"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#c00000" y1="13" x1="5" y2="13" stroke-width="1" x2="7"/>
+    <use x="6" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 17.5 23" id="接地线:接地线@2001">
+    <ellipse join_style="64" fill_style="1" fill="#979797" cx="6" cy="10" cap_style="16" rx="6" ry="6" line_style="1" stroke="#696969" line_width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="4" x1="6" y2="8" stroke-width="2" x2="6"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="9" x1="2" y2="9" stroke-width="1" x2="10"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="11" x1="4" y2="11" stroke-width="1" x2="8"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#000000" y1="13" x1="5" y2="13" stroke-width="1" x2="7"/>
+    <use x="6" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 18.5 18.5" id="地线灯:地线灯@0">
+    <ellipse join_style="64" fill_style="1" fill="#b5b5b5" cx="8" cy="8" cap_style="16" rx="8" ry="8" line_style="1" stroke="#8a8a8a" line_width="2"/>
+    <ellipse join_style="64" fill_style="1" fill="#919191" cx="8" cy="8" cap_style="16" rx="3" ry="3" line_style="1" stroke="#717171" line_width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 18.5 18.5" id="地线灯:地线灯@1">
+    <ellipse join_style="64" fill_style="1" fill="#ff7676" cx="8" cy="8" cap_style="16" rx="8" ry="8" line_style="1" stroke="#ff0000" line_width="2"/>
+    <ellipse join_style="64" fill_style="1" fill="#e54747" cx="8" cy="8" cap_style="16" rx="3" ry="3" line_style="1" stroke="#800000" line_width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 18.5 18.5" id="地线灯:地线灯@1000">
+    <ellipse join_style="64" fill_style="1" fill="#afaf00" cx="8" cy="8" cap_style="16" rx="8" ry="8" line_style="1" stroke="#787800" line_width="2"/>
+    <ellipse join_style="64" fill_style="1" fill="#939393" cx="8" cy="8" cap_style="16" rx="3" ry="3" line_style="1" stroke="#545400" line_width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 18.5 18.5" id="地线灯:地线灯@1001">
+    <ellipse join_style="64" fill_style="1" fill="#dfdf00" cx="8" cy="8" cap_style="16" rx="8" ry="8" line_style="1" stroke="#ffee00" line_width="2"/>
+    <ellipse join_style="64" fill_style="1" fill="#dada00" cx="8" cy="8" cap_style="16" rx="3" ry="3" line_style="1" stroke="#b4b400" line_width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 15 48" id="避雷器250:BLQ-3">
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="13" x1="7" y2="19" stroke-width="2" x2="7"/>
+    <rect width="10" join_style="64" x="2" y="6" fill_style="0" fill="none" cap_style="16" height="14" line_style="1" stroke="#a00000" line_width="1"/>
+    <polygon join_style="64" fill_style="1" points="7 9,9 13,5 13" fill="#a00000" cap_style="16" line_style="1" stroke="#a00000" stroke-width="1"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="21" x1="7" y2="29" stroke-width="2" x2="7"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="30" x1="0" y2="30" stroke-width="1" x2="14"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="33" x1="3" y2="33" stroke-width="1" x2="11"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="36" x1="5" y2="36" stroke-width="1" x2="9"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 14 34" id="负荷266:LOAD-3">
+    <use x="6" y="4" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="4" x1="6" y2="28" stroke-width="2" x2="6"/>
+    <polyline join_style="64" points="0 21,6 31,12 21" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 14 34" id="负荷267:LOAD-3">
+    <use x="6" y="4" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="4" x1="6" y2="28" stroke-width="2" x2="6"/>
+    <polyline join_style="64" points="0 21,6 31,12 21" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 14 34" id="负荷268:LOAD-3">
+    <use x="6" y="4" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="4" x1="6" y2="28" stroke-width="2" x2="6"/>
+    <polyline join_style="64" points="0 21,6 31,12 21" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 14 34" id="负荷269:LOAD-3">
+    <use x="6" y="4" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="4" x1="6" y2="28" stroke-width="2" x2="6"/>
+    <polyline join_style="64" points="0 21,6 31,12 21" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 14 34" id="负荷270:LOAD-3">
+    <use x="6" y="4" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="4" x1="6" y2="28" stroke-width="2" x2="6"/>
+    <polyline join_style="64" points="0 21,6 31,12 21" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 14 34" id="负荷271:LOAD-3">
+    <use x="6" y="4" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="4" x1="6" y2="28" stroke-width="2" x2="6"/>
+    <polyline join_style="64" points="0 21,6 31,12 21" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 14 34" id="负荷272:LOAD-3">
+    <use x="6" y="4" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="4" x1="6" y2="28" stroke-width="2" x2="6"/>
+    <polyline join_style="64" points="0 21,6 31,12 21" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 14 34" id="负荷273:LOAD-3">
+    <use x="6" y="4" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="4" x1="6" y2="28" stroke-width="2" x2="6"/>
+    <polyline join_style="64" points="0 21,6 31,12 21" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="2"/>
+   </symbol>
+   <symbol viewBox="0 0 42.5 82" id="两卷变324:LJB-1">
+    <ellipse join_style="64" fill_style="0" fill="none" cx="20" cy="24" cap_style="16" rx="20" ry="20" line_style="1" stroke="#ffff0d" line_width="2"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="20" cy="54" cap_style="16" rx="20" ry="20" line_style="1" stroke="#a00000" line_width="2"/>
+    <use x="20" y="4" xlink:href="#terminal"/>
+    <use x="20" y="24" xlink:href="#terminal"/>
+    <use x="20" y="54" xlink:href="#terminal"/>
+    <use x="20" y="74" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 42.5 82" id="两卷变334:LJB-1">
+    <ellipse join_style="64" fill_style="0" fill="none" cx="20" cy="24" cap_style="16" rx="20" ry="20" line_style="1" stroke="#ffff0d" line_width="2"/>
+    <ellipse join_style="64" fill_style="0" fill="none" cx="20" cy="54" cap_style="16" rx="20" ry="20" line_style="1" stroke="#a00000" line_width="2"/>
+    <use x="20" y="4" xlink:href="#terminal"/>
+    <use x="20" y="24" xlink:href="#terminal"/>
+    <use x="20" y="54" xlink:href="#terminal"/>
+    <use x="20" y="74" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:双位开关@0">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb1)" cap_style="16" height="24" line_style="1" stroke="#00c600" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ff0000" y1="5.5" x1="2.5" y2="27.5" stroke-width="2" x2="12.5"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ff0000" y1="27" x1="1" y2="5" stroke-width="2" x2="13"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:双位开关@1">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb1)" cap_style="16" height="24" line_style="1" stroke="#00c600" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ff0000" y1="5.5" x1="2.5" y2="27.5" stroke-width="2" x2="12.5"/>
+    <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ff0000" y1="27" x1="1" y2="5" stroke-width="2" x2="13"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:双位开关@93">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb1)" cap_style="16" height="24" line_style="1" stroke="#00c600" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+   </symbol>
+   <symbol viewBox="0 0 16 36" id="开关:双位开关@94">
+    <rect width="14" join_style="64" x="0" y="4" fill_style="1" fill="url(#gradient_jb2)" cap_style="16" height="24" line_style="1" stroke="#ff0000" line_width="1"/>
+    <use x="7" y="4" xlink:href="#terminal"/>
+    <use x="7" y="28" xlink:href="#terminal"/>
+   </symbol>
+  </symbol>
+  <linearGradient>
+   <linearGradient id="gradient_jb2" y1="0%" x1="0%" y2="0%" x2="100%">
+    <stop offset="0" stop-color="#ff0000" stop-opacity="1"/>
+    <stop offset="0.801047" stop-color="#9d0000" stop-opacity="1"/>
+    <stop offset="0.827225" stop-color="#c80000" stop-opacity="1"/>
+    <stop offset="1" stop-color="#c80000" stop-opacity="1"/>
+   </linearGradient>
+   <linearGradient id="gradient_jb1" y1="0%" x1="0%" y2="0%" x2="100%">
+    <stop offset="0" stop-color="#00ff00" stop-opacity="1"/>
+    <stop offset="0.801047" stop-color="#006d00" stop-opacity="1"/>
+    <stop offset="0.82199" stop-color="#009100" stop-opacity="1"/>
+    <stop offset="1" stop-color="#009100" stop-opacity="1"/>
+   </linearGradient>
+   <linearGradient id="gradient_jb3" y1="0%" x1="0%" y2="0%" x2="100%">
+    <stop offset="0" stop-color="#b4b400" stop-opacity="1"/>
+    <stop offset="0.801047" stop-color="#616100" stop-opacity="1"/>
+    <stop offset="0.82199" stop-color="#858500" stop-opacity="1"/>
+    <stop offset="1" stop-color="#858500" stop-opacity="1"/>
+   </linearGradient>
+   <linearGradient id="gradient_jb4" y1="0%" x1="0%" y2="0%" x2="100%">
+    <stop offset="0" stop-color="#dcdc00" stop-opacity="1"/>
+    <stop offset="0.801047" stop-color="#919100" stop-opacity="1"/>
+    <stop offset="0.82199" stop-color="#b4b400" stop-opacity="1"/>
+    <stop offset="1" stop-color="#b4b400" stop-opacity="1"/>
+   </linearGradient>
+   <linearGradient id="gradient_jb5" y1="0%" x1="0%" y2="0%" x2="100%">
+    <stop offset="0" stop-color="#a9a9a9" stop-opacity="1"/>
+    <stop offset="0.801047" stop-color="#3f3f26" stop-opacity="1"/>
+    <stop offset="0.82199" stop-color="#505035" stop-opacity="1"/>
+    <stop offset="1" stop-color="#505050" stop-opacity="1"/>
+   </linearGradient>
+   <linearGradient id="gradient_VVolt35" y1="0%" x1="0%" y2="100%" x2="0%">
+    <stop offset="0.2" stop-color="#ffff0d" stop-opacity="1"/>
+    <stop offset="1.0" stop-color="#3f3f03" stop-opacity="1"/>
+   </linearGradient>
+   <linearGradient id="gradient_VVolt10" y1="0%" x1="0%" y2="100%" x2="0%">
+    <stop offset="0.2" stop-color="#a00000" stop-opacity="1"/>
+    <stop offset="1.0" stop-color="#280000" stop-opacity="1"/>
+   </linearGradient>
+  </linearGradient>
+  <radialGradient/>
+  <conicalGradient/>
+ </defs>
+ <g>
+  <rect width="1185.28" x="0" y="0" fill="#000000" height="949.78"/>
+  <g id="2">
+   <use width="16" x="394.2799999999997" y="203.2700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="YX396" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="3">
+   <use width="18" x="391.2799999999997" y="245.2700000000004" height="38" xlink:href="#刀闸:刀闸@0" transform="rotate(180 400.28 264.27)">
+    <UT.shapedata>
+     <PowerData PointName="YX399" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="4">
+   <use width="18" x="394.2799999999997" y="159.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX18" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="5">
+   <use width="40.869" x="448.8499999999995" y="141.7000000000007" height="52" xlink:href="#电压互感器5:PT-15"/>
+  </g>
+  <g id="6">
+   <rect width="390" x="695.2799999999997" y="302.2700000000004" fill_style="0" fill="url(#gradient_VVolt35)" height="8" devid="66"/>
+  </g>
+  <g id="7">
+   <use width="18" x="488.2799999999997" y="249.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX487" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="8">
+   <use width="18" x="730.2799999999997" y="250.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX488" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="9">
+   <use width="16" x="593.2799999999997" y="207.7700000000004" height="36" xlink:href="#开关:开关@0" transform="rotate(90 601.28 225.77)">
+    <UT.shapedata>
+     <PowerData PointName="YX571" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="10">
+   <use width="18" x="394.2799999999997" y="328.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX134" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="11">
+   <rect width="1120" x="65.27999999999975" y="597.2700000000004" fill_style="0" fill="url(#gradient_VVolt10)" height="8" devid="67"/>
+  </g>
+  <g id="12">
+   <use width="18" x="393.2799999999997" y="538.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX135" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="13">
+   <use width="16" x="393.2799999999997" y="484.2700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="YX05" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="14">
+   <use width="18" x="825.0299999999997" y="327.7700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX322" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="15">
+   <use width="18" x="824.0299999999997" y="534.7700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX323" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="16">
+   <use width="16" x="824.0299999999997" y="480.7700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="YX320" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="17">
+   <use width="34.5" x="204.2799999999997" y="381.2700000000004" height="40" xlink:href="#电压互感器17:PT-12"/>
+  </g>
+  <g id="18">
+   <use width="18" x="205.2799999999997" y="327.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX688" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="19">
+   <polyline join_style="64" points="212.28 357.27,212.28 385.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="20">
+   <rect width="1118" x="66.27999999999975" y="796.2700000000004" fill_style="0" fill="url(#gradient_VVolt10)" height="8" devid="68"/>
+  </g>
+  <g id="21">
+   <use width="16" x="824.7799999999997" y="196.7700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="61850-352" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="22">
+   <use width="18" x="821.7799999999997" y="240.7700000000004" height="38" xlink:href="#刀闸:刀闸@0" transform="rotate(180 830.78 259.77)">
+    <UT.shapedata>
+     <PowerData PointName="YX485" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="23">
+   <use width="18" x="824.7799999999997" y="152.7700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX484" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="24">
+   <use width="40.869" x="879.3499999999995" y="140.9700000000003" height="52" xlink:href="#电压互感器24:PT-15"/>
+  </g>
+  <g id="25">
+   <use width="18" x="166.2799999999997" y="616.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1212" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="26">
+   <use width="16" x="166.2799999999997" y="660.2700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1055" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="27">
+   <use width="18" x="278.2799999999997" y="615.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1209" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="28">
+   <use width="16" x="278.2799999999997" y="659.2700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1006" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="29">
+   <use width="18" x="278.2799999999997" y="704.8000000000002" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1210" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="30">
+   <use width="18" x="318.2799999999997" y="752.7400000000007" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1211" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="31">
+   <use width="18" x="393.2799999999997" y="614.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1206" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="32">
+   <use width="34.5" x="601.2799999999997" y="681.2700000000004" height="40" xlink:href="#电压互感器32:PT-12"/>
+  </g>
+  <g id="33">
+   <use width="18" x="709.7799999999997" y="621.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX814" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="34">
+   <use width="16" x="709.7799999999997" y="665.2700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="YX812" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="35">
+   <use width="18" x="709.7799999999997" y="708.9900000000007" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX815" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="36">
+   <use width="18" x="749.7799999999997" y="760.1200000000008" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX816" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="37">
+   <use width="18" x="823.7799999999997" y="620.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX728" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="38">
+   <use width="16" x="823.7799999999997" y="664.2700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="YX726" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="39">
+   <use width="18" x="823.7799999999997" y="709.7000000000007" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX729" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="40">
+   <use width="18" x="863.7799999999997" y="758.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX730" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="41">
+   <use width="18" x="944.7799999999997" y="619.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1218" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="42">
+   <use width="16" x="944.7799999999997" y="663.2700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1153" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="43">
+   <use width="18" x="944.7799999999997" y="708.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1219" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="44">
+   <use width="18" x="984.7799999999997" y="758.7200000000003" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1220" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="45">
+   <use width="18" x="1068.78" y="617.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1215" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="46">
+   <use width="16" x="1068.78" y="661.2700000000004" height="36" xlink:href="#开关:开关@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1104" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="47">
+   <use width="18" x="1068.78" y="706.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1216" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="48">
+   <use width="18" x="1106.78" y="750.5900000000001" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1217" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="49">
+   <text font-family="SimSun" fill="#ffffff" font-size="53">
+    <tspan x="334.3099999999995" y="58.5">35kV优特变电站主接线图</tspan>
+   </text>
+  </g>
+  <g id="50">
+   <use width="17.5" x="206.2799999999997" y="833.2700000000004" height="48" xlink:href="#避雷器50:BLQ-3"/>
+  </g>
+  <g id="51">
+   <polyline join_style="64" points="284.82 821.76,323.82 821.76,323.82 835.76" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="52">
+   <use width="17.5" x="316.8199999999997" y="831.7600000000002" height="48" xlink:href="#避雷器52:BLQ-3"/>
+  </g>
+  <g id="53">
+   <polyline join_style="64" points="517.28 820.6,556.28 820.6,556.28 834.6" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="54">
+   <use width="17.5" x="549.2799999999997" y="830.6000000000004" height="48" xlink:href="#避雷器54:BLQ-3"/>
+  </g>
+  <g id="55">
+   <polyline join_style="64" points="716.78 819.63,755.78 819.63,755.78 833.63" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="56">
+   <use width="17.5" x="748.7799999999997" y="829.6300000000001" height="48" xlink:href="#避雷器56:BLQ-3"/>
+  </g>
+  <g id="57">
+   <polyline join_style="64" points="830.78 821.34,869.78 821.34,869.78 835.34" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="58">
+   <use width="17.5" x="862.7799999999997" y="831.3400000000001" height="48" xlink:href="#避雷器58:BLQ-3"/>
+  </g>
+  <g id="59">
+   <polyline join_style="64" points="952.94 820.6,991.94 820.6,991.94 834.6" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="60">
+   <use width="17.5" x="984.9399999999996" y="830.6000000000004" height="48" xlink:href="#避雷器60:BLQ-3"/>
+  </g>
+  <g id="61">
+   <polyline join_style="64" points="1075.65 820.6,1114.65 820.6,1114.65 834.6" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="62">
+   <use width="17.5" x="1107.65" y="830.6000000000004" height="48" xlink:href="#避雷器62:BLQ-3"/>
+  </g>
+  <g id="63">
+   <text font-family="SimSun" fill="#ffffff" font-size="20">
+    <tspan x="139.5699999999997" y="935.2800000000007">马料河线</tspan>
+   </text>
+  </g>
+  <g id="64">
+   <text font-family="SimSun" fill="#ffffff" font-size="20">
+    <tspan x="265.3000000000002" y="937.2800000000007">回龙村线</tspan>
+   </text>
+  </g>
+  <g id="65">
+   <text font-family="SimSun" fill="#ffffff" font-size="20">
+    <tspan x="389.6899999999996" y="941.2800000000007">官渡线</tspan>
+   </text>
+  </g>
+  <g id="66">
+   <text font-family="SimSun" fill="#ffffff" font-size="20">
+    <tspan x="509.7399999999998" y="936.2800000000007">土桥线</tspan>
+   </text>
+  </g>
+  <g id="67">
+   <text font-family="SimSun" fill="#ffffff" font-size="20">
+    <tspan x="669.04" y="935.9500000000007">泵站I回线</tspan>
+   </text>
+  </g>
+  <g id="68">
+   <text font-family="SimSun" fill="#ffffff" font-size="20">
+    <tspan x="802.3800000000001" y="938.2800000000007">羊浦头线</tspan>
+   </text>
+  </g>
+  <g id="69">
+   <text font-family="SimSun" fill="#ffffff" font-size="20">
+    <tspan x="927.2699999999995" y="935.2800000000007">王家营线</tspan>
+   </text>
+  </g>
+  <g id="70">
+   <text font-family="SimSun" fill="#ffffff" font-size="20">
+    <tspan x="1047.82" y="935.2800000000007">呈贡化肥厂线</tspan>
+   </text>
+  </g>
+  <g id="71">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="589.1799999999994" y="210.8000000000002">350</tspan>
+   </text>
+  </g>
+  <g id="72">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="510.2799999999997" y="270.2700000000004">3501</tspan>
+   </text>
+  </g>
+  <g id="73">
+   <polyline join_style="64" points="737.28 306.27,737.28 280.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="74">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="752.2799999999997" y="271.2700000000004">3502</tspan>
+   </text>
+  </g>
+  <g id="75">
+   <polyline join_style="64" points="401.28 189.27,401.28 207.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="76">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="422.6799999999994" y="224.4000000000005">351</tspan>
+   </text>
+  </g>
+  <g id="77">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="414.2799999999997" y="268.2700000000004">3512</tspan>
+   </text>
+  </g>
+  <g id="78">
+   <polyline join_style="64" points="401.28 231.27,401.28 251.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="79">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="416.2799999999997" y="180.2700000000004">3513</tspan>
+   </text>
+  </g>
+  <g id="80">
+   <text font-family="SimSun" fill="#ffff00" font-size="15">
+    <tspan x="991.6599999999999" y="221.4500000000007">61850-Ua</tspan>
+   </text>
+  </g>
+  <g id="81">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="845.2799999999997" y="216.7700000000004">352</tspan>
+   </text>
+  </g>
+  <g id="82">
+   <polyline join_style="64" points="831.78 272.77,831.78 306.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="83">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="844.7799999999997" y="263.7700000000004">3522</tspan>
+   </text>
+  </g>
+  <g id="84">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="846.7799999999997" y="173.7700000000004">3523</tspan>
+   </text>
+  </g>
+  <g id="85">
+   <polyline join_style="64" points="831.78 123.54,898.78 123.54,898.78 145.54" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="86">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="227.2799999999997" y="348.2700000000004">3601</tspan>
+   </text>
+  </g>
+  <g id="87">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="413.7799999999997" y="504.2700000000004">421</tspan>
+   </text>
+  </g>
+  <g id="88">
+   <polyline join_style="64" points="401.28 387.27,401.28 358.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="89">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="416.2799999999997" y="349.2700000000004">3511</tspan>
+   </text>
+  </g>
+  <g id="90">
+   <polyline join_style="64" points="400.28 601.27,400.28 568.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="91">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="415.2799999999997" y="559.2700000000004">4212</tspan>
+   </text>
+  </g>
+  <g id="92">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="844.5299999999997" y="500.7700000000004">422</tspan>
+   </text>
+  </g>
+  <g id="93">
+   <polyline join_style="64" points="832.03 331.77,832.03 306.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="94">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="847.0299999999997" y="348.7700000000004">3521</tspan>
+   </text>
+  </g>
+  <g id="95">
+   <polyline join_style="64" points="831.03 601.27,831.03 564.77" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="96">
+   <polyline join_style="64" points="831.03 538.77,831.03 508.77" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="97">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="846.0299999999997" y="555.7700000000004">4222</tspan>
+   </text>
+  </g>
+  <g id="98">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="413.7799999999997" y="678.2700000000004">452</tspan>
+   </text>
+  </g>
+  <g id="99">
+   <polyline join_style="64" points="400.99 621.1,400.99 601.269" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="100">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="415.2799999999997" y="635.2700000000004">4521</tspan>
+   </text>
+  </g>
+  <g id="101">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="298.7799999999997" y="679.2700000000004">453</tspan>
+   </text>
+  </g>
+  <g id="102">
+   <polyline join_style="64" points="285.28 619.27,285.28 601.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="103">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="300.2799999999997" y="636.2700000000004">4531</tspan>
+   </text>
+  </g>
+  <g id="104">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="300.2799999999997" y="725.8000000000002">4532</tspan>
+   </text>
+  </g>
+  <g id="105">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="340.2799999999997" y="773.7400000000007">4533</tspan>
+   </text>
+  </g>
+  <g id="106">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="186.7799999999997" y="680.2700000000004">454</tspan>
+   </text>
+  </g>
+  <g id="107">
+   <polyline join_style="64" points="173.28 620.27,173.28 601.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="108">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="188.2799999999997" y="637.2700000000004">4541</tspan>
+   </text>
+  </g>
+  <g id="109">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="1089.28" y="681.2700000000004">455</tspan>
+   </text>
+  </g>
+  <g id="110">
+   <polyline join_style="64" points="1075.78 621.27,1075.78 601.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="111">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="1090.78" y="638.2700000000004">4551</tspan>
+   </text>
+  </g>
+  <g id="112">
+   <polyline join_style="64" points="1075.78 868.27,1075.78 736.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="113">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="1090.78" y="727.2700000000004">4552</tspan>
+   </text>
+  </g>
+  <g id="114">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="1128.78" y="771.5900000000001">4553</tspan>
+   </text>
+  </g>
+  <g id="115">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="965.2799999999997" y="683.2700000000004">456</tspan>
+   </text>
+  </g>
+  <g id="116">
+   <polyline join_style="64" points="951.78 623.27,951.78 601.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="117">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="966.7799999999997" y="640.2700000000004">4561</tspan>
+   </text>
+  </g>
+  <g id="118">
+   <polyline join_style="64" points="951.78 868.27,951.78 738.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="119">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="966.7799999999997" y="729.2700000000004">4562</tspan>
+   </text>
+  </g>
+  <g id="120">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="1006.78" y="779.7200000000003">4563</tspan>
+   </text>
+  </g>
+  <g id="121">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="844.2799999999997" y="684.2700000000004">457</tspan>
+   </text>
+  </g>
+  <g id="122">
+   <polyline join_style="64" points="830.78 624.27,830.78 601.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="123">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="845.7799999999997" y="641.2700000000004">4571</tspan>
+   </text>
+  </g>
+  <g id="124">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="845.7799999999997" y="730.7000000000007">4572</tspan>
+   </text>
+  </g>
+  <g id="125">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="885.7799999999997" y="779.2700000000004">4573</tspan>
+   </text>
+  </g>
+  <g id="126">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="730.2799999999997" y="685.2700000000004">458</tspan>
+   </text>
+  </g>
+  <g id="127">
+   <polyline join_style="64" points="716.78 625.27,716.78 601.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="128">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="731.7799999999997" y="642.2700000000004">4581</tspan>
+   </text>
+  </g>
+  <g id="129">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="731.7799999999997" y="729.9900000000007">4582</tspan>
+   </text>
+  </g>
+  <g id="130">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="771.7799999999997" y="781.1200000000008">4583</tspan>
+   </text>
+  </g>
+  <g id="131">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="632.54" y="290.5">35kV二段母线</tspan>
+   </text>
+  </g>
+  <g id="132">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="64.53999999999996" y="584.2700000000004">10kV一段母线</tspan>
+   </text>
+  </g>
+  <g id="133">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="62.30999999999949" y="783.2700000000004">10kV二段母线</tspan>
+   </text>
+  </g>
+  <g id="134">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="427.7799999999997" y="426.2700000000004">1ZB</tspan>
+   </text>
+  </g>
+  <g id="135">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="863.4299999999994" y="429.6700000000001">2ZB</tspan>
+   </text>
+  </g>
+  <g id="136">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="296.1999999999998" y="424.7400000000007">Tap</tspan>
+   </text>
+  </g>
+  <g id="137">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="320.1999999999998" y="424.7400000000007">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="" StationName=""/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="138">
+   <use width="13" x="478.9399999999996" y="481.9500000000007" height="22.5" xlink:href="#网门:网门@0"/>
+  </g>
+  <g id="139">
+   <use width="17.5" x="474.4299999999994" y="542.3700000000008" height="23" xlink:href="#接地线:接地线@0"/>
+  </g>
+  <g id="140">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="461.3800000000001" y="522.9700000000003">421WM</tspan>
+   </text>
+  </g>
+  <g id="141">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="507.71" y="555.8700000000008">421DD</tspan>
+   </text>
+  </g>
+  <g id="142">
+   <use width="18.5" x="472.1700000000001" y="567.8000000000002" height="18.5" xlink:href="#地线灯:地线灯@0"/>
+  </g>
+  <g id="143">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="514.3099999999995" y="584">DXD1</tspan>
+   </text>
+  </g>
+  <g id="144">
+   <rect width="32.0469" x="422.7799999999997" opacity="0.01" y="407.2700000000004" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站1#主变间隔图_0.svg"/>
+  </g>
+  <g id="145">
+   <rect width="32.6719" x="417.6799999999994" opacity="0.01" y="205.4000000000005" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站351间隔图_0.svg"/>
+  </g>
+  <g id="146">
+   <text space="preserve" font-family="SimSun" fill="#00ff00" font-size="12">
+    <tspan x="62.77999999999975" y="336.2700000000004">P</tspan>
+   </text>
+  </g>
+  <g id="147">
+   <text space="preserve" font-family="SimSun" fill="#00ff00" font-size="12">
+    <tspan x="70.77999999999975" y="336.2700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC5" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="148">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="62.77999999999975" y="352.2700000000004">Q</tspan>
+   </text>
+  </g>
+  <g id="149">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="70.77999999999975" y="352.2700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC6" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="150">
+   <text space="preserve" font-family="SimSun" fill="#ffffff" font-size="12">
+    <tspan x="62.77999999999975" y="368.2700000000004">Ia</tspan>
+   </text>
+  </g>
+  <g id="151">
+   <text space="preserve" font-family="SimSun" fill="#ffffff" font-size="12">
+    <tspan x="78.77999999999975" y="368.2700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC0" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="152">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="62.77999999999975" y="384.2700000000004">Ua</tspan>
+   </text>
+  </g>
+  <g id="153">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="78.77999999999975" y="384.2700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC2" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="154">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="62.77999999999975" y="400.2700000000004">Uab</tspan>
+   </text>
+  </g>
+  <g id="155">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="86.77999999999975" y="400.2700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC8" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="156">
+   <text space="preserve" font-family="SimSun" fill="#a0a0a4" font-size="12">
+    <tspan x="62.77999999999975" y="416.2700000000004">Angle</tspan>
+   </text>
+  </g>
+  <g id="157">
+   <text space="preserve" font-family="SimSun" fill="#a0a0a4" font-size="12">
+    <tspan x="102.7799999999997" y="416.2700000000004">0.00</tspan>
+   </text>
+  </g>
+  <g id="158">
+   <text space="preserve" font-family="SimSun" fill="#a0a0a4" font-size="12">
+    <tspan x="62.77999999999975" y="432.2700000000004">Phase</tspan>
+   </text>
+  </g>
+  <g id="159">
+   <text space="preserve" font-family="SimSun" fill="#a0a0a4" font-size="12">
+    <tspan x="102.7799999999997" y="432.2700000000004">0.00</tspan>
+   </text>
+  </g>
+  <g id="160">
+   <text space="preserve" font-family="SimSun" fill="#a0a0a4" font-size="12">
+    <tspan x="62.77999999999975" y="448.2700000000004">Hz</tspan>
+   </text>
+  </g>
+  <g id="161">
+   <text space="preserve" font-family="SimSun" fill="#a0a0a4" font-size="12">
+    <tspan x="78.77999999999975" y="448.2700000000004">0.00</tspan>
+   </text>
+  </g>
+  <g id="162">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="62.77999999999975" y="464.2700000000004">Cos</tspan>
+   </text>
+  </g>
+  <g id="163">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="86.77999999999975" y="464.2700000000004">9.900</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC7" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="164">
+   <text space="preserve" font-family="SimSun" fill="#a0a0a4" font-size="12">
+    <tspan x="62.77999999999975" y="480.2700000000004">Tap</tspan>
+   </text>
+  </g>
+  <g id="165">
+   <text space="preserve" font-family="SimSun" fill="#a0a0a4" font-size="12">
+    <tspan x="86.77999999999975" y="480.2700000000004">0.00</tspan>
+   </text>
+  </g>
+  <g id="166">
+   <text space="preserve" font-family="SimSun" fill="#ffc0cb" font-size="12">
+    <tspan x="62.77999999999975" y="496.2700000000004">Tmp</tspan>
+   </text>
+  </g>
+  <g id="167">
+   <text space="preserve" font-family="SimSun" fill="#ffc0cb" font-size="12">
+    <tspan x="86.77999999999975" y="496.2700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC10" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="168">
+   <text space="preserve" font-family="SimSun" fill="#00ff00" font-size="12">
+    <tspan x="918.5299999999997" y="474.7700000000004">P</tspan>
+   </text>
+  </g>
+  <g id="169">
+   <text space="preserve" font-family="SimSun" fill="#00ff00" font-size="12">
+    <tspan x="926.5299999999997" y="474.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC28" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="170">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="918.5299999999997" y="490.7700000000004">Q</tspan>
+   </text>
+  </g>
+  <g id="171">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="926.5299999999997" y="490.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC29" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="172">
+   <text space="preserve" font-family="SimSun" fill="#ffffff" font-size="12">
+    <tspan x="918.5299999999997" y="506.7700000000004">Ia</tspan>
+   </text>
+  </g>
+  <g id="173">
+   <text space="preserve" font-family="SimSun" fill="#ffffff" font-size="12">
+    <tspan x="934.5299999999997" y="506.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC23" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="174">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="918.5299999999997" y="522.7700000000004">Ua</tspan>
+   </text>
+  </g>
+  <g id="175">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="934.5299999999997" y="522.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC25" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="176">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="918.5299999999997" y="538.7700000000004">Uab</tspan>
+   </text>
+  </g>
+  <g id="177">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="942.5299999999997" y="538.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC31" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="178">
+   <text space="preserve" font-family="SimSun" fill="#00ff00" font-size="12">
+    <tspan x="274.0500000000002" y="179.5200000000004">P</tspan>
+   </text>
+  </g>
+  <g id="179">
+   <text space="preserve" font-family="SimSun" fill="#00ff00" font-size="12">
+    <tspan x="282.0500000000002" y="179.5200000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC56" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="180">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="274.0500000000002" y="195.5200000000004">Q</tspan>
+   </text>
+  </g>
+  <g id="181">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="282.0500000000002" y="195.5200000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC57" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="182">
+   <text space="preserve" font-family="SimSun" fill="#ffffff" font-size="12">
+    <tspan x="274.0500000000002" y="211.5200000000004">Ia</tspan>
+   </text>
+  </g>
+  <g id="183">
+   <text space="preserve" font-family="SimSun" fill="#ffffff" font-size="12">
+    <tspan x="290.0500000000002" y="211.5200000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC46" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="184">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="274.0500000000002" y="227.5200000000004">Ua</tspan>
+   </text>
+  </g>
+  <g id="185">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="290.0500000000002" y="227.5200000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC49" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="186">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="274.0500000000002" y="243.5200000000004">Uab</tspan>
+   </text>
+  </g>
+  <g id="187">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="298.0500000000002" y="243.5200000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC53" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="188">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="274.0500000000002" y="259.5200000000004">Cos</tspan>
+   </text>
+  </g>
+  <g id="189">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="298.0500000000002" y="259.5200000000004">9.900</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC58" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="190">
+   <text space="preserve" font-family="SimSun" fill="#00ff00" font-size="12">
+    <tspan x="911.2799999999997" y="206.7700000000004">P</tspan>
+   </text>
+  </g>
+  <g id="191">
+   <text space="preserve" font-family="SimSun" fill="#00ff00" font-size="12">
+    <tspan x="919.2799999999997" y="206.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC79" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="192">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="911.2799999999997" y="222.7700000000004">Q</tspan>
+   </text>
+  </g>
+  <g id="193">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="919.2799999999997" y="222.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC80" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="194">
+   <text space="preserve" font-family="SimSun" fill="#ffffff" font-size="12">
+    <tspan x="911.2799999999997" y="238.7700000000004">Ia</tspan>
+   </text>
+  </g>
+  <g id="195">
+   <text space="preserve" font-family="SimSun" fill="#ffffff" font-size="12">
+    <tspan x="927.2799999999997" y="238.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC69" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="196">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="911.2799999999997" y="254.7700000000004">Ua</tspan>
+   </text>
+  </g>
+  <g id="197">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="927.2799999999997" y="254.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC72" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="198">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="911.2799999999997" y="270.7700000000004">Uab</tspan>
+   </text>
+  </g>
+  <g id="199">
+   <text space="preserve" font-family="SimSun" fill="#ffff00" font-size="12">
+    <tspan x="935.2799999999997" y="270.7700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC76" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="200">
+   <rect width="32.9531" x="408.7799999999997" opacity="0.01" y="485.2700000000004" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站1#主变间隔图.svg"/>
+  </g>
+  <g id="201">
+   <polyline join_style="64" points="400.28 456.27,400.28 488.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="202">
+   <polyline join_style="64" points="400.28 512.27,400.28 542.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="203">
+   <use width="18" x="510.2799999999997" y="613.9200000000001" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1203" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="204">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="535.8199999999997" y="634.9200000000001">4511</tspan>
+   </text>
+  </g>
+  <g id="205">
+   <polyline join_style="64" points="517.28 617.918,517.28 601.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="206">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="557.4899999999998" y="690.4700000000003"> </tspan>
+   </text>
+  </g>
+  <g id="207">
+   <rect width="32.9531" x="725.2799999999997" opacity="0.01" y="666.2700000000004" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站458间隔图_0.svg"/>
+  </g>
+  <g id="208">
+   <polyline join_style="64" points="716.78 651.27,716.78 669.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="209">
+   <polyline join_style="64" points="716.78 870.27,716.78 738.992" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="210">
+   <polyline join_style="64" points="716.78 712.992,716.78 693.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="211">
+   <polyline join_style="64" points="870.78 800.27,870.78 788.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="212">
+   <polyline join_style="64" points="870.78 761.34,870.78 752.766,830.78 752.766" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="213">
+   <polyline join_style="64" points="756.78 800.27,756.78 790.122" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="214">
+   <polyline join_style="64" points="756.78 763.192,756.78 753.766,716.78 753.766" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="215">
+   <polyline join_style="64" points="830.78 869.27,830.78 739.696" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="216">
+   <rect width="32.9531" x="840.2799999999997" opacity="0.01" y="197.7700000000004" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站352间隔图_0.svg"/>
+  </g>
+  <g id="217">
+   <polyline join_style="64" points="831.78 182.77,831.78 200.77" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="218">
+   <polyline join_style="64" points="831.78 224.77,831.78 246.77" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="219">
+   <rect width="160" join_style="64" x="10.34000000000015" y="128.3400000000001" fill_style="1" fill="#00aa7f" cap_style="16" height="52" line_style="1" stroke="#77b7f3" line_width="1"/>
+  </g>
+  <g id="220">
+   <text font-family="SimSun" fill="#ffffff" font-size="22">
+    <tspan x="26.35999999999967" y="162.0600000000004">35kV分接线图</tspan>
+   </text>
+  </g>
+  <g id="221">
+   <rect width="160" join_style="64" x="10.34000000000015" y="205.3400000000001" fill_style="1" fill="#00aa7f" cap_style="16" height="52" line_style="1" stroke="#77b7f3" line_width="1"/>
+  </g>
+  <g id="222">
+   <text font-family="SimSun" fill="#ffffff" font-size="22">
+    <tspan x="24.35999999999967" y="242.0600000000004">10kV分接线图</tspan>
+   </text>
+  </g>
+  <g id="223">
+   <rect width="156" x="12.57999999999993" opacity="0.01" y="129.3200000000006" fill_style="1" fill="#ffffff" height="50" stroke="#ffffff"/>
+   <file link="35千伏优特变电站分接线图.svg"/>
+  </g>
+  <g id="224">
+   <polyline join_style="64" points="401.28 164.47,401.28 74.47" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="2"/>
+  </g>
+  <g id="225">
+   <polyline join_style="64" points="831.78 156.77,831.78 69.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="2"/>
+  </g>
+  <g id="226">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="312.5099999999993" y="118.96">LINE_1</tspan>
+   </text>
+  </g>
+  <g id="227">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="765.5699999999997" y="118.1500000000005">LINE_2</tspan>
+   </text>
+  </g>
+  <g id="228">
+   <polyline join_style="64" points="173.28 819.27,213.28 819.27,213.28 837.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="229">
+   <use width="18" x="510.2799999999997" y="692.4900000000007" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1204" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="230">
+   <use width="18" x="558.2799999999997" y="751.2400000000007" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1205" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="231">
+   <polyline join_style="64" points="517.28 743.27,565.28 743.27,565.28 755.24" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="232">
+   <polyline join_style="64" points="565.28 781.24,565.28 800.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="233">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="532.2799999999997" y="713.4900000000007">4512</tspan>
+   </text>
+  </g>
+  <g id="234">
+   <polyline join_style="64" points="517.28 871.27,517.28 722.489" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="235">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="583.8199999999997" y="774.3600000000006">4513</tspan>
+   </text>
+  </g>
+  <g id="236">
+   <use width="18" x="393.2799999999997" y="694.9400000000005" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1207" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="237">
+   <polyline join_style="64" points="400.28 871.27,400.28 724.937" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="238">
+   <use width="18" x="448.2799999999997" y="750.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1208" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="239">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="415.2799999999997" y="715.9400000000005">4522</tspan>
+   </text>
+  </g>
+  <g id="240">
+   <polyline join_style="64" points="455.28 800.27,455.28 780.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="241">
+   <polyline join_style="64" points="455.28 754.27,455.28 745.27,400.28 745.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="242">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="470.2799999999997" y="771.2700000000004">4523</tspan>
+   </text>
+  </g>
+  <g id="243">
+   <use width="18" x="166.2799999999997" y="705.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1213" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="244">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="188.2799999999997" y="726.2700000000004">4542</tspan>
+   </text>
+  </g>
+  <g id="245">
+   <use width="18" x="208.2799999999997" y="752.2700000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1214" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="246">
+   <polyline join_style="64" points="173.28 748.81,215.28 748.81,215.28 755.81" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="247">
+   <polyline join_style="64" points="215.28 782.27,215.28 800.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="248">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="230.2799999999997" y="773.2700000000004">4543</tspan>
+   </text>
+  </g>
+  <g id="249">
+   <polyline join_style="64" points="400.28 821.27,435.28 821.27,435.28 835.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="250">
+   <use width="17.5" x="428.2799999999997" y="831.2700000000004" height="48" xlink:href="#避雷器250:BLQ-3"/>
+  </g>
+  <g id="251">
+   <use width="18" x="424.9499999999998" y="93.27000000000044" height="38" xlink:href="#刀闸:刀闸@0" transform="rotate(90 433.95 112.27)">
+    <UT.shapedata>
+     <PowerData PointName="YX1221" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="252">
+   <polyline join_style="64" points="468.28 146.27,468.28 111.27,446.947 111.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="253">
+   <polyline join_style="64" points="420.947 111.27,401.28 111.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="254">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="416.9499999999998" y="92.27000000000044">3515</tspan>
+   </text>
+  </g>
+  <g id="255">
+   <use width="18" x="602.2799999999997" y="619.6000000000004" height="38" xlink:href="#刀闸:刀闸@0">
+    <UT.shapedata>
+     <PowerData PointName="YX1202" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="256">
+   <polyline join_style="64" points="609.28 685.27,609.28 649.603" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="257">
+   <polyline join_style="64" points="609.28 623.603,609.28 601.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="258">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="624.2799999999997" y="640.6000000000004">4601</tspan>
+   </text>
+  </g>
+  <g id="259">
+   <rect width="390" x="169.7799999999997" y="303.2700000000004" fill_style="0" fill="url(#gradient_VVolt35)" height="8" devid="65"/>
+  </g>
+  <g id="260">
+   <polyline join_style="64" points="401.28 277.27,401.28 307.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="261">
+   <polyline join_style="64" points="212.28 331.27,212.28 307.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="262">
+   <polyline join_style="64" points="495.28 279.27,495.28 307.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="263">
+   <polyline join_style="64" points="401.28 332.27,401.28 307.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="264">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="170.7799999999997" y="290.2700000000004">35kV一段母线</tspan>
+   </text>
+  </g>
+  <g id="265">
+   <polyline join_style="64" points="173.28 735.27,173.28 877.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="266">
+   <use width="17" x="167.2799999999997" y="873.2700000000004" height="34" xlink:href="#负荷266:LOAD-3"/>
+  </g>
+  <g id="267">
+   <use width="17" x="279.2799999999997" y="868.2700000000004" height="34" xlink:href="#负荷267:LOAD-3"/>
+  </g>
+  <g id="268">
+   <use width="17" x="394.2799999999997" y="867.2700000000004" height="34" xlink:href="#负荷268:LOAD-3"/>
+  </g>
+  <g id="269">
+   <use width="17" x="511.2799999999997" y="867.2700000000004" height="34" xlink:href="#负荷269:LOAD-3"/>
+  </g>
+  <g id="270">
+   <use width="17" x="710.7799999999997" y="866.2700000000004" height="34" xlink:href="#负荷270:LOAD-3"/>
+  </g>
+  <g id="271">
+   <use width="17" x="824.7799999999997" y="865.2700000000004" height="34" xlink:href="#负荷271:LOAD-3"/>
+  </g>
+  <g id="272">
+   <use width="17" x="945.7799999999997" y="864.2700000000004" height="34" xlink:href="#负荷272:LOAD-3"/>
+  </g>
+  <g id="273">
+   <use width="17" x="1069.78" y="864.2700000000004" height="34" xlink:href="#负荷273:LOAD-3"/>
+  </g>
+  <g id="274">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="188.2799999999997" y="892.2700000000004">LD_1</tspan>
+   </text>
+  </g>
+  <g id="275">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="300.2799999999997" y="887.2700000000004">LD_2</tspan>
+   </text>
+  </g>
+  <g id="276">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="415.2799999999997" y="886.2700000000004">LD_3</tspan>
+   </text>
+  </g>
+  <g id="277">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="532.2799999999997" y="886.2700000000004">LD_4</tspan>
+   </text>
+  </g>
+  <g id="278">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="731.7799999999997" y="885.2700000000004">LD_5</tspan>
+   </text>
+  </g>
+  <g id="279">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="845.7799999999997" y="884.2700000000004">LD_6</tspan>
+   </text>
+  </g>
+  <g id="280">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="966.7799999999997" y="883.2700000000004">LD_7</tspan>
+   </text>
+  </g>
+  <g id="281">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="1090.78" y="883.2700000000004">LD_8</tspan>
+   </text>
+  </g>
+  <g id="282">
+   <rect width="32.6719" x="584.1799999999994" opacity="0.01" y="191.8000000000002" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站350间隔图_0.svg"/>
+  </g>
+  <g id="283">
+   <polyline join_style="64" points="737.28 254.27,737.28 225.27,613.28 225.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="284">
+   <polyline join_style="64" points="589.28 225.27,495.28 225.27,495.28 253.27" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="285">
+   <rect width="32.6719" x="181.7799999999997" opacity="0.01" y="661.2700000000004" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站454间隔图_0.svg"/>
+  </g>
+  <g id="286">
+   <polyline join_style="64" points="173.28 646.27,173.28 664.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="287">
+   <polyline join_style="64" points="173.28 688.27,173.28 709.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="288">
+   <rect width="32.6719" x="293.7799999999997" opacity="0.01" y="660.2700000000004" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站453间隔图_0.svg"/>
+  </g>
+  <g id="289">
+   <polyline join_style="64" points="285.28 645.27,285.28 663.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="290">
+   <rect width="32.6719" x="839.2799999999997" opacity="0.01" y="665.2700000000004" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站457间隔图_0.svg"/>
+  </g>
+  <g id="291">
+   <polyline join_style="64" points="830.78 650.27,830.78 668.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="292">
+   <polyline join_style="64" points="830.78 692.27,830.78 713.696" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="293">
+   <rect width="32.6719" x="960.2799999999997" opacity="0.01" y="664.2700000000004" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站456间隔图_0.svg"/>
+  </g>
+  <g id="294">
+   <polyline join_style="64" points="951.78 649.27,951.78 667.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="295">
+   <polyline join_style="64" points="951.78 691.27,951.78 712.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="296">
+   <rect width="32.6719" x="1084.28" opacity="0.01" y="662.2700000000004" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站455间隔图_0.svg"/>
+  </g>
+  <g id="297">
+   <polyline join_style="64" points="1075.78 647.27,1075.78 665.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="298">
+   <polyline join_style="64" points="1075.78 689.27,1075.78 710.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="299">
+   <polyline join_style="64" points="285.28 872.27,285.28 734.802" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="300">
+   <polyline join_style="64" points="285.28 708.802,285.28 687.27" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="301">
+   <polyline join_style="64" points="325.28 800.272,325.28 782.74" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="302">
+   <polyline join_style="64" points="325.28 756.74,325.28 747.74,285.28 747.74" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="303">
+   <polyline join_style="64" points="991.78 800.266,991.78 788.715" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="304">
+   <polyline join_style="64" points="991.78 762.715,991.78 754.44,951.78 754.44" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="305">
+   <polyline join_style="64" points="1113.78 800.269,1113.78 780.59" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="306">
+   <polyline join_style="64" points="1113.78 754.59,1113.78 746.76,1075.78 746.76" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="307">
+   <rect width="162" x="8.199999999999818" opacity="0.01" y="203.6400000000003" fill_style="1" fill="#ffffff" height="52" stroke="#ffffff"/>
+   <file link="10千伏优特变电站分接线图.svg"/>
+  </g>
+  <g id="308">
+   <rect width="32.0469" x="858.4299999999994" opacity="0.01" y="410.6700000000001" fill_style="1" fill="#ffffff" height="26" stroke="#ffffff"/>
+   <file link="优特变电站2#主变间隔图_0.svg"/>
+  </g>
+  <g id="309">
+   <rect width="160" join_style="64" x="10.34000000000015" y="52.26000000000022" fill_style="1" fill="#157dd7" cap_style="16" height="52" line_style="1" stroke="#77b7f3" line_width="1"/>
+  </g>
+  <g id="310">
+   <text font-family="SimSun" fill="#ffffff" font-size="22">
+    <tspan x="41.80000000000018" y="86.97000000000025">返回索引图</tspan>
+   </text>
+  </g>
+  <g id="311">
+   <rect width="160" x="11.27999999999975" opacity="0.01" y="52.27000000000044" fill_style="1" fill="#ffffff" height="50" stroke="#ffffff"/>
+   <file link="系统结构索引图.svg"/>
+  </g>
+  <g id="312">
+   <text font-family="SimSun" fill="#ff0000" font-size="12">
+    <tspan x="1070.62" y="221.0200000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="61850-351" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="313">
+   <text font-family="SimSun" fill="#ffff00" font-size="15">
+    <tspan x="994.21" y="254.1900000000005">61850-Ia</tspan>
+   </text>
+  </g>
+  <g id="314">
+   <text font-family="SimSun" fill="#ff0000" font-size="12">
+    <tspan x="1072.73" y="253.1900000000005">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="61850-351-A" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="315">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" y1="402.103" x1="832.28" y2="408.77" stroke-width="2" x2="832.28"/>
+  </g>
+  <g id="316">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" y1="408.77" x1="832.28" y2="412.103" stroke-width="2" x2="825.613"/>
+  </g>
+  <g id="317">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" y1="408.77" x1="832.28" y2="412.103" stroke-width="2" x2="838.947"/>
+  </g>
+  <g id="318">
+   <line join_style="0" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" y1="438.77" x1="802.28" y2="380.77" stroke-width="2" x2="860.28"/>
+  </g>
+  <g id="319">
+   <polygon join_style="0" fill_style="1" points="862.28 378.77,852.28 383.77,857.28 388.77,862.28 378.77" fill="#ffff0d" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="2"/>
+  </g>
+  <g id="320">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="432.996" x1="828.947" y2="444.544" stroke-width="2" x2="828.947"/>
+  </g>
+  <g id="321">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="444.544" x1="828.947" y2="438.77" stroke-width="2" x2="838.947"/>
+  </g>
+  <g id="322">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="438.77" x1="838.947" y2="432.996" stroke-width="2" x2="828.947"/>
+  </g>
+  <g id="323">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="432.996" x1="828.947" y2="432.996" stroke-width="2" x2="828.947"/>
+  </g>
+  <g id="324">
+   <use width="42.5" x="812.2799999999997" y="384.7700000000004" height="82" xlink:href="#两卷变324:LJB-1"/>
+  </g>
+  <g id="325">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" y1="399.603" x1="400.28" y2="406.27" stroke-width="2" x2="400.28"/>
+  </g>
+  <g id="326">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" y1="406.27" x1="400.28" y2="409.603" stroke-width="2" x2="393.613"/>
+  </g>
+  <g id="327">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" y1="406.27" x1="400.28" y2="409.603" stroke-width="2" x2="406.947"/>
+  </g>
+  <g id="328">
+   <line join_style="0" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" y1="436.27" x1="370.28" y2="378.27" stroke-width="2" x2="428.28"/>
+  </g>
+  <g id="329">
+   <polygon join_style="0" fill_style="1" points="430.28 376.27,420.28 381.27,425.28 386.27,430.28 376.27" fill="#ffff0d" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="2"/>
+  </g>
+  <g id="330">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="430.496" x1="396.947" y2="442.044" stroke-width="2" x2="396.947"/>
+  </g>
+  <g id="331">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="442.044" x1="396.947" y2="436.27" stroke-width="2" x2="406.947"/>
+  </g>
+  <g id="332">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="436.27" x1="406.947" y2="430.496" stroke-width="2" x2="396.947"/>
+  </g>
+  <g id="333">
+   <line join_style="64" fill="none" cap_style="16" line_style="1" stroke="#a00000" y1="430.496" x1="396.947" y2="430.496" stroke-width="2" x2="396.947"/>
+  </g>
+  <g id="334">
+   <use width="42.5" x="380.2799999999997" y="382.2700000000004" height="82" xlink:href="#两卷变334:LJB-1"/>
+  </g>
+  <g id="335">
+   <polyline join_style="64" points="832.28 388.77,832.28 355.77" fill="none" cap_style="16" line_style="1" stroke="#ffff0d" stroke-width="3"/>
+  </g>
+  <g id="336">
+   <polyline join_style="64" points="831.28 488.77,831.28 455.77" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="337">
+   <use width="16" x="510.2799999999997" y="652.96" height="36" xlink:href="#开关:开关@1">
+    <UT.shapedata>
+     <PowerData PointName="YX908" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="338">
+   <polyline join_style="64" points="517.28 643.918,517.28 656.955" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="339">
+   <polyline join_style="64" points="517.28 680.955,517.28 696.489" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="340">
+   <use width="16" x="393.2799999999997" y="655.2900000000009" height="36" xlink:href="#开关:开关@1">
+    <UT.shapedata>
+     <PowerData PointName="YX957" StationName="UTStation"/>
+    </UT.shapedata>
+   </use>
+  </g>
+  <g id="341">
+   <polyline join_style="64" points="400.28 644.27,400.28 659.294" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="342">
+   <polyline join_style="64" points="400.28 683.294,400.28 698.937" fill="none" cap_style="16" line_style="1" stroke="#a00000" stroke-width="3"/>
+  </g>
+  <g id="343">
+   <text font-family="SimSun" fill="#ffffff" font-size="15">
+    <tspan x="530.7799999999997" y="671.96">451</tspan>
+   </text>
+  </g>
+  <g id="344">
+   <text font-family="SimSun" fill="#ff0000" font-size="12">
+    <tspan x="224.2799999999997" y="541.2700000000004">9.90</tspan>
+    <UT.shapedata>
+     <PowerData PointName="YC11" StationName="UTStation"/>
+    </UT.shapedata>
+   </text>
+  </g>
+  <g id="345">
+   <text font-family="SimSun" fill="#ff0000" font-size="15">
+    <tspan x="157.2799999999997" y="540.2700000000004">xiangjiao</tspan>
+   </text>
+  </g>
+  <g id="346">
+   <use width="16" x="0.5" y="506.3000000000002" height="36" xlink:href="#开关:双位开关@0"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>UT Stream Client ActiveX</title>
+    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+<style type="text/css">
+	body 
+	{
+        overflow:hidden;
+		background-repeat: repeat;
+		background-attachment:fixed;
+        background-color:#D5EDF5;
+	}
+    label
+    {
+        vertical-align:middle;
+    }
+</style>
+<script language="javascript"  type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
+<script language="javascript"  type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+<script language="javascript"  type="text/javascript" src="../js/RecPlay.js"></script>
+<script language="javascript"  type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
+
+</head>
+
+<body>
+    <input type="hidden" id="nodeid" value="" />
+    <input type="hidden" id="nodename" value="" />
+    <input type="hidden" id="parentid" value="" />
+
+    <input type="hidden" id="DvrIp" value="" />
+    <input type="hidden" id="DvrPort" value="" />
+    <input type="hidden" id="CamChanNo" value="" />
+
+<div style="width:100%;height:100%; background-color:red;">
+<object id='UTStream' name='UTStream' style="float:left;" codebase="../cab/UTStreamOcx.cab#version=1,0,1,12" classid="clsid:b82ea52f-404b-4f74-899c-1fbcffffb15e">
+    <param name="_Version" value="65536">
+    <embed src="65536"  _version="65536" ></embed>
+</object>
+
+<div  style="float:right;width:380px; font-size:13px;background-color:#D6EFF5; text-align:center;" id="jk" >
+    <div style="margin-top:15px;">
+<!--     <label> 回放类型： </label> <select id="queryType" class="easyui-combobox" editable="false" name="state" style="width:150px;">
+		    <option value="1">按文件回放</option>
+		    <option value="2">按时间回放</option>
+        </select><p />
+        <label> 文件类型： </label> <select id="recordType" class="easyui-combobox" editable="false" name="state" style="width:150px;">
+            <option value="-1">全部</option>
+            <option value="1">定时录像</option>
+		    <option value="2">移动侦测</option>
+		    <option value="3">报警触发</option>
+        </select><p />-->
+     <label> 开始时间： </label> <input id="starttime" class="easyui-datetimebox" editable="false" style="width:150px"><p />
+     <label> 结束时间： </label> <input id="endtime" class="easyui-datetimebox" editable="false" style="width:150px"><p />
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="recQuery()">查询</a><p />
+    </div>
+
+    <div style="margin-left:10px; margin-top:30px; margin-bottom:10px;">
+    <table id="recdg" class="easyui-datagrid" title="录像列表" style="width:360px;height:430px"
+			data-options="singleSelect:true,pagination:true,pageSize:20,rownumbers:true,toolbar:toolbar">
+		<thead>
+			<tr>
+                <th data-options="field:'fstart',hidden:true">开始时间</th>
+                <th data-options="field:'fend',hidden:true">结束时间</th>
+                <th data-options="field:'finfo',hidden:true">文件信息</th>
+				<th data-options="field:'start',width:100">开始时间</th>
+				<th data-options="field:'end',width:100">结束时间</th>
+				<th data-options="field:'size',width:100">文件大小(字节)</th>
+			</tr>
+		</thead>
+	</table>
+    </div>
+</div>
+</div>
+</body>
+
+</html>

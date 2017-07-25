@@ -1,0 +1,20 @@
+1. svg 标签 增加事件 
+
+onload="svgInit(evt)" 
+onclick="svgClick(evt)
+
+如下:
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cge="http://iec.ch/TC57/2005/SVG-schema#" width="1795.549" height="676.5" viewBox="4351.451 4592 1795.549 676.5" onload="svgInit(evt)" onclick="svgClick(evt)">
+
+2. use 标签 增加id 
+如下: 
+    <g id="OtherClass">
+      <g id="470">
+        <use id="112112112" x="4376" y="4710" width="24" height="28" xlink:href="#OtherClass:gmsxm@1" class="KV220" />
+        <UT.shapedata>
+          <ShapeRef TextID="630" />
+          <PowerData StationName="郭家岗变" PointName="郭01端子箱" Description="郭01端子箱" />
+        </UT.shapedata>
+      </g>
+	  
+3. 将 svg.ctrl.js 内容嵌入到 svg 头即可正常调用 

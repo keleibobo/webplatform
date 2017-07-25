@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .sitemap
+        {
+            text-align: left;
+            background-repeat: repeat-x;
+            background-position: 0px -810px;
+            height: 15px;
+            width: 100%;
+            float: left;
+            font-size: 12px;
+            border-bottom-style: double;
+            border-bottom-width: thin;
+            border-bottom-color: #dddddd;
+            vertical-align: middle;
+            position: fixed;
+        }
+        .sitemapfont
+        {
+            color: #000000;
+            font-family: 华文行楷;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        //    function toUrl(sSelectNode, sSelectNodeName, sSelectNodeType, URLType) {
+        //         
+        //        var s = window.location.href;
+        //                if (s.indexOf("?") > 0)
+        //                    s = s.substring(0, s.indexOf("?"));
+        //                window.location.href = s + "?SelectNode=" + sSelectNode + "&SelectNodeName=" + sSelectNodeName + "&SelectNodeType=" + sSelectNodeType + "&type=" + URLType;
+        //    }
+    </script>
+    <form runat="server">
+    <table style="width: 100%; height: 20px" class="sitemap" border="1">
+        <tr>
+            <td style="width: 50%; vertical-align: top">
+                &nbsp;&nbsp;您现在的位置:&nbsp;&nbsp;&nbsp;
+            </td>
+            <td style="width: 50%; overflow: hidden;">
+                当前节点:&nbsp;
+                <asp:Label ID="labNode" CssClass="sitemapfont" runat="server" Text=""></asp:Label>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div id="div1" style="padding-top: 10px; padding-left: 10px;">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    </form>
+</body>
+</html>

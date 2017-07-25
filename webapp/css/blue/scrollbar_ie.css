@@ -1,0 +1,14 @@
+﻿/*IE设置滑动条样式*/
+body
+{
+    scrollbar-3dlight-color: #2591CB; /*滚动条亮边的颜色*/
+    scrollbar-arrow-color:#2471B2; /*上下按钮上三角箭头的颜色*/
+    scrollbar-darkshadow-color: #2591CB; /*滚动条强阴影的颜色*/
+    scrollbar-highlight-color: #ffffff; /*滚动条空白部分的颜色*/
+    scrollbar-face-color: #79CDD9; /*滚动条凸出部分的颜色*/
+    scrollbar-shadow-color: #ffffff; /*滚动条阴影的颜色*/
+    scrollbar-track-color: #79BFE8; /*滚动条背景颜色*/
+    /*以下2条适用与body、div、textarea、iframe*/
+    scrollbar-base-color: #C7E9FF; /*滚动条的基本颜色*/
+    Cursor: url(mouse.cur); /*自定义个性鼠标*/
+}

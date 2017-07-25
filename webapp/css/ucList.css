@@ -1,0 +1,95 @@
+﻿/* 表头*/
+.trHead
+{
+    font-family:"Verdana","Arial",  "Helvetica", "sans-serif" ,"宋体"  ;
+}
+/* 表头样式*/
+.tdhead
+{
+   
+    position: relative  ;
+    font-weight: bold  ;
+    color: #444444  ;
+    font-size: 10pt  ;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #7BC2CA;
+    border-top: 1px solid #20BED0;
+    border-bottom: 1px solid #1EB5C6;
+    background: url(../images/line04.gif);
+    height: 22px  ; 
+    padding-left:8px;
+    padding-right:8px;
+}
+
+/* 偶数行样式*/
+.tr1
+{
+    background: #B1CCEF  ;
+    font-size:9pt  ;
+}
+/* 偶数行样式*/
+ .td1
+{
+    border-right: 1px solid #B9DFE3  ;
+    border-bottom: 1px solid #B9DFE3  ;
+    height: 21px  ;
+    white-space:nowrap; 
+    padding-left:8px;
+     padding-right:8px;
+}
+/* 奇数行样式*/
+.tr0
+{
+    background: #FFFFEE  ;
+    font-size:9pt  ;
+}
+/*奇数行样式*/
+.td0
+{
+    border-right: 1px solid #B9DFE3  ;
+    border-bottom: 1px solid #CDE9EF  ;
+    height: 22px  ;
+    white-space:nowrap; 
+    padding-left:8px;
+     padding-right:8px;
+}
+/*分页样式*/
+.page 
+{ 
+    background-color: #B6ECF4;
+    color:#004080  ; 
+    font-size:9pt  ;
+}
+/*分页字体变灰的样式*/
+.page1 
+{
+    color:#7296BA  ; 
+    font-size:9pt  ;
+}
+/*svg按钮样式*/
+#svgbutton
+{
+    background:url('../images/expand.bmp');
+    width:16px;
+    height:16px;
+    z-index:9999;
+    position:fixed;
+    right:0px;
+    bottom:0px;
+}
+/*svg导航样式*/
+#SvgNavigation
+{
+    visibility:hidden;
+    z-index:1;
+    position:fixed;
+    right:0px;
+    bottom:0px;
+}
+/*svg缩略图背景样式*/
+.btbg{width:100px; height:56px; overflow:hidden; text-align:center; position:absolute; top:23px; visibility:hidden;}
+/*svg缩略图右样式*/
+.btright{width:11px; height:56px; overflow:hidden; position:absolute; top:0; right:0;}
+/*svg缩略图左样式*/
+.btleft{width:89px; height:56px; overflow:hidden; top:0; left:0; position:absolute;}
+

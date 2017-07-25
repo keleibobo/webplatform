@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<connectionStrings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <add name="basestring" type="SYSBASE" connectionString="DNS=vL8NS1vdpZY++5cAxEFdDA==" providerName="System.Data.SqlClient" />
+  <add name="sysbase" type="membership" connectionString="data source=192.100.0.48;database=sysbase0713;persist security info=true;user id=s11001jGciw=;password=w3CjwMdUijk=;" providerName="System.Data.SqlClient" dbpath="d:\data" />
+  <add name="userright" type="userrightdb" connectionString="data source=192.100.0.48;database=userright0713;persist security info=true;user id=s11001jGciw=;password=w3CjwMdUijk=;" providerName="System.Data.SqlClient" dbpath="d:\data" />
+  <add name="draw" type="drawdb" connectionString="data source=192.100.0.48;database=draw0713;persist security info=true;user id=s11001jGciw=;password=w3CjwMdUijk=;" providerName="System.Data.SqlClient" dbpath="d:\data\" />
+  <add name="joyoc2" type="joyoc2" connectionString="data source=192.168.65.85\SQLSERVER2008;database=joyoc2webdb;persist security info=true;user id=s11001jGciw=;password=x89uqME6VSQ=;" providerName="System.Data.SqlClient" dbpath="f:\data" />
+  <add name="af" type="joyoaffzpt" connectionString="data source=192.100.0.48;database=utscadadb;persist security info=true;user id=s11001jGciw=;password=w3CjwMdUijk=;" providerName="System.Data.SqlClient" dbpath="d:\data\" />
+</connectionStrings>
