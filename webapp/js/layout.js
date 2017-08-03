@@ -191,12 +191,12 @@ function comboboxInit(cid) {
 }
 
 var firstHide = true;
-function f_loadtree(treeview) {
-    var win = $.messager.progress({
+function f_loadtree(treeview) {               //加载导航树数据
+    var win = $.messager.progress({           //设置弹出框
         title: '正在获取导航树数据中...',
         msg: ''
     }); 
-    if ($("body").find("#svg").length > 0) {
+    if ($("body").find("#svg").length > 0) {   //设置样式
         if (parent.document.getElementById('style').value == "green") {
             $(".treeback").css("background", "#018781");
             $("#layoutwest").css("background", "#018781");
@@ -208,7 +208,7 @@ function f_loadtree(treeview) {
     }
     var url = "../basepage/HandlerTreeview.ashx?action=getTree&random=123123";
 
-    $("#" + treeview).tree({
+    $("#" + treeview).tree({   //获取数据
         lines: true,
         url: url,
         animate:false,
@@ -219,16 +219,16 @@ function f_loadtree(treeview) {
             });
             $("#" + treeview).tree("options").url = url + "&nodepath=" + node.attributes.value;
         },
-        onClick: function (node) {
+        onClick: function (node) {  //单击事件
             clickNode(node, treeview);
         },
-        onExpand: function (node) {
+        onExpand: function (node) {  //树展开的时候触发
             $.messager.progress('close');
             if (node.checked) {
                 $('#' + treeview).tree('check',node.target);
             }
         },
-        onDblClick: function (node) {
+        onDblClick: function (node) { //双击事件
             $("#TreeNodeText").val(node.text);
             $("#svgnodeid").val(node.id);
             $("#nodepath").val(node.attributes.value);
@@ -278,7 +278,7 @@ function f_loadtree(treeview) {
     });
 }
 
-function clickNode(node, treeview) {
+function clickNode(node, treeview) {//单机事件
     $("#svgnodeid").val(node.id);
     $("#TreeNodeText").val(node.text);
     var treeOption = $('#' + treeview).tree('options');

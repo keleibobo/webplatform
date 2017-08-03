@@ -91,7 +91,14 @@ function startshow(sapp) {
         success: function (data) {
             totalData = data;
             if (window.ShowEventWindow == true) {
-                messagerShow("告警事件", GetTableTh());
+
+                /*
+                 *时间 2017.7.28
+                 *维护人员 李士群
+                 *修改内容 .对这行代码进行注释,从而使弹框不会一开始就弹出来
+                 */
+
+              //  messagerShow("告警事件", GetTableTh());
                 InitData();
             }
             else {
@@ -224,6 +231,7 @@ function EventHubInit() {
 
     EventHub.client.pushEvent = function (event) {
         if (window.ShowEventWindow == false) {
+            
             window.ShowEventWindow = true;
             messagerShow("告警事件", GetTableTh());
             InitData();
@@ -266,4 +274,5 @@ function EventHubInit() {
         //   alert("[" + new Date().toTimeString() + "]: " + oldState + " => " + newState + " " + $.connection.hub.id );
     });
     $.connection.hub.start();
+    
 }

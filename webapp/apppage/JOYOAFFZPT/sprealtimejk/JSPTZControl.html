@@ -4,246 +4,319 @@
 
 <head>
 
-<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
-<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
-<meta HTTP-EQUIV="expires" CONTENT="0">
-<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache" />
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate" />
+    <meta HTTP-EQUIV="expires" CONTENT="0" />
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
 
-<title>UT Stream Client ActiveX</title>
-<link rel="stylesheet" href="../../../css/com.css" />
-<style type="text/css">
-	body 
-	{
-		overflow:hidden;
-		background-image: url("background.gif");
-		background-repeat: repeat;
-		background-attachment:fixed;
-        background-color:#D5EDF5;
-	}
-        label
-    {
-        vertical-align:middle;
-    }
-    .style1
-    {
-        height: 30px;
-    }
-</style>
-<script language="javascript"  type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
-<script language="javascript"  type="text/javascript" src="../js/PTZControl.js"></script>
+    <title>UT Stream Client ActiveX</title>
+    <link rel="stylesheet" href="../../../css/com.css" />
+    <style type="text/css">
+        body {
+            overflow: hidden;
+            background-image: url("background.gif");
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-color: #D5EDF5;
+        }
+
+        label {
+            vertical-align: middle;
+        }
+
+        .style1 {
+            height: 30px;
+        }
+
+        .paging_button {
+            background-color: #D5EDF5;
+            font-size: 10.5pt;
+            font-weight: bold;
+            width: 90px;
+            height: 40px;
+            padding: 4px;
+            margin: 7px;
+            float: left;
+        }
+
+            .paging_button:hover {
+                background-color: #f0f39d;
+            }
+        .input_div{
+            left:260px;
+            float:right;
+            padding:10px;
+            font-family:YouYuan;
+            font-weight:bold;
+        }
+        .input_text{
+           background-color:#D5EDF5;
+           border-width:0px;
+           text-align:center;
+           font-family:YouYuan;
+           font-weight:bold;
+           font-size:10.5pt;
+           color:crimson;
+        }
+    </style>
+    <script language="javascript" type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/PTZControl.js"></script>
 </head>
 
 <body>
     <input type="hidden" id="nodeid" value="" />
     <input type="hidden" id="nodename" value="" />
     <input type="hidden" id="parentid" value="" />
-    <input type="hidden" id="treedbclick" onclick="nodeDbClick()" />
+    <input type="hidden" id="nodedata" value="" />
+
+    <input type="hidden" id="lsqnodedata" value="" />
+    <input type="hidden" id="lsq" onclick="lsqViewClick()" />
+
+    <!--
+    <input type="hidden" id="lsq_onenodedata" value="" />
+    <input type="hidden" id="lsq_one" onclick="lsqOneViewClick()" />-->
+
+
+
+    <input type="hidden" id="treedbclick" onclick="jsystreeDbClick()" />
     <input type="hidden" id="treeclick" onclick="nodeClick()" />
     <input type="hidden" id="stationdbclick" onclick="stationDbClick()" />
 
-<div style="width:100%;height:100%;">
 
-<object id='UTStream' name='UTStream' style="float:left;" codebase="../cab/UTStreamOcx.cab#version=1,0,1,12" classid="clsid:b82ea52f-404b-4f74-899c-1fbcffffb15e">
+    <div style="width:100%;height:100%;">
 
-</object>
+        <div style="float:left">
+            <!--摄像头加载-->
+            <!--     <object id='UTStream' name='UTStream' codebase="../cab/UTStreamOcx.cab#version=1,0,1,2" classid="clsid:b82ea52f-404b-4f74-899c-1fbcffffb15e"></object>-->
+            <object id='UTStream' name='UTStream' classid="clsid:b82ea52f-404b-4f74-899c-1fbcffffb15e"></object>
+            <div>
+                <input id="lsq_shou" type="button" value="首页" onclick="lsqFirstPage()" class="paging_button" disabled="disabled" />
+                <input id="lsq_shang" type="button" value="上一页" onclick="lsqPrePage()" class="paging_button" disabled="disabled" />
+                <input id="lsq_xia" type="button" value="下一页" onclick="lsqNextPage()" class="paging_button" disabled="disabled" />
+                <input id="lsq_wei" type="button" value="尾页" onclick="lsqLastPage()" class="paging_button" disabled="disabled" />
 
-<div  style="float:right;width:300px;height:800px" id="jk" >
-<table width="277" border="0" cellpadding="0" cellspacing="0" bgcolor="#D5EDF5" class="TextBorder011">
-  <tr>
-    <td align="center" valign="top">
-	
-	<!--云台控制 部份-->
-	<table width="277" height="299" border="0" cellpadding="0" cellspacing="0">
-      <tr>
-        <td height="215" colspan="2" align="center"><img id="ptzcontrol" src="kongzhiback.gif" width="177" height="175" border="0" usemap="#map" />
-          <map name="map" id="map">
-            <!--上-->      
-            <area shape="poly" coords="89,84,142,31,138,27,131,22,125,18,117,14,108,10,98,8,88,7,74,9,63,12,53,16,44,23,36,30" onmousedown="PTZControl('up',0)" onmouseup="PTZControl('up',1)" href="#" />
-			<!--下-->
-            <area shape="poly" coords="89,86,35,140,49,150,62,157,78,161,90,161,104,160,115,156,126,151,133,146,142,140" onmousedown="PTZControl('down',0)" onmouseup="PTZControl('down',1)" href="#" />
-			 <!--左-->
-            <area shape="poly" coords="89,85,35,30,26,42,17,56,12,73,11,86,12,98,15,109,20,121,28,132,35,139" onmousedown="PTZControl('left',0)" onmouseup="PTZControl('left',1)" href="#" />
-			<!-- 右-->
-           <area shape="poly" coords="88,85,142,138,149,129,155,118,159,108,163,93,164,81,163,69,160,59,156,50,149,40,142,31" onmousedown="PTZControl('right',0)" onmouseup="PTZControl('right',1)" href="#" />
-          </map></td>
-        </tr>
-      <tr>
-        <td height="74" align="center"><a href="#"><img src="fanda.gif" id="zoomin" onmousedown="PTZControl('zoomin',0)" onmouseup="PTZControl('zoomin',1)" width="115" height="48" border="0" /></a></td>
-        <td height="74" align="center"><a href="#"><img src="shuoxiao.gif" id="zoomout" onmousedown="PTZControl('zoomout',0)" onmouseup="PTZControl('zoomout',1)" width="115" height="48" border="0" /></a></td>
-      </tr>
-	    <tr>
-        <td height="1" colspan="2" align="center" bgcolor="#A5DCE1"></td>
-      </tr>
-      <tr>
-        <td height="1" colspan="2" align="center" bgcolor="#78C0C9"></td>
-      </tr>
-      <tr>
-        <td height="1" colspan="2" align="center" bgcolor="#FFFFFF"></td>
-        </tr>
-    </table>
-	<!--云台控制 部份end-->	
-	
-	
-	<!--图标 部份-->
-        <table width="277" height="170" border="0" cellpadding="0" cellspacing="0">
-            <tr><td class="style1">
-                <div style="margin-top:5px;">
-               <label> 预置点：</label>
-                    <select id="presetList" style=" min-width:100px;" onchange="presetSelect()">
-                    <option value=""></option>
-                </select>
+                <!--    <input id="lsq_wei" type="button" value="停止" onclick="lsq_stop()" class="paging_button"  />-->
+
+                <div class="input_div">
+                    共<input id="lsq_text_all" type="text" value="" style="width:30px;" readonly="readonly"  class="input_text"/>页
                 </div>
-                </td>
-            </tr>
-            <tr >
-                <td style=" height:60px;" align="center" border="0" cellpadding="0" cellspacing="0">
-                    <table  border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td width="80" align="center">
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td align="center"><a href="#">
-                                            <img src="../images/ico_kaishixunshi.gif" width="32" height="32" border="0" onclick="openScoutWindow()" /></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C"><span id="xunshi">开始</span>巡视</td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td width="80" align="center">
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td align="center"><a href="#">
-                                            <img src="../images/ico_bofangzhuhe.gif" width="32" height="32" border="0" onclick="openCombineWindow()" /></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">组合播放</td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td width="80"  align="center">
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td align="center"><a href="#" onclick="pcCall()">
-                                            <img src="../images/ico_pcduijiang.gif" width="32" height="32" border="0" /></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">PC对讲</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                <div class="input_div">
+                    第<input id="lsq_text" type="text" value="" style="width:30px;" readonly="readonly" class="input_text"/>页
+                </div>
 
-                    </table>
-                </td>
-            </tr>
-            <!--<tr >
-                <td style=" height:60px;" align="center" border="0" cellpadding="0" cellspacing="0">
-                    <table  border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td width="80" align="center">
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td align="center"><a href="#">
-                                            <img src="../images/截图.gif" width="32" height="32" border="0" onclick="cutPic()" /></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">截&nbsp&nbsp&nbsp&nbsp&nbsp图</td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td width="80" align="center">
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td align="center"><a href="#" >
-                                            <img src="../images/录像.gif" width="32" height="32" border="0" onclick="Rec()" /></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">开始录像</td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td width="80"  align="center">
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td align="center"><a href="#" >
-                                            <img src="../images/结束录像.gif" width="32" height="32" border="0" onclick="stopRec()" /></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">结束录像</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+            </div>
 
-                    </table>
-                </td>
-            </tr>
-            <tr >
-                <td style=" height:60px;" align="center" border="0" cellpadding="0" cellspacing="0">
-                    <table  border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td width="80" align="center">
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td align="center"><a href="#">
-                                            <img src="../images/打开音屏.gif" width="32" height="32" border="0" onclick="openSound()" /></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">打开声音</td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td width="80" align="center">
-                                
-                            </td>
-                            <td width="80"  align="center">
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td align="center"><a href="#" >
-                                            <img src="../images/关闭音屏.gif" width="32" height="32" border="0" onclick="closeSound()" /></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">关闭声音</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+        </div>
 
-                    </table>
-                </td>
-            </tr>-->
-            <tr>
-                <td height="1" colspan="2" align="center" bgcolor="#A5DCE1"></td>
-            </tr>
-            <tr>
-                <td height="1" colspan="2" align="center" bgcolor="#78C0C9"></td>
-            </tr>
-            <tr>
-                <td height="1" colspan="2" align="center" bgcolor="#FFFFFF"></td>
-            </tr>
-        </table>	
-	
-	<table id="huamianNum" width="277" height="98" border="0" cellpadding="0" cellspacing="0">
-      <tr>
-        <td height="30" colspan="9" align="left" style="font-size:14px; font-weight:bold; color:#2C2C2C; padding-left:20px;">显示布局          </td>
-      </tr>
-      <tr>
-        <td width="15" height="40" align="left" ></td>
-        <td align="center" ><img style="cursor:pointer;" id="huamian1" src="../images/huamian1_off.gif" width="26" height="26" onclick="setWindowNum(1)"></td>
-        <td width="15" align="left">&nbsp;</td>
-        <td align="center"><img style="cursor:pointer;" id="huamian4" src="../images/huamian4_off.gif" width="26" height="26" onclick="setWindowNum(4)"></td>
-        <td width="15" align="left" >&nbsp;</td>
-        <td align="center"><img style="cursor:pointer;" id="huamian9" src="../images/huamian9_off.gif" width="26" height="26" onclick="setWindowNum(9)"></td>
-        <td width="15" align="center">&nbsp;</td>
-        <td align="center"><img style="cursor:pointer;" id="huamian16" src="../images/huamian16.gif" width="26" height="26" onclick="setWindowNum(16)"></td>
-        <td width="15" height="40" align="left">&nbsp;</td>
-      </tr>
-          </table></td>
-  </tr>
-</table>
-</div>
-</div>
+        <div style="float:right;width:300px;height:800px" id="jk">
+            <table width="277" border="0" cellpadding="0" cellspacing="0" bgcolor="#D5EDF5" class="TextBorder011">
+                <tr>
+                    <td align="center" valign="top">
+
+                        <!--云台控制 部份-->
+                        <table width="277" height="299" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td height="215" colspan="2" align="center">
+                                    <img id="ptzcontrol" src="kongzhiback.gif" width="177" height="175" border="0" usemap="#map" />
+                                    <map name="map" id="map">
+                                        <!--上-->
+                                        <area shape="poly" coords="89,84,142,31,138,27,131,22,125,18,117,14,108,10,98,8,88,7,74,9,63,12,53,16,44,23,36,30" onmousedown="PTZControl('up',0)" onmouseup="PTZControl('up',1)" href="#" />
+                                        <!--下-->
+                                        <area shape="poly" coords="89,86,35,140,49,150,62,157,78,161,90,161,104,160,115,156,126,151,133,146,142,140" onmousedown="PTZControl('down',0)" onmouseup="PTZControl('down',1)" href="#" />
+                                        <!--左-->
+                                        <area shape="poly" coords="89,85,35,30,26,42,17,56,12,73,11,86,12,98,15,109,20,121,28,132,35,139" onmousedown="PTZControl('left',0)" onmouseup="PTZControl('left',1)" href="#" />
+                                        <!-- 右-->
+                                        <area shape="poly" coords="88,85,142,138,149,129,155,118,159,108,163,93,164,81,163,69,160,59,156,50,149,40,142,31" onmousedown="PTZControl('right',0)" onmouseup="PTZControl('right',1)" href="#" />
+                                    </map>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="74" align="center"><a href="#"><img src="fanda.gif" id="zoomin" onmousedown="PTZControl('zoomin',0)" onmouseup="PTZControl('zoomin',1)" width="115" height="48" border="0" /></a></td>
+                                <td height="74" align="center"><a href="#"><img src="shuoxiao.gif" id="zoomout" onmousedown="PTZControl('zoomout',0)" onmouseup="PTZControl('zoomout',1)" width="115" height="48" border="0" /></a></td>
+                            </tr>
+                            <tr>
+                                <td height="1" colspan="2" align="center" bgcolor="#A5DCE1"></td>
+                            </tr>
+                            <tr>
+                                <td height="1" colspan="2" align="center" bgcolor="#78C0C9"></td>
+                            </tr>
+                            <tr>
+                                <td height="1" colspan="2" align="center" bgcolor="#FFFFFF"></td>
+                            </tr>
+                        </table>
+                        <!--云台控制 部份end-->
+                        <!--图标 部份-->
+                        <table width="277" height="170" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="style1">
+                                    <div style="margin-top:5px;">
+                                        <label> 预置点：</label>
+                                        <select id="presetList" style=" min-width:100px;" onchange="presetSelect()">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style=" height:60px;" align="center" border="0" cellpadding="0" cellspacing="0">
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td width="80" align="center">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <a href="#">
+                                                                <img src="../images/ico_kaishixunshi.gif" width="32" height="32" border="0" onclick="openScoutWindow()" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C"><span id="xunshi">开始</span>巡视</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="80" align="center">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <a href="#">
+                                                                <img src="../images/ico_bofangzhuhe.gif" width="32" height="32" border="0" onclick="openCombineWindow()" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">组合播放</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="80" align="center">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <a href="#" onclick="pcCall()">
+                                                                <img src="../images/ico_pcduijiang.gif" width="32" height="32" border="0" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">PC对讲</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                            <!--<tr >
+                                <td style=" height:60px;" align="center" border="0" cellpadding="0" cellspacing="0">
+                                    <table  border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td width="80" align="center">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td align="center"><a href="#">
+                                                            <img src="../images/截图.gif" width="32" height="32" border="0" onclick="cutPic()" /></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">截&nbsp&nbsp&nbsp&nbsp&nbsp图</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="80" align="center">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td align="center"><a href="#" >
+                                                            <img src="../images/录像.gif" width="32" height="32" border="0" onclick="Rec()" /></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">开始录像</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="80"  align="center">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td align="center"><a href="#" >
+                                                            <img src="../images/结束录像.gif" width="32" height="32" border="0" onclick="stopRec()" /></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">结束录像</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr >
+                                <td style=" height:60px;" align="center" border="0" cellpadding="0" cellspacing="0">
+                                    <table  border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td width="80" align="center">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td align="center"><a href="#">
+                                                            <img src="../images/打开音屏.gif" width="32" height="32" border="0" onclick="openSound()" /></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">打开声音</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="80" align="center">
+
+                                            </td>
+                                            <td width="80"  align="center">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td align="center"><a href="#" >
+                                                            <img src="../images/关闭音屏.gif" width="32" height="32" border="0" onclick="closeSound()" /></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="24" style="font-size: 14px; font-weight: bold; color: #2C2C2C">关闭声音</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>-->
+                            <tr>
+                                <td height="1" colspan="2" align="center" bgcolor="#A5DCE1"></td>
+                            </tr>
+                            <tr>
+                                <td height="1" colspan="2" align="center" bgcolor="#78C0C9"></td>
+                            </tr>
+                            <tr>
+                                <td height="1" colspan="2" align="center" bgcolor="#FFFFFF"></td>
+                            </tr>
+                        </table>
+
+                        <table id="huamianNum" width="277" height="98" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td height="30" colspan="9" align="left" style="font-size:14px; font-weight:bold; color:#2C2C2C; padding-left:20px;">显示布局          </td>
+                            </tr>
+                            <tr>
+                                <td width="15" height="40" align="left"></td>
+                                <td align="center"><img style="cursor:pointer;" id="huamian1" src="../images/huamian1_off.gif" width="26" height="26" onclick="setWindowNum(1)" /></td>
+                                <td width="15" align="left">&nbsp;</td>
+                                <td align="center"><img style="cursor:pointer;" id="huamian4" src="../images/huamian4_off.gif" width="26" height="26" onclick="setWindowNum(4)" /></td>
+                                <td width="15" align="left">&nbsp;</td>
+                                <td align="center"><img style="cursor:pointer;" id="huamian9" src="../images/huamian9_off.gif" width="26" height="26" onclick="setWindowNum(9)" /></td>
+                                <td width="15" align="center">&nbsp;</td>
+                                <td align="center"><img style="cursor:pointer;" id="huamian16" src="../images/huamian16.gif" width="26" height="26" onclick="setWindowNum(16)" /></td>
+                                <td width="15" height="40" align="left">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 
+</html>
 </html>

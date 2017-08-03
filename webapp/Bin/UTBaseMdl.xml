@@ -5,5 +5,5 @@
   <add name="userright" type="userrightdb" connectionString="data source=192.100.0.48;database=userright0713;persist security info=true;user id=s11001jGciw=;password=w3CjwMdUijk=;" providerName="System.Data.SqlClient" dbpath="d:\data" />
   <add name="draw" type="drawdb" connectionString="data source=192.100.0.48;database=draw0713;persist security info=true;user id=s11001jGciw=;password=w3CjwMdUijk=;" providerName="System.Data.SqlClient" dbpath="d:\data\" />
   <add name="joyoc2" type="joyoc2" connectionString="data source=192.168.65.85\SQLSERVER2008;database=joyoc2webdb;persist security info=true;user id=s11001jGciw=;password=x89uqME6VSQ=;" providerName="System.Data.SqlClient" dbpath="f:\data" />
-  <add name="af" type="joyoaffzpt" connectionString="data source=192.100.0.48;database=utscadadb;persist security info=true;user id=s11001jGciw=;password=w3CjwMdUijk=;" providerName="System.Data.SqlClient" dbpath="d:\data\" />
+  <add name="af" type="joyoaffzpt" connectionString="data source=192.168.60.124;database=utscadadb_yanshi;persist security info=true;user id=s11001jGciw=;password=Wc7D7bQufMA=;" providerName="System.Data.SqlClient" dbpath="d:\data\" />
 </connectionStrings>

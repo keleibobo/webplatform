@@ -164,11 +164,20 @@ public class HandlerTreeview : IHttpHandler, IRequiresSessionState
         if (nodepath == null || nodepath.Length == 0)//第一个
         {
             nodepathtype = CreateFirstObjectType(bccCall, navigatetype);
+            //if(nodepathtype=="jsys")
+            //{
+            //    root=null;
+            //}
+            //else
+            //{
             nodepath = appname + "|appname|" + nodepathtype;
             root = new EasyUITreeNode("", LoginUserModel.Title, nodepath);
             root.state = "open";
             string func = LayoutUI.getTreeViewClick(nodepathtype);
             root.addAttribute("clickjs", func);
+            //root.text = "";
+            // }
+
         }
 
         string[] aNodePath = nodepath.Split('|');
@@ -185,7 +194,7 @@ public class HandlerTreeview : IHttpHandler, IRequiresSessionState
         List<object> rt1 = WSutils.getListFromPostWS(url, typeof(UTDtCnvrt.NavigateData));
 
         List<NavigateData> LND = new List<NavigateData>();
-        if(rt1!=null)
+        if (rt1 != null)
         {
             foreach (UTDtCnvrt.NavigateData oTmp in rt1)
             {
@@ -193,7 +202,7 @@ public class HandlerTreeview : IHttpHandler, IRequiresSessionState
             }
 
         }
-        
+
         if (LND != null && LND.Count > 0)
         {
             List<NavigateData> query = GetSortData(LND);
@@ -247,6 +256,7 @@ public class HandlerTreeview : IHttpHandler, IRequiresSessionState
                 rs.Add(node);
             }
         }
+        bool showRootNode = true;
         //处理父子节点
         foreach (ClassNaviagteCall cnc in bccCall.bcNavigateList)
         {
@@ -254,13 +264,21 @@ public class HandlerTreeview : IHttpHandler, IRequiresSessionState
                 && cnc.getdataflag.Equals("returnalldata", StringComparison.CurrentCultureIgnoreCase))
             {
                 Bynode(rs, rt1);
+                if (cnc.name == "jsys")
+                {
+                    showRootNode = false;
+                }
             }
         }
-        if (root != null)
+        if (root != null && showRootNode)
         {
             root.children = rs;
             rs = new List<EasyUITreeNode>();
+
+
             rs.Add(root);
+
+
         }
         string temp = FormatUtil.toJSON(rs);
         return temp;
@@ -355,13 +373,13 @@ public class HandlerTreeview : IHttpHandler, IRequiresSessionState
     private string getFunc(String lastnodepath)
     {
         string rs = ""; //改用addExtend
-        //string ctype = "onclicktype";
-        //if (extendparam.ContainsKey(ctype) && extendparam[ctype].Equals(lastnodepath))
-        //{
-        //    ctype = "onClick";
-        //    if(extendparam.ContainsKey(ctype))
-        //    return extendparam[ctype].ToString();
-        //}
+                        //string ctype = "onclicktype";
+                        //if (extendparam.ContainsKey(ctype) && extendparam[ctype].Equals(lastnodepath))
+                        //{
+                        //    ctype = "onClick";
+                        //    if(extendparam.ContainsKey(ctype))
+                        //    return extendparam[ctype].ToString();
+                        //}
         return rs;
     }
 

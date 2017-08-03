@@ -192,6 +192,7 @@ namespace AppCode
         /// </summary>
         public static void reinit()
         {
+
             if (time > 3)
             {
                 time = 0;

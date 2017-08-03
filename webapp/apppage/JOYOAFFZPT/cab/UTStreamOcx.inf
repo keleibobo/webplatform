@@ -6,27 +6,44 @@ AdvancedINF=2.0
 UTStreamOcx.ocx=UTStreamOcx.ocx
 AudioDec.dll=AudioDec.dll
 AudioDecV33.dll=AudioDecV33.dll
-AVShow.dll=AVShow.dll
+AudioIntercom.dll=AudioIntercom.dll
+AudioRender.dll=AudioRender.dll
+avcodec-53.dll=avcodec-53.dll
 AVI.dll=AVI.dll
+AVShow.dll=AVShow.dll
 avutil-51.dll=avutil-51.dll
+BCGCBPRO1100.dll=BCGCBPRO1100.dll
+BCGPStyle2007Luna110.dll=BCGPStyle2007Luna110.dll
 CharRes.dll=CharRes.dll
+D3DX9_43.dll=D3DX9_43.dll
+dhdvr.dll=dhdvr.dll 
 dhplay.dll=dhplay.dll 
-DllDeinterlace.dll=DllDeinterlace.dll
-dllh264.dll=dllh264.dll 
+DllDeinterlace.dll=DllDeinterlace.dll 
+dllh264.dll=dllh264.dll
+gdiplus.dll=gdiplus.dll
+h26ldec.dll=h26ldec.dll
+h264dec.dll=h264dec.dll
+HCCore.dll=HCCore.dll
+HCCoreDevCfg.dll=HCCoreDevCfg.dll
+HCNetSDK.dll=HCNetSDK.dll
+HCVoiceTalk.dll=HCVoiceTalk.dll
 hi_h264dec_w.dll=hi_h264dec_w.dll
-hi_h264dec_w1.dll=hi_h264dec_w1.dll
 lib_VoiceEngine_dll.dll=lib_VoiceEngine_dll.dll
 libpthread-2.dll=libpthread-2.dll
 MjpegDec.dll=MjpegDec.dll
+mfc42.dll=mfc42.dll
+msvcrt.dll=msvcrt.dll
 mxml1.dll=mxml1.dll 
+OpenAL32.dll=OpenAL32.dll
 PlayCtrl.dll=PlayCtrl.dll
 PlaySdkM4.dll=PlaySdkM4.dll 
 pthreadGC2.dll=pthreadGC2.dll
 pthreadVC2.dll=pthreadVC2.dll
 RSPlay.dll=RSPlay.dll
 SPDecV33.dll=SPDecV33.dll
-SQLBase.dll=SQLBase.dll
+SuperRender.dll=SuperRender.dll
 swscale-2.dll=swscale-2.dll
+SQLBase.dll=SQLBase.dll 
 TPDec.dll=TPDec.dll
 UtNet.dll=UtNet.dll 
 UtPlayer.dll=Utplayer.dll
@@ -41,7 +58,7 @@ file-win32-x86=thiscab
 RegisterServer=yes 
 clsid={b82ea52f-404b-4f74-899c-1fbcffffb15e} 
 DestDir=11 
-FileVersion=1,0,1,7
+FileVersion=1,0,1,12
 
 [AudioDec.dll]
 file-win32-x86=thiscab
@@ -53,7 +70,17 @@ file-win32-x86=thiscab
 DestDir=11
 FileVersion=0,0,0,0
 
-[Avcodec-53.dll]
+[AudioIntercom.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=1,1,0,4
+
+[AudioRender.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=1,0,1,6
+
+[avcodec-53.dll]
 file-win32-x86=thiscab
 DestDir=11
 FileVersion=0,0,0,0
@@ -73,15 +100,35 @@ file-win32-x86=thiscab
 DestDir=11
 FileVersion=0,0,0,0
 
+[BCGCBPRO1100.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=11,0,0,0
+
+[BCGPStyle2007Luna110.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=10,2,0,0
+
 [CharRes.dll]
 file-win32-x86=thiscab
 DestDir=11
 FileVersion=1,0,8,1219
 
+[D3DX9_43.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=9,29,952,3111
+
+[dhdvr.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=3,3,8,5251
+
 [dhplay.dll]
 file-win32-x86=thiscab
 DestDir=11
-FileVersion=3,32,0,5267
+FileVersion=3,32,0,19240
 
 [DllDeinterlace.dll]
 file-win32-x86=thiscab
@@ -96,14 +143,39 @@ FileVersion=0,0,0,0
 [gdiplus.dll]
 file-win32-x86=thiscab
 DestDir=11
-FileVersion=6,0,3264,0
+FileVersion=5.1.3102.1360
 
-[hi_h264dec_w.dll]
+[h26ldec.dll]
 file-win32-x86=thiscab
 DestDir=11
 FileVersion=0,0,0,0
 
-[hi_h264dec_w1.dll]
+[h264dec.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=0,0,0,0
+
+[HCCore.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=5,2,1,15
+
+[HCCoreDevCfg.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=5,2,1,10
+
+[HCNetSDK.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=5,2,1,15
+
+[HCVoiceTalk.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=5,2,1,10
+
+[hi_h264dec_w.dll]
 file-win32-x86=thiscab
 DestDir=11
 FileVersion=0,0,0,0
@@ -113,7 +185,7 @@ file-win32-x86=thiscab
 DestDir=11
 FileVersion=1,0,2,4
 
-[libpthread-2.dll]
+[lib_pthread.dll]
 file-win32-x86=thiscab
 DestDir=11
 FileVersion=2,8,0,0
@@ -123,7 +195,22 @@ file-win32-x86=thiscab
 DestDir=11
 FileVersion=4,0,0,2
 
+[mfc42.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=6,0,9586,0
+
+[msvcrt.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=6,1,9844,0
+
 [mxml1.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=0,0,0,0
+
+[OpenAL32.dll]
 file-win32-x86=thiscab
 DestDir=11
 FileVersion=0,0,0,0
@@ -131,7 +218,7 @@ FileVersion=0,0,0,0
 [PlayCtrl.dll]
 file-win32-x86=thiscab
 DestDir=11
-FileVersion=6,3,2,12
+FileVersion=7,3,2,50
 
 [PlaySdkM4.dll]
 file-win32-x86=thiscab
@@ -151,22 +238,27 @@ FileVersion=2,7,0,0
 [RSPlay.dll]
 file-win32-x86=thiscab
 DestDir=11
-FileVersion=1,0,3,0
+FileVersion=1,0,0,7
 
 [SPDecV33.dll]
 file-win32-x86=thiscab
 DestDir=11
 FileVersion=4,0,0,2
 
-[SQLBase.dll]
+[SuperRender.dll]
 file-win32-x86=thiscab
 DestDir=11
-FileVersion=1,2,0,0
+FileVersion=1,2,1,2
 
 [swscale-2.dll]
 file-win32-x86=thiscab
 DestDir=11
 FileVersion=0,0,0,0
+
+[SQLBase.dll]
+file-win32-x86=thiscab
+DestDir=11
+FileVersion=1,2,0,0
 
 [TPDec.dll]
 file-win32-x86=thiscab
@@ -176,7 +268,7 @@ FileVersion=1,5,10,113
 [UtNet.dll]
 file-win32-x86=thiscab
 DestDir=11
-FileVersion=1,0,0,2
+FileVersion=1,0,0,51
 
 [UtPlayer.dll]
 file-win32-x86=thiscab
@@ -186,7 +278,7 @@ FileVersion=0,0,0,0
 [UTRvsSQLCall.dll]
 file-win32-x86=thiscab
 DestDir=11
-FileVersion=1,2,0,1
+FileVersion=1,2,0,2
 
 [V_A_B_DLL.dll]
 file-win32-x86=thiscab
