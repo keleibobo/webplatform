@@ -19,6 +19,11 @@
             height: 16px;
             width: 155px;
         }
+        .version_number{
+            text-align:right;
+            font-size:small;
+            color:darkcyan;
+        }
     </style>
     <script language="JavaScript" type="text/JavaScript">
         var rememberuser = "<%=RememberUser%>" == "true";
@@ -253,12 +258,20 @@
                                         <td width="524" align="left" valign="top" background="../../images/<%=style %>/login_back.png">
                                             <table width="100%" height="38" border="0" align="center" cellpadding="0" cellspacing="0">
                                                 <tr>
-                                                    <td>&nbsp;</td>
+                                                    
+                                                    <td>&nbsp;
+                                                        <div class="version_number">
+                                                            
+                                                             °æ±¾ºÅ<%=ReadConfig.TheReadConfig["VersionNumber"]%>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                             </table>
                                             <table width="100%" height="36" border="0" align="center" cellpadding="0" cellspacing="0">
                                                 <tr>
+                                                    
                                                     <td align="left" valign="middle" class="tdtitle13"><%=title %></td>
+                                              
                                                 </tr>
                                             </table>
                                             <table width="100%" height="2" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -334,6 +347,7 @@
                                                     <td width="194" align="center">&nbsp;</td>
                                                     <td width="84" align="center" valign="middle">
                                                         <table width="84" height="29" border="0" cellpadding="0" cellspacing="0">
+                                                          
                                                             <tr onmouseout="changeout(this)" onmouseover="changeon(this)" style="cursor: pointer">
                                                                 <td width="10" background="../../images/<%=style %>/button_l.png"></td>
                                                                 <td width="64" align="center" background="../../images/<%=style %>/button_m.png" id="btnload" onclick="VerifyTxt()">µÇÂ¼</td>
